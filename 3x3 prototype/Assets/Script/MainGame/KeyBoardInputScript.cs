@@ -18,5 +18,7 @@ public class KeyBoardInputScript : MonoBehaviour
         {
             inventory.SetActive(true);
         }
+
+
     }
 }
