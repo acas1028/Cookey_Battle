@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 555775395}
   - component: {fileID: 555775394}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Stage3_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -272,10 +272,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 555775392}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 933550f7b83fd2446a2e32f164fc0acc, type: 3}
+  m_Script: {fileID: 11500000, guid: 078b54c0bf92a514c91147a453cfc8b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  select: 6
+  buildSceneNumber: 6
+  stageNumber: 3
 --- !u!114 &555775395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,7 +321,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 555775394}
-        m_MethodName: Scene_Change
+        m_MethodName: SceneChange
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -381,7 +382,7 @@ GameObject:
   - component: {fileID: 626079624}
   - component: {fileID: 626079623}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Stage1_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -416,10 +417,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 626079621}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 933550f7b83fd2446a2e32f164fc0acc, type: 3}
+  m_Script: {fileID: 11500000, guid: 078b54c0bf92a514c91147a453cfc8b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  select: 4
+  buildSceneNumber: 4
+  stageNumber: 1
 --- !u!114 &626079624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -464,7 +466,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 626079623}
-        m_MethodName: Scene_Change
+        m_MethodName: SceneChange
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -608,7 +610,7 @@ GameObject:
   - component: {fileID: 1080253607}
   - component: {fileID: 1080253606}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Stage2_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -643,10 +645,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1080253604}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 933550f7b83fd2446a2e32f164fc0acc, type: 3}
+  m_Script: {fileID: 11500000, guid: 078b54c0bf92a514c91147a453cfc8b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  select: 5
+  buildSceneNumber: 5
+  stageNumber: 2
 --- !u!114 &1080253607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -691,7 +694,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1080253606}
-        m_MethodName: Scene_Change
+        m_MethodName: SceneChange
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

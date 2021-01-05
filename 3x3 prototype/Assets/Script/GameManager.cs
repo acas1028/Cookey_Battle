@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     private static GameManager Instance;
     private string userName;
+    private int ingameStage;
     public float musicVol = 0.5f;
     public float soundVol = 0.5f;
     public static GameManager instance
@@ -67,5 +68,15 @@ public class GameManager : MonoBehaviour
     public string getUserName()
     {
         return userName;
+    }
+
+    public int getStageLevel()
+    {
+        return ingameStage;
+    }
+
+    public void setStageLevel(int stageLevel)
+    {
+        ingameStage = stageLevel;
     }
 }
