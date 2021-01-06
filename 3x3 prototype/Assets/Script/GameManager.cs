@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour
     // 세팅
     private static GameManager Instance;
     private string userName;
-    private int ingameStage;
     public float musicVol = 0.5f;
     public float soundVol = 0.5f;
 
@@ -21,8 +20,10 @@ public class GameManager : MonoBehaviour
     private bool stage2HiddenClear;
     private bool stage3Clear;
     private bool stage3HiddenClear;
-
-    
+    // 진행상황(스테이지)
+    // ========================================================================
+    private int ingameStage; //스테이지 입장 시 어떤 스테이지인지 판별하게해주는 변수
+    // ========================================================================
 
 
     public static GameManager instance
@@ -73,6 +74,51 @@ public class GameManager : MonoBehaviour
         if(PlayerPrefs.HasKey("Name"))
         {
             userName = PlayerPrefs.GetString("Name");
+        }
+
+        if(PlayerPrefs.HasKey("Stage1"))
+        {
+            switch(PlayerPrefs.GetInt("Stage1"))
+            {
+                case 0:
+                    break;
+                case 1:
+                    stage1Clear = true;
+                    break;
+                case 2:
+                    stage1HiddenClear = true;
+                    break;
+            }
+        }
+
+        if (PlayerPrefs.HasKey("Stage2"))
+        {
+            switch (PlayerPrefs.GetInt("Stage2"))
+            {
+                case 0:
+                    break;
+                case 1:
+                    stage2Clear = true;
+                    break;
+                case 2:
+                    stage2HiddenClear = true;
+                    break;
+            }
+        }
+
+        if (PlayerPrefs.HasKey("Stage3"))
+        {
+            switch (PlayerPrefs.GetInt("Stage3"))
+            {
+                case 0:
+                    break;
+                case 1:
+                    stage3Clear = true;
+                    break;
+                case 2:
+                    stage3HiddenClear = true;
+                    break;
+            }
         }
     }
 
