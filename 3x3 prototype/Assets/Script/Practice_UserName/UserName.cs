@@ -8,7 +8,7 @@ public class UserName : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        text.text = GameManager.instance.GetUserName();
+        text.text = GameManager.instance.getUserName();
     }
 
     // Update is called once per frame

@@ -5,26 +5,10 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     // Start is called before the first frame update
-    // 세팅
     private static GameManager Instance;
     private string userName;
-    private int ingameStage;
     public float musicVol = 0.5f;
     public float soundVol = 0.5f;
-
-    // 세팅
-    // ======================================================================
-    // 진행상황(스테이지)
-    private bool stage1Clear;
-    private bool stage1HiddenClear;
-    private bool stage2Clear;
-    private bool stage2HiddenClear;
-    private bool stage3Clear;
-    private bool stage3HiddenClear;
-
-    
-
-
     public static GameManager instance
     {
         get
@@ -59,13 +43,6 @@ public class GameManager : MonoBehaviour
             return;
         }
         userName = "";
-
-        stage1Clear = false;
-        stage2Clear = false;
-        stage3Clear = false;
-        stage1HiddenClear = false;
-        stage2HiddenClear = false;
-        stage3HiddenClear = false;
         DontDestroyOnLoad(gameObject);
     }
     void Start()
@@ -82,79 +59,13 @@ public class GameManager : MonoBehaviour
        
     }
 
-    public void SetUserName(string pUserName)
+    public void setUserName(string pUserName)
     {
         userName = pUserName;
     }
 
-    public string GetUserName()
+    public string getUserName()
     {
         return userName;
-    }
-
-    public int GetStageLevel()
-    {
-        return ingameStage;
-    }
-
-    public void SetStageLevel(int stageLevel)
-    {
-        ingameStage = stageLevel;
-    }
-
-    public bool GetStage1Clear()
-    {
-        return stage1Clear;
-    }
-
-    public bool GetStage2Clear()
-    {
-        return stage2Clear;
-    }
-
-    public bool GetStage3Clear()
-    {
-        return stage3Clear;
-    }
-
-    public bool GetStage1HiddenClear()
-    {
-        return stage1HiddenClear;
-    }
-
-    public bool GetStage2HiddenClear()
-    {
-        return stage2HiddenClear;
-    }
-
-    public bool GetStage3HiddenClear()
-    {
-        return stage3HiddenClear;
-    }
-
-    public void SetStage1Clear(bool isClear)
-    {
-        stage1Clear = isClear;
-    }
-    public void SetStage2Clear(bool isClear)
-    {
-        stage2Clear = isClear;
-    }
-    public void SetStage3Clear(bool isClear)
-    {
-        stage3Clear = isClear;
-    }
-
-    public void SetStage1HiddenClear(bool isClear)
-    {
-        stage1HiddenClear = isClear;
-    }
-    public void SetStage2HiddenClear(bool isClear)
-    {
-        stage2HiddenClear = isClear;
-    }
-    public void SetStage3HiddenClear(bool isClear)
-    {
-        stage3HiddenClear = isClear;
     }
 }
