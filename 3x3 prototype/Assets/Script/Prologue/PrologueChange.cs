@@ -19,20 +19,12 @@ public class PrologueChange : MonoBehaviour
     void Update()
     {
         
-        
     }
 
     public void changeImage()
     {
-        if (currentButton.tag == "Untagged")
-        {
-            currentButton.SetActive(false);
-            nextButton.SetActive(true);
-        }
-        else if(currentButton.tag== "No")
-        {
-            nextButton.SetActive(true);
-        }
+        currentButton.SetActive(false);
+        nextButton.SetActive(true);
 
         if (nextButton.transform.tag == "Finish")
             SceneManager.LoadScene(sceneNumber);

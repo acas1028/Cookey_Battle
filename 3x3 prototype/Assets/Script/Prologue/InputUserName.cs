@@ -20,8 +20,8 @@ public class InputUserName : MonoBehaviour
 
     public void updateUserName()
     {
-        GameManager.instance.setUserName(inputField.text);
-        Debug.Log(GameManager.instance.getUserName());
+        GameManager.instance.SetUserName(inputField.text);
+        Debug.Log(GameManager.instance.GetUserName());
         PlayerPrefs.SetString("Name", inputField.text);
     }
 }
