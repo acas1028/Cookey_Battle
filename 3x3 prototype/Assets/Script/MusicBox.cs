@@ -9,7 +9,7 @@ public class MusicBox : MonoBehaviour
     public AudioSource musicAudio;
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        
     }
     void Start()
     {

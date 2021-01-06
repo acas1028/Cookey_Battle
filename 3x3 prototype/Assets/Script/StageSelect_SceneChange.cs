@@ -22,6 +22,6 @@ public class StageSelect_SceneChange : MonoBehaviour
     public void SceneChange()
     {
         SceneManager.LoadScene(buildSceneNumber);
-        GameManager.instance.setStageLevel(stageNumber);
+        GameManager.instance.SetStageLevel(stageNumber);
     }
 }

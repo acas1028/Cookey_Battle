@@ -9,7 +9,7 @@ public class CompareActiveAnswer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ingameStage = GameManager.instance.getStageLevel();
+        ingameStage = GameManager.instance.GetStageLevel();
         ingameStep = 0;
     }
 
