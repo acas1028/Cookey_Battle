@@ -7,15 +7,15 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     // 세팅
     private static GameManager Instance;
-    private string userName;
-    public float musicVol = 0.5f;
-    public float soundVol = 0.5f;
+    private string userName;      // 이름 저장
+    public float musicVol = 0.5f; // 음악 소리
+    public float soundVol = 0.5f; // 효과음 소리
 
     // 세팅
     // ======================================================================
     // 진행상황(스테이지)
-    private bool stage1Clear;
-    private bool stage1HiddenClear;
+    private bool stage1Clear;  // 스테이지1 클리어 판별변수
+    private bool stage1HiddenClear; // 스테이지1 히든클리어 판별변수   이하 동문
     private bool stage2Clear;
     private bool stage2HiddenClear;
     private bool stage3Clear;
@@ -23,6 +23,9 @@ public class GameManager : MonoBehaviour
     // 진행상황(스테이지)
     // ========================================================================
     private int ingameStage; //스테이지 입장 시 어떤 스테이지인지 판별하게해주는 변수
+    private int stage1IngameScore; //스테이지1 최종 점수
+    private int stage2IngameScore; //스테이지2 최종 점수
+    private int stage3IngameScore; //스테이지3 최종 점수
     // ========================================================================
 
 
@@ -202,5 +205,35 @@ public class GameManager : MonoBehaviour
     public void SetStage3HiddenClear(bool isClear)
     {
         stage3HiddenClear = isClear;
+    }
+
+    public void SetStage1Score(int Score)
+    {
+        stage1IngameScore = Score;
+    }
+
+    public void SetStage2Score(int Score)
+    {
+        stage2IngameScore = Score;
+    }
+
+    public void SetStage3Score(int Score)
+    {
+        stage3IngameScore = Score;
+    }
+
+    public int GetStage1Score()
+    {
+        return stage1IngameScore;
+    }
+
+    public int GetStage2Score()
+    {
+        return stage2IngameScore;
+    }
+
+    public int GetStage3Score()
+    {
+        return stage3IngameScore;
     }
 }
