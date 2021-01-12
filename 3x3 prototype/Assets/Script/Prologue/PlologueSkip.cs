@@ -9,8 +9,6 @@ public class PlologueSkip : MonoBehaviour
     public GameObject checkNameObject;
     void Start()
     {
-        if (PlayerPrefs.HasKey("Name"))
-            SceneManager.LoadScene(2);
             
     }
 

@@ -19,5 +19,6 @@ public class TestClearPlayerPrefs : MonoBehaviour
     public void ClearPlayerPrefs()
     {
         PlayerPrefs.DeleteAll();
+        GameManager.instance.ResetGameManager();
     }
 }

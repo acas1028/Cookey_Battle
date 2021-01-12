@@ -20,6 +20,6 @@ public class SceneChange : MonoBehaviour
 
     public void Scene_Change()
     {
-        SceneManager.LoadScene(select);
+        LoadingSceneManager.LoadScene(select);
     }
 }

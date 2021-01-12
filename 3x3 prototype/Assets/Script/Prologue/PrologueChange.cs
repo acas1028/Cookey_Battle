@@ -35,7 +35,7 @@ public class PrologueChange : MonoBehaviour
         }
 
         if (nextButton.transform.tag == "Finish")
-            SceneManager.LoadScene(sceneNumber);
+            LoadingSceneManager.LoadScene(sceneNumber);
 
     }
 }

@@ -236,4 +236,16 @@ public class GameManager : MonoBehaviour
     {
         return stage3IngameScore;
     }
+
+    public void ResetGameManager()
+    {
+        userName = "";
+
+        stage1Clear = false;
+        stage2Clear = false;
+        stage3Clear = false;
+        stage1HiddenClear = false;
+        stage2HiddenClear = false;
+        stage3HiddenClear = false;
+    }
 }
