@@ -23,9 +23,9 @@ public class GameManager : MonoBehaviour
     // 진행상황(스테이지)
     // ========================================================================
     private int ingameStage; //스테이지 입장 시 어떤 스테이지인지 판별하게해주는 변수
-    private int stage1IngameScore; //스테이지1 최종 점수
-    private int stage2IngameScore; //스테이지2 최종 점수
-    private int stage3IngameScore; //스테이지3 최종 점수
+    private int stage1Score; //스테이지1 최종 점수
+    private int stage2Score; //스테이지2 최종 점수
+    private int stage3Score; //스테이지3 최종 점수
     // ========================================================================
 
 
@@ -123,6 +123,22 @@ public class GameManager : MonoBehaviour
                     break;
             }
         }
+
+        if(PlayerPrefs.HasKey("Stage1Score"))
+        {
+            stage1Score = PlayerPrefs.GetInt("Stage1Score");
+        }
+        if (PlayerPrefs.HasKey("Stage2Score"))
+        {
+            stage2Score = PlayerPrefs.GetInt("Stage2Score");
+        }
+        if (PlayerPrefs.HasKey("Stage3Score"))
+        {
+            stage3Score = PlayerPrefs.GetInt("Stage3Score");
+        }
+
+
+
     }
 
     // Update is called once per frame
@@ -209,32 +225,32 @@ public class GameManager : MonoBehaviour
 
     public void SetStage1Score(int Score)
     {
-        stage1IngameScore = Score;
+        stage1Score = Score;
     }
 
     public void SetStage2Score(int Score)
     {
-        stage2IngameScore = Score;
+        stage2Score = Score;
     }
 
     public void SetStage3Score(int Score)
     {
-        stage3IngameScore = Score;
+        stage3Score = Score;
     }
 
     public int GetStage1Score()
     {
-        return stage1IngameScore;
+        return stage1Score;
     }
 
     public int GetStage2Score()
     {
-        return stage2IngameScore;
+        return stage2Score;
     }
 
     public int GetStage3Score()
     {
-        return stage3IngameScore;
+        return stage3Score;
     }
 
     public void ResetGameManager()
