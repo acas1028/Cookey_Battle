@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CompareActiveAnswer : MonoBehaviour
 {
+    public GameObject fieldObject;
+    public GameObject gameFinishObject;
+
     int ingameStage;
     int ingameStep;
     // Start is called before the first frame update
@@ -16,10 +19,21 @@ public class CompareActiveAnswer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        compareAnswer(ingameStep);
+        switch(ingameStage)
+        {
+            case 1:
+                CompareAnswer_Stage1(ingameStep);
+                break;
+            case 2:
+                CompareAnswer_Stage2(ingameStep);
+                break;
+            case 3:
+                CompareAnswer_Stage3(ingameStep);
+                break;
+        }
     }
 
-    void compareAnswer(int step)
+    void CompareAnswer_Stage1(int step)  // 예를들어 스텝 7이 끝
     {
         switch(step)
         {
@@ -53,16 +67,46 @@ public class CompareActiveAnswer : MonoBehaviour
                         ingameStep++;
                 }
                 break;
+            case 6:
+                {
+                    if (Input.GetKeyDown(KeyCode.Alpha6))
+                        ingameStep++;
+                }
+                break;
+            case 7:
+                {
+                    if (Input.GetKeyDown(KeyCode.Alpha7))
+                    {
+                        ingameStep++;
+
+                        gameFinishObject.SetActive(true);
+                        GameManager.instance.SetStage1Score(fieldObject.GetComponent<FieldObjectScript>().getFieldScore());
+                    }
+                }
+                break;
 
         }
     }
 
-    public int getingameStep()
+    void CompareAnswer_Stage2(int step)     // 13
+    {
+
+    }
+
+    void CompareAnswer_Stage3(int step)     // 15
+    {
+
+    }
+    public int GetIngameStep()
     {
         return ingameStep;
     }
 
-    public void setingameStep(int num)
+    public int GetIngameStage()
+    {
+        return ingameStage;
+    }
+    public void SetIngameStep(int num)
     {
         ingameStep = num;
     }

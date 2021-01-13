@@ -17,7 +17,7 @@ public class WareHouseInventoryScript : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            ingameStepObject.GetComponent<CompareActiveAnswer>().setingameStep(1);
+            ingameStepObject.GetComponent<CompareActiveAnswer>().SetIngameStep(1);
             MainKeyBoardInput.SetActive(true);
             this.gameObject.SetActive(false);
         }

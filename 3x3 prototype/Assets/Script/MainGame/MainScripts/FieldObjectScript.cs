@@ -5,12 +5,12 @@ using UnityEngine;
 public class FieldObjectScript : MonoBehaviour
 {
     int     itemNumber;
-    float   fieldScore;
+    int     fieldScore;
     // Start is called before the first frame update
     void Start()
     {
         itemNumber = 0;
-        fieldScore = 0;
+        fieldScore = 67;
     }
 
     // Update is called once per frame
@@ -24,7 +24,7 @@ public class FieldObjectScript : MonoBehaviour
         return itemNumber;
     }
 
-    public float getFieldScore()
+    public int getFieldScore()
     {
         return fieldScore;
     }

@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LoadingScene.unity
     guid: 1ae2bdc7e17c081419b1a2b855719d46
+  - enabled: 1
+    path: Assets/Scenes/ScoreEvaluation.unity
+    guid: 70b582612dc92b242b2195b050dc0d53
   m_configObjects: {}
