@@ -21,5 +21,6 @@ public class WareHouseInventoryScript : MonoBehaviour
             MainKeyBoardInput.SetActive(true);
             this.gameObject.SetActive(false);
         }
+
     }
 }
