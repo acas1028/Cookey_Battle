@@ -6,21 +6,17 @@ using UnityEngine.UI;
 public class OpenandClose : MonoBehaviour
 {
     public GameObject inventoryPanel;
-    public bool activeInventory = false;
+    public bool activeInventory = true;
 
     private void Start()
     {
-        inventoryPanel.SetActive(activeInventory);
+        
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            activeInventory = !activeInventory;
-            inventoryPanel.SetActive(activeInventory);
-        }
-        else if (activeInventory == true)
+        
+        if (activeInventory == true)
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {

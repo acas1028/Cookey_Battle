@@ -1,0 +1,34 @@
+ingredient	Butter	버터	FALSE
+ingredient	Mint Candy	박하사탕	FALSE
+ingredient	Syrup	물엿	FALSE
+ingredient	Milk	우유	FALSE
+ingredient	Kohakuto	코하쿠토	FALSE
+ingredient	Ruby	루비	FALSE
+ingredient	Mayo	마요네즈	FALSE
+ingredient	Fresh Cream	생크림	FALSE
+ingredient	Cloud Cream	구름크림	FALSE
+ingredient	Honey Mushroom	벌꿀버섯	FALSE
+ingredient	Slime	슬라임	FALSE
+ingredient	Gold Slime	골드슬라임	FALSE
+ingredient	Soya Milk	두유	FALSE
+ingredient	Oil	기름	FALSE
+ingredient	Mushroom	버섯	FALSE
+ingredient	Garlic	마늘	FALSE
+ingredient	Lettuce	양상추	FALSE
+ingredient	Apple	사과	FALSE
+ingredient	Tomato	토마토	FALSE
+ingredient	Strawberry	딸기	FALSE
+ingredient	Mandragora	만드라고라	FALSE
+ingredient	Dragon Meat	드래곤고기	FALSE
+ingredient	Salt	소금	FALSE
+ingredient	Pepper	후추	FALSE
+ingredient	Soy Sauce	간장	FALSE
+ingredient	Water	물	FALSE
+ingredient	Honey Bear Foot	꿀곰발바닥	FALSE
+ingredient	Honey	꿀소스	FALSE
+ingredient	World Tree Leaf	세계수월잎	FALSE
+ingredient	Bread Leaf	빵잎	FALSE
+ingredient	Wasp Tree Bark	말벌꿀나무 껍질	FALSE
+ingredient	Yogurt	요거트	FALSE
+ingredient	Honey Deer Horn	꿀사슴의 뿔	FALSE
+ingredient	Dwarf Tree Leaf	난쟁이나무의 잎	FALSE
