@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
     // 세팅
     // ======================================================================
     // 진행상황(스테이지)
+    private bool stage1Try; // 시도했는가?
+    private bool stage2Try;
+    private bool stage3Try;
     private bool stage1Clear;  // 스테이지1 클리어 판별변수
     private bool stage1HiddenClear; // 스테이지1 히든클리어 판별변수   이하 동문
     private bool stage2Clear;
@@ -27,6 +30,9 @@ public class GameManager : MonoBehaviour
     private int stage2Score; //스테이지2 최종 점수
     private int stage3Score; //스테이지3 최종 점수
     // ========================================================================
+    private int stage1HighScore; // 최고점
+    private int stage2HighScore;
+    private int stage3HighScore;
 
 
     public static GameManager instance
@@ -64,6 +70,9 @@ public class GameManager : MonoBehaviour
         }
         userName = "";
 
+        stage1Try = false;
+        stage2Try = false;
+        stage3Try = false;
         stage1Clear = false;
         stage2Clear = false;
         stage3Clear = false;
@@ -107,6 +116,7 @@ public class GameManager : MonoBehaviour
                     stage2HiddenClear = true;
                     break;
             }
+           
         }
 
         if (PlayerPrefs.HasKey("Stage3"))
@@ -127,14 +137,17 @@ public class GameManager : MonoBehaviour
         if(PlayerPrefs.HasKey("Stage1Score"))
         {
             stage1Score = PlayerPrefs.GetInt("Stage1Score");
+            stage1Try = true;  // 점수가있다 => 시도를 했다.
         }
         if (PlayerPrefs.HasKey("Stage2Score"))
         {
             stage2Score = PlayerPrefs.GetInt("Stage2Score");
+            stage2Try = true;
         }
         if (PlayerPrefs.HasKey("Stage3Score"))
         {
             stage3Score = PlayerPrefs.GetInt("Stage3Score");
+            stage3Try = true;
         }
 
 
@@ -253,6 +266,34 @@ public class GameManager : MonoBehaviour
         return stage3Score;
     }
 
+    public bool GetStage1Try()
+    {
+        return stage1Try;
+    }
+
+    public bool GetStage2Try()
+    {
+        return stage2Try;
+    }
+
+    public bool GetStage3Try()
+    {
+        return stage3Try;
+    }
+
+    public void SetStage1Try(bool isTry)
+    {
+        stage1Try = isTry;
+    }
+    public void SetStage2Try(bool isTry)
+    {
+        stage2Try = isTry;
+    }
+    public void SetStage3Try(bool isTry)
+    {
+        stage3Try = isTry;
+    }
+
     public void ResetGameManager()
     {
         userName = "";
@@ -263,7 +304,9 @@ public class GameManager : MonoBehaviour
         stage1HiddenClear = false;
         stage2HiddenClear = false;
         stage3HiddenClear = false;
-
+        stage1Try = false;
+        stage2Try = false;
+        stage3Try = false;
         stage1Score = 0;
         stage2Score = 0;
         stage3Score = 0;

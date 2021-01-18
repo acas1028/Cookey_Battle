@@ -16,6 +16,7 @@ public class TestScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
+            GameManager.instance.SetStage1Try(true);
             GameManager.instance.SetStage1Clear(true);
             Debug.Log("스테이지 1 클리어");
             PlayerPrefs.SetInt("Stage1",1);
@@ -24,6 +25,7 @@ public class TestScript : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.W))
         {
+            GameManager.instance.SetStage2Try(true);
             GameManager.instance.SetStage2Clear(true);
             Debug.Log("스테이지 2 클리어");
             PlayerPrefs.SetInt("Stage2", 1);
@@ -32,6 +34,7 @@ public class TestScript : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
+            GameManager.instance.SetStage3Try(true);
             GameManager.instance.SetStage3Clear(true);
             Debug.Log("스테이지 3 클리어");
             PlayerPrefs.SetInt("Stage3", 1);
@@ -40,6 +43,7 @@ public class TestScript : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.A))
         {
+            GameManager.instance.SetStage1Try(true);
             GameManager.instance.SetStage1HiddenClear(true);
             Debug.Log("스테이지 1 히든클리어");
             PlayerPrefs.SetInt("Stage1", 2);
@@ -48,6 +52,7 @@ public class TestScript : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.S))
         {
+            GameManager.instance.SetStage2Try(true);
             GameManager.instance.SetStage2HiddenClear(true);
             Debug.Log("스테이지 2 히든클리어");
             PlayerPrefs.SetInt("Stage2", 2);
@@ -56,6 +61,7 @@ public class TestScript : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
+            GameManager.instance.SetStage2Try(true);
             GameManager.instance.SetStage3HiddenClear(true);
             Debug.Log("스테이지 3 히든클리어");
             PlayerPrefs.SetInt("Stage3", 2);
@@ -64,6 +70,7 @@ public class TestScript : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Z))
         {
+            GameManager.instance.SetStage1Try(true);
             GameManager.instance.SetStage1HiddenClear(true);
             GameManager.instance.SetStage1Score(100);
             Debug.Log("스테이지 1 히든퍼펙트클리어");
@@ -73,6 +80,7 @@ public class TestScript : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.X))
         {
+            GameManager.instance.SetStage2Try(true);
             GameManager.instance.SetStage2HiddenClear(true);
             GameManager.instance.SetStage2Score(100);
             Debug.Log("스테이지 2 히든퍼펙트클리어");
@@ -82,6 +90,7 @@ public class TestScript : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.C))
         {
+            GameManager.instance.SetStage3Try(true);
             GameManager.instance.SetStage3HiddenClear(true);
             GameManager.instance.SetStage3Score(100);
             Debug.Log("스테이지 3 히든퍼펙트클리어");

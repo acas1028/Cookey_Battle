@@ -9,6 +9,15 @@ public class BeforeChangeScript : MonoBehaviour
     public GameObject afterSpaceObject_2nd;
     public GameObject afterSpaceObject_3rd;
     public GameObject foodCover;
+    public GameObject backGroundEffect;
+
+    public GameObject goMainMenuButton;
+    public GameObject goStageSelectButton;
+
+
+    public Sprite goodEffect;
+    public Sprite badEffect;
+    public Sprite hiddenEffect;
 
     int enemy1Score;
     int enemy2Score;
@@ -17,6 +26,7 @@ public class BeforeChangeScript : MonoBehaviour
     void Start()
     {
         SetEnemyScore();
+        SetEffect();
 
         Debug.Log("player" + playerScore);
         Debug.Log("enemy1" + enemy1Score);
@@ -39,7 +49,10 @@ public class BeforeChangeScript : MonoBehaviour
                 afterSpaceObject_3rd.SetActive(true);
 
             foodCover.SetActive(false);
+            backGroundEffect.SetActive(true);
             this.gameObject.SetActive(false);
+            goMainMenuButton.SetActive(true);
+            goStageSelectButton.SetActive(true);
         }
     }
 
@@ -66,6 +79,33 @@ public class BeforeChangeScript : MonoBehaviour
        
     }
 
+    void SetEffect()
+    {
+        switch(GameManager.instance.GetStageLevel())
+        {
+            case 1:
+                backGroundEffect.GetComponent<Image>().sprite = badEffect;
+                if (GameManager.instance.GetStage1Clear())
+                    backGroundEffect.GetComponent<Image>().sprite = goodEffect;
+                if (GameManager.instance.GetStage1HiddenClear())
+                    backGroundEffect.GetComponent<Image>().sprite = hiddenEffect;
+                break;
+            case 2:
+                backGroundEffect.GetComponent<Image>().sprite = badEffect;
+                if (GameManager.instance.GetStage2Clear())
+                    backGroundEffect.GetComponent<Image>().sprite = goodEffect;
+                if (GameManager.instance.GetStage2HiddenClear())
+                    backGroundEffect.GetComponent<Image>().sprite = hiddenEffect;
+                break;
+            case 3:
+                backGroundEffect.GetComponent<Image>().sprite = badEffect;
+                if (GameManager.instance.GetStage3Clear())
+                    backGroundEffect.GetComponent<Image>().sprite = goodEffect;
+                if (GameManager.instance.GetStage3HiddenClear())
+                    backGroundEffect.GetComponent<Image>().sprite = hiddenEffect;
+                break;
+        }
+    }
     public int GetEnemy1Score()
     {
         return enemy1Score;
