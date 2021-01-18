@@ -10,6 +10,7 @@ public class UI_ImageChangeScript : MonoBehaviour
     public GameObject hiddenEffectPanel;
     public Sprite noneClearImage;
     public Sprite firstClearImage;
+    public Sprite badClearImage;
     public Sprite hiddenClearImage;
     public Sprite hiddenPerfectClearImage;
 
@@ -18,183 +19,126 @@ public class UI_ImageChangeScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        switch(stageNumber)
-        {
-            case 1:
-                if (GameManager.instance.GetStage1Clear() == false)
-                {
-                    this.gameObject.GetComponent<Image>().sprite = noneClearImage;
-                    translucentLockPanel.SetActive(false);
-                }
-                else if (GameManager.instance.GetStage1Clear() == true)
-                {
-                    this.gameObject.GetComponent<Image>().sprite = firstClearImage;
-                    translucentLockPanel.SetActive(false);
-                }
-                if(GameManager.instance.GetStage1HiddenClear() == true)
-                {
-                    hiddenEffectPanel.SetActive(true);
-                    if (GameManager.instance.GetStage1Score() == 100)
-                    {
-                        this.gameObject.GetComponent<Image>().sprite = hiddenPerfectClearImage;
-                        hiddenEffectPanel.GetComponent<Image>().sprite = hiddenPerfectClearEffect;
-                    }
-                    else
-                    {
-                        this.gameObject.GetComponent<Image>().sprite = hiddenClearImage;
-                        hiddenEffectPanel.GetComponent<Image>().sprite = hiddenClearEffect;
-                    }
-                    translucentLockPanel.SetActive(false);
-                }   
-                break;
-            case 2:
-                if (GameManager.instance.GetStage2Clear() == false)
-                {
-                    this.gameObject.GetComponent<Image>().sprite = noneClearImage;
-                    translucentLockPanel.SetActive(true);
-                }
-                else if (GameManager.instance.GetStage2Clear() == true)
-                {
-                    this.gameObject.GetComponent<Image>().sprite = firstClearImage;
-                    translucentLockPanel.SetActive(false);
-                }
-                if (GameManager.instance.GetStage2HiddenClear() == true)
-                {
-                    hiddenEffectPanel.SetActive(true);
-                    if (GameManager.instance.GetStage2Score() == 100)
-                    {
-                        this.gameObject.GetComponent<Image>().sprite = hiddenPerfectClearImage;
-                        hiddenEffectPanel.GetComponent<Image>().sprite = hiddenPerfectClearEffect;
-                    }
-                    else
-                    {
-                        this.gameObject.GetComponent<Image>().sprite = hiddenClearImage;
-                        hiddenEffectPanel.GetComponent<Image>().sprite = hiddenClearEffect;
-                    }
-                    translucentLockPanel.SetActive(false);
-                }
-                break;
-            case 3:
-                if (GameManager.instance.GetStage3Clear() == false)
-                {
-                    this.gameObject.GetComponent<Image>().sprite = noneClearImage;
-                    translucentLockPanel.SetActive(true);
-                }
-                else if (GameManager.instance.GetStage3Clear() == true)
-                {
-                    this.gameObject.GetComponent<Image>().sprite = firstClearImage;
-                    translucentLockPanel.SetActive(false);
-                }
-                if (GameManager.instance.GetStage3HiddenClear() == true)
-                {
-                    hiddenEffectPanel.SetActive(true);
-                    if (GameManager.instance.GetStage3Score() == 100)
-                    {
-                        this.gameObject.GetComponent<Image>().sprite = hiddenPerfectClearImage;
-                        hiddenEffectPanel.GetComponent<Image>().sprite = hiddenPerfectClearEffect;
-                    }
-                    else
-                    {
-                        this.gameObject.GetComponent<Image>().sprite = hiddenClearImage;
-                        hiddenEffectPanel.GetComponent<Image>().sprite = hiddenClearEffect;
-                    }
-                    translucentLockPanel.SetActive(false);
-                }
-                break;
-            default:
-                break;
-        }
+        SettingImage();
+        SettingPanel();
     }
 
     // Update is called once per frame
     void Update()
     {
+        SettingImage();
+        SettingPanel();
+
+    }
+
+    void SettingImage()
+    {
         switch (stageNumber)
         {
             case 1:
-                if (GameManager.instance.GetStage1Clear() == false)
+                if (GameManager.instance.GetStage1Try() == false)
                 {
                     this.gameObject.GetComponent<Image>().sprite = noneClearImage;
-                    translucentLockPanel.SetActive(false);
                 }
-                else if (GameManager.instance.GetStage1Clear() == true)
+                else
                 {
-                    this.gameObject.GetComponent<Image>().sprite = firstClearImage;
-                    translucentLockPanel.SetActive(false);
-                }
-                if (GameManager.instance.GetStage1HiddenClear() == true)
-                {
-                    hiddenEffectPanel.SetActive(true);
-                    if (GameManager.instance.GetStage1Score() == 100)
+                    this.gameObject.GetComponent<Image>().sprite = badClearImage;
+                    if (GameManager.instance.GetStage1Clear() == true)
                     {
-                        this.gameObject.GetComponent<Image>().sprite = hiddenPerfectClearImage;
-                        hiddenEffectPanel.GetComponent<Image>().sprite = hiddenPerfectClearEffect;
+                        this.gameObject.GetComponent<Image>().sprite = firstClearImage;
                     }
-                    else
+                    if (GameManager.instance.GetStage1HiddenClear() == true)
                     {
-                        this.gameObject.GetComponent<Image>().sprite = hiddenClearImage;
-                        hiddenEffectPanel.GetComponent<Image>().sprite = hiddenClearEffect;
+                        hiddenEffectPanel.SetActive(true);
+                        if (GameManager.instance.GetStage1Score() == 100)
+                        {
+                            this.gameObject.GetComponent<Image>().sprite = hiddenPerfectClearImage;
+                            hiddenEffectPanel.GetComponent<Image>().sprite = hiddenPerfectClearEffect;
+                        }
+                        else
+                        {
+                            this.gameObject.GetComponent<Image>().sprite = hiddenClearImage;
+                            hiddenEffectPanel.GetComponent<Image>().sprite = hiddenClearEffect;
+                        }
                     }
-                    translucentLockPanel.SetActive(false);
                 }
                 break;
             case 2:
-                if (GameManager.instance.GetStage2Clear() == false)
+                if (GameManager.instance.GetStage2Try() == false)
                 {
                     this.gameObject.GetComponent<Image>().sprite = noneClearImage;
-                    translucentLockPanel.SetActive(true);
                 }
-                else if (GameManager.instance.GetStage2Clear() == true)
+                else
                 {
-                    this.gameObject.GetComponent<Image>().sprite = firstClearImage;
-                    translucentLockPanel.SetActive(false);
-                }
-                if (GameManager.instance.GetStage2HiddenClear() == true)
-                {
-                    hiddenEffectPanel.SetActive(true);
-                    if (GameManager.instance.GetStage2Score() == 100)
+                    this.gameObject.GetComponent<Image>().sprite = badClearImage;
+                    if (GameManager.instance.GetStage2Clear() == true)
                     {
-                        this.gameObject.GetComponent<Image>().sprite = hiddenPerfectClearImage;
-                        hiddenEffectPanel.GetComponent<Image>().sprite = hiddenPerfectClearEffect;
+                        this.gameObject.GetComponent<Image>().sprite = firstClearImage;
                     }
-                    else
+                    if (GameManager.instance.GetStage2HiddenClear() == true)
                     {
-                        this.gameObject.GetComponent<Image>().sprite = hiddenClearImage;
-                        hiddenEffectPanel.GetComponent<Image>().sprite = hiddenClearEffect;
+                        hiddenEffectPanel.SetActive(true);
+                        if (GameManager.instance.GetStage2Score() == 100)
+                        {
+                            this.gameObject.GetComponent<Image>().sprite = hiddenPerfectClearImage;
+                            hiddenEffectPanel.GetComponent<Image>().sprite = hiddenPerfectClearEffect;
+                        }
+                        else
+                        {
+                            this.gameObject.GetComponent<Image>().sprite = hiddenClearImage;
+                            hiddenEffectPanel.GetComponent<Image>().sprite = hiddenClearEffect;
+                        }
                     }
-                    translucentLockPanel.SetActive(false);
                 }
                 break;
             case 3:
-                if (GameManager.instance.GetStage3Clear() == false)
+                if (GameManager.instance.GetStage3Try() == false)
                 {
                     this.gameObject.GetComponent<Image>().sprite = noneClearImage;
-                    translucentLockPanel.SetActive(true);
                 }
-                else if (GameManager.instance.GetStage3Clear() == true)
+                else
                 {
-                    this.gameObject.GetComponent<Image>().sprite = firstClearImage;
-                    translucentLockPanel.SetActive(false);
-                }
-                if (GameManager.instance.GetStage3HiddenClear() == true)
-                {
-                    hiddenEffectPanel.SetActive(true);
-                    if (GameManager.instance.GetStage3Score() == 100)
+                    this.gameObject.GetComponent<Image>().sprite = badClearImage;
+                    if (GameManager.instance.GetStage3Clear() == true)
                     {
-                        this.gameObject.GetComponent<Image>().sprite = hiddenPerfectClearImage;
-                        hiddenEffectPanel.GetComponent<Image>().sprite = hiddenPerfectClearEffect;
+                        this.gameObject.GetComponent<Image>().sprite = firstClearImage;
                     }
-                    else
+                    if (GameManager.instance.GetStage3HiddenClear() == true)
                     {
-                        this.gameObject.GetComponent<Image>().sprite = hiddenClearImage;
-                        hiddenEffectPanel.GetComponent<Image>().sprite = hiddenClearEffect;
+                        hiddenEffectPanel.SetActive(true);
+                        if (GameManager.instance.GetStage3Score() == 100)
+                        {
+                            this.gameObject.GetComponent<Image>().sprite = hiddenPerfectClearImage;
+                            hiddenEffectPanel.GetComponent<Image>().sprite = hiddenPerfectClearEffect;
+                        }
+                        else
+                        {
+                            this.gameObject.GetComponent<Image>().sprite = hiddenClearImage;
+                            hiddenEffectPanel.GetComponent<Image>().sprite = hiddenClearEffect;
+                        }
                     }
-                    translucentLockPanel.SetActive(false);
                 }
                 break;
             default:
                 break;
         }
     }
-
+    void SettingPanel()
+    {
+        switch(stageNumber)
+        {
+            case 1:
+                translucentLockPanel.SetActive(false);
+                break;
+            case 2:
+                translucentLockPanel.SetActive(true);
+                if(GameManager.instance.GetStage1Clear()==true || GameManager.instance.GetStage1HiddenClear() == true)
+                    translucentLockPanel.SetActive(false);
+                break;
+            case 3:
+                if (GameManager.instance.GetStage2Clear() == true || GameManager.instance.GetStage2HiddenClear() == true)
+                    translucentLockPanel.SetActive(false);
+                break;
+        }
+    }
 }
