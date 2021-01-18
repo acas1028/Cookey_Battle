@@ -16,6 +16,18 @@ public class GameFinishScript : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
+            switch(GameManager.instance.GetStageLevel())
+            {
+                case 1:
+                    GameManager.instance.SetStage1Try(true);
+                    break;
+                case 2:
+                    GameManager.instance.SetStage2Try(true);
+                    break;
+                case 3:
+                    GameManager.instance.SetStage3Try(true);
+                    break;
+            }
             LoadingSceneManager.LoadScene(8);
         }
     }
