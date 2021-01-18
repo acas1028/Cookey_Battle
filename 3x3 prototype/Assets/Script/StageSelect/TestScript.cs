@@ -27,7 +27,7 @@ public class TestScript : MonoBehaviour
             GameManager.instance.SetStage2Clear(true);
             Debug.Log("스테이지 2 클리어");
             PlayerPrefs.SetInt("Stage2", 1);
-            PlayerPrefs.SetInt("Stage2Score", 70);
+            PlayerPrefs.SetInt("Stage2Score", 80);
             GameManager.instance.SetStage1Score(80);
         }
         if (Input.GetKeyDown(KeyCode.E))
@@ -35,7 +35,7 @@ public class TestScript : MonoBehaviour
             GameManager.instance.SetStage3Clear(true);
             Debug.Log("스테이지 3 클리어");
             PlayerPrefs.SetInt("Stage3", 1);
-            PlayerPrefs.SetInt("Stage3Score", 70);
+            PlayerPrefs.SetInt("Stage3Score", 80);
             GameManager.instance.SetStage1Score(80);
         }
         if (Input.GetKeyDown(KeyCode.A))
@@ -43,7 +43,7 @@ public class TestScript : MonoBehaviour
             GameManager.instance.SetStage1HiddenClear(true);
             Debug.Log("스테이지 1 히든클리어");
             PlayerPrefs.SetInt("Stage1", 2);
-            PlayerPrefs.SetInt("Stage1Score", 70);
+            PlayerPrefs.SetInt("Stage1Score", 80);
             GameManager.instance.SetStage1Score(80);
         }
         if (Input.GetKeyDown(KeyCode.S))
@@ -51,7 +51,7 @@ public class TestScript : MonoBehaviour
             GameManager.instance.SetStage2HiddenClear(true);
             Debug.Log("스테이지 2 히든클리어");
             PlayerPrefs.SetInt("Stage2", 2);
-            PlayerPrefs.SetInt("Stage2Score", 70);
+            PlayerPrefs.SetInt("Stage2Score", 80);
             GameManager.instance.SetStage2Score(80);
         }
         if (Input.GetKeyDown(KeyCode.D))
@@ -59,7 +59,7 @@ public class TestScript : MonoBehaviour
             GameManager.instance.SetStage3HiddenClear(true);
             Debug.Log("스테이지 3 히든클리어");
             PlayerPrefs.SetInt("Stage3", 2);
-            PlayerPrefs.SetInt("Stage3Score", 70);
+            PlayerPrefs.SetInt("Stage3Score", 80);
             GameManager.instance.SetStage3Score(80);
         }
         if (Input.GetKeyDown(KeyCode.Z))

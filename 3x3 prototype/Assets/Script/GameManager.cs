@@ -263,5 +263,9 @@ public class GameManager : MonoBehaviour
         stage1HiddenClear = false;
         stage2HiddenClear = false;
         stage3HiddenClear = false;
+
+        stage1Score = 0;
+        stage2Score = 0;
+        stage3Score = 0;
     }
 }
