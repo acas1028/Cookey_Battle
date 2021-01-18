@@ -27,6 +27,9 @@ public class GameManager : MonoBehaviour
     private int stage2Score; //스테이지2 최종 점수
     private int stage3Score; //스테이지3 최종 점수
     // ========================================================================
+    private bool stage1Try;
+    private bool stage2Try;
+    private bool stage3Try;
 
 
     public static GameManager instance
@@ -70,6 +73,9 @@ public class GameManager : MonoBehaviour
         stage1HiddenClear = false;
         stage2HiddenClear = false;
         stage3HiddenClear = false;
+        stage1Try = false;
+        stage2Try = false;
+        stage3Try = false;
         DontDestroyOnLoad(gameObject);
     }
     void Start()
@@ -127,14 +133,17 @@ public class GameManager : MonoBehaviour
         if(PlayerPrefs.HasKey("Stage1Score"))
         {
             stage1Score = PlayerPrefs.GetInt("Stage1Score");
+            stage1Try = true;
         }
         if (PlayerPrefs.HasKey("Stage2Score"))
         {
             stage2Score = PlayerPrefs.GetInt("Stage2Score");
+            stage2Try = true;
         }
         if (PlayerPrefs.HasKey("Stage3Score"))
         {
             stage3Score = PlayerPrefs.GetInt("Stage3Score");
+            stage3Try = true;
         }
 
 
@@ -252,6 +261,36 @@ public class GameManager : MonoBehaviour
     {
         return stage3Score;
     }
+
+    public bool GetStage1Try()
+    {
+        return stage1Try;
+    }
+
+    public bool GetStage2Try()
+    {
+        return stage2Try;
+    }
+
+    public bool GetStage3Try()
+    {
+        return stage3Try;
+    }
+
+    public void SetStage1Try(bool isTry)
+    {
+        stage1Try = isTry;
+    }
+
+    public void SetStage2Try(bool isTry)
+    {
+        stage2Try = isTry;
+    }
+    public void SetStage3Try(bool isTry)
+    {
+        stage3Try = isTry;
+    }
+
 
     public void ResetGameManager()
     {
