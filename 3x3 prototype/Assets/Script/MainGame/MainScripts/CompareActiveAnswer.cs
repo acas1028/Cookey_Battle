@@ -80,6 +80,7 @@ public class CompareActiveAnswer : MonoBehaviour
                         ingameStep++;
 
                         gameFinishObject.SetActive(true);
+                        GameManager.instance.SetStage1Score(fieldObject.GetComponent<FieldObjectScript>().getFieldScore());
                     }
                 }
                 break;

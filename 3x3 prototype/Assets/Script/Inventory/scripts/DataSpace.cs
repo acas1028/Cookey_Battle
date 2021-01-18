@@ -14,7 +14,10 @@ public class DataSpace : MonoBehaviour
 
     public bool dataMovingCount = false;
 
-    
+    private void Start()
+    {
+       
+    }
 
     private void Update()
     {

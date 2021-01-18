@@ -21,7 +21,7 @@ public class WareHouseDataMove : MonoBehaviour
 
     public bool isInventoryMove = false;
 
-    public float DoubleClick_Second = 0.1f;
+    public float DoubleClick_Second = 0.25f;
 
     public bool OneClick = false;
 
@@ -42,7 +42,7 @@ public class WareHouseDataMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        Timer = Time.time;
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -51,20 +51,17 @@ public class WareHouseDataMove : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            if (OneClick == false)
+            if (!OneClick)
             {
-                Timer = Time.time;
                 OneClick = true;
-
-
             }
-            else if (OneClick == true && (Time.time - Timer) < DoubleClick_Second)
+            else if (OneClick && (Timer > DoubleClick_Second))
             {
-
                 OneClick = false;
                 DataMoving();
             }
 
+            Debug.Log(Time.time - Timer);
         }
 
 
