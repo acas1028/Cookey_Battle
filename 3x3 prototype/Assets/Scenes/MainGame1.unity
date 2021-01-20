@@ -4823,3 +4823,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50c3d6c4be50d404ca94118c161eef6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ingameStepObject: {fileID: 346193893}
+  fieldObject: {fileID: 476160129}

@@ -20,14 +20,12 @@ public class UI_ImageChangeScript : MonoBehaviour
     void Start()
     {
         SettingImage();
-        SettingPanel();
     }
 
     // Update is called once per frame
     void Update()
     {
         SettingImage();
-        SettingPanel();
 
     }
 
@@ -43,14 +41,14 @@ public class UI_ImageChangeScript : MonoBehaviour
                 else
                 {
                     this.gameObject.GetComponent<Image>().sprite = badClearImage;
-                    if (GameManager.instance.GetStage1Clear() == true)
+                    if (GameManager.instance.GetStage1State() == 1)
                     {
                         this.gameObject.GetComponent<Image>().sprite = firstClearImage;
                     }
-                    if (GameManager.instance.GetStage1HiddenClear() == true)
+                    if (GameManager.instance.GetStage1State() == 2)
                     {
                         hiddenEffectPanel.SetActive(true);
-                        if (GameManager.instance.GetStage1Score() == 100)
+                        if (GameManager.instance.GetStage1HighScore() == 100)
                         {
                             this.gameObject.GetComponent<Image>().sprite = hiddenPerfectClearImage;
                             hiddenEffectPanel.GetComponent<Image>().sprite = hiddenPerfectClearEffect;
@@ -71,14 +69,14 @@ public class UI_ImageChangeScript : MonoBehaviour
                 else
                 {
                     this.gameObject.GetComponent<Image>().sprite = badClearImage;
-                    if (GameManager.instance.GetStage2Clear() == true)
+                    if (GameManager.instance.GetStage2State() == 1)
                     {
                         this.gameObject.GetComponent<Image>().sprite = firstClearImage;
                     }
-                    if (GameManager.instance.GetStage2HiddenClear() == true)
+                    if (GameManager.instance.GetStage2State() == 2)
                     {
                         hiddenEffectPanel.SetActive(true);
-                        if (GameManager.instance.GetStage2Score() == 100)
+                        if (GameManager.instance.GetStage2HighScore() == 100)
                         {
                             this.gameObject.GetComponent<Image>().sprite = hiddenPerfectClearImage;
                             hiddenEffectPanel.GetComponent<Image>().sprite = hiddenPerfectClearEffect;
@@ -99,14 +97,14 @@ public class UI_ImageChangeScript : MonoBehaviour
                 else
                 {
                     this.gameObject.GetComponent<Image>().sprite = badClearImage;
-                    if (GameManager.instance.GetStage3Clear() == true)
+                    if (GameManager.instance.GetStage3State() == 1)
                     {
                         this.gameObject.GetComponent<Image>().sprite = firstClearImage;
                     }
-                    if (GameManager.instance.GetStage3HiddenClear() == true)
+                    if (GameManager.instance.GetStage3State() == 2)
                     {
                         hiddenEffectPanel.SetActive(true);
-                        if (GameManager.instance.GetStage3Score() == 100)
+                        if (GameManager.instance.GetStage3HighScore() == 100)
                         {
                             this.gameObject.GetComponent<Image>().sprite = hiddenPerfectClearImage;
                             hiddenEffectPanel.GetComponent<Image>().sprite = hiddenPerfectClearEffect;
@@ -123,22 +121,5 @@ public class UI_ImageChangeScript : MonoBehaviour
                 break;
         }
     }
-    void SettingPanel()
-    {
-        switch(stageNumber)
-        {
-            case 1:
-                translucentLockPanel.SetActive(false);
-                break;
-            case 2:
-                translucentLockPanel.SetActive(true);
-                if(GameManager.instance.GetStage1Clear()==true || GameManager.instance.GetStage1HiddenClear() == true)
-                    translucentLockPanel.SetActive(false);
-                break;
-            case 3:
-                if (GameManager.instance.GetStage2Clear() == true || GameManager.instance.GetStage2HiddenClear() == true)
-                    translucentLockPanel.SetActive(false);
-                break;
-        }
-    }
+    
 }

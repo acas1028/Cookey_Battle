@@ -309,7 +309,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -63}
+  m_AnchoredPosition: {x: 0, y: -60}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &48719822
@@ -329,6 +329,7 @@ MonoBehaviour:
   hiddenEffectPanel: {fileID: 912424491}
   noneClearImage: {fileID: 21300000, guid: 017a910eca515ee43a907921da6db313, type: 3}
   firstClearImage: {fileID: 21300000, guid: 248876fbc6fec5f4ca59e63b15721dc4, type: 3}
+  badClearImage: {fileID: 0}
   hiddenClearImage: {fileID: 21300000, guid: 7cd13f4db382e1741a82823a6292fd7b, type: 3}
   hiddenPerfectClearImage: {fileID: 0}
   hiddenClearEffect: {fileID: 0}
@@ -653,7 +654,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -60}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &382122082
@@ -673,6 +674,7 @@ MonoBehaviour:
   hiddenEffectPanel: {fileID: 947618834}
   noneClearImage: {fileID: 21300000, guid: 6fab0a10f5f06ff4c890ba1cf28e506b, type: 3}
   firstClearImage: {fileID: 21300000, guid: 248876fbc6fec5f4ca59e63b15721dc4, type: 3}
+  badClearImage: {fileID: 0}
   hiddenClearImage: {fileID: 21300000, guid: 7cd13f4db382e1741a82823a6292fd7b, type: 3}
   hiddenPerfectClearImage: {fileID: 0}
   hiddenClearEffect: {fileID: 0}
@@ -1004,7 +1006,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1232697861}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1103,6 +1105,7 @@ MonoBehaviour:
   hiddenEffectPanel: {fileID: 912424491}
   noneClearImage: {fileID: 21300000, guid: d31ce50c04eddcc4baaefe0a4712eb2f, type: 3}
   firstClearImage: {fileID: 21300000, guid: d31ce50c04eddcc4baaefe0a4712eb2f, type: 3}
+  badClearImage: {fileID: 21300000, guid: d31ce50c04eddcc4baaefe0a4712eb2f, type: 3}
   hiddenClearImage: {fileID: 21300000, guid: d31ce50c04eddcc4baaefe0a4712eb2f, type: 3}
   hiddenPerfectClearImage: {fileID: 21300000, guid: 1d245878ef495bc4e8932c30579d5355,
     type: 3}
@@ -1141,7 +1144,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1232697861}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1534,6 +1537,7 @@ MonoBehaviour:
   hiddenEffectPanel: {fileID: 267498944}
   noneClearImage: {fileID: 21300000, guid: 5f109c8a275450243978e2b436e7e4e7, type: 3}
   firstClearImage: {fileID: 21300000, guid: 5f109c8a275450243978e2b436e7e4e7, type: 3}
+  badClearImage: {fileID: 21300000, guid: 5f109c8a275450243978e2b436e7e4e7, type: 3}
   hiddenClearImage: {fileID: 21300000, guid: 5f109c8a275450243978e2b436e7e4e7, type: 3}
   hiddenPerfectClearImage: {fileID: 21300000, guid: abb05d0ee38078249ae3d791826c3cad,
     type: 3}
@@ -1781,6 +1785,7 @@ MonoBehaviour:
   hiddenEffectPanel: {fileID: 912424491}
   noneClearImage: {fileID: 21300000, guid: cbca626feceb2fd439375fc5e8eface0, type: 3}
   firstClearImage: {fileID: 21300000, guid: e9536b2b7d9d1b6479736c84069d9c94, type: 3}
+  badClearImage: {fileID: 21300000, guid: 5300a8b3885a5e241adcce05f771f2a4, type: 3}
   hiddenClearImage: {fileID: 21300000, guid: 136fe3d5f887cc64993b064943e99857, type: 3}
   hiddenPerfectClearImage: {fileID: 21300000, guid: 136fe3d5f887cc64993b064943e99857,
     type: 3}
@@ -2024,6 +2029,7 @@ MonoBehaviour:
   hiddenEffectPanel: {fileID: 947618834}
   noneClearImage: {fileID: 21300000, guid: cbca626feceb2fd439375fc5e8eface0, type: 3}
   firstClearImage: {fileID: 21300000, guid: e9536b2b7d9d1b6479736c84069d9c94, type: 3}
+  badClearImage: {fileID: 21300000, guid: 5300a8b3885a5e241adcce05f771f2a4, type: 3}
   hiddenClearImage: {fileID: 21300000, guid: 136fe3d5f887cc64993b064943e99857, type: 3}
   hiddenPerfectClearImage: {fileID: 21300000, guid: 136fe3d5f887cc64993b064943e99857,
     type: 3}
@@ -2176,8 +2182,8 @@ RectTransform:
   m_Children:
   - {fileID: 1030438024}
   - {fileID: 912424492}
-  - {fileID: 611277538}
   - {fileID: 626079622}
+  - {fileID: 611277538}
   - {fileID: 622681208}
   m_Father: {fileID: 1176073306}
   m_RootOrder: 0
@@ -2224,49 +2230,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1232697860}
   m_CullTransparentMesh: 0
---- !u!1 &1547196002
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1547196004}
-  - component: {fileID: 1547196003}
-  m_Layer: 0
-  m_Name: TestObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1547196003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1547196002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee636cd981568814cb2905eb7bfef437, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1547196004
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1547196002}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1004.5689, y: 432.1267, z: -1012.52136}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1567601300
 GameObject:
   m_ObjectHideFlags: 0
@@ -2341,6 +2304,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1567601300}
   m_CullTransparentMesh: 0
+--- !u!1 &1759139108
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1759139110}
+  - component: {fileID: 1759139109}
+  m_Layer: 0
+  m_Name: PanelChangeObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1759139109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759139108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6afc38dd25565a34aa071a9b8750729b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stage1Panel: {fileID: 611277535}
+  Stage2Panel: {fileID: 1567601300}
+  Stage3Panel: {fileID: 164118563}
+--- !u!4 &1759139110
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759139108}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1090.5519, y: 594.67914, z: -184.7847}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1762183647
 GameObject:
   m_ObjectHideFlags: 0
@@ -2462,6 +2471,7 @@ MonoBehaviour:
   hiddenEffectPanel: {fileID: 947618834}
   noneClearImage: {fileID: 21300000, guid: d181be085043cb24f97ee18dab2e6abe, type: 3}
   firstClearImage: {fileID: 21300000, guid: d181be085043cb24f97ee18dab2e6abe, type: 3}
+  badClearImage: {fileID: 21300000, guid: d181be085043cb24f97ee18dab2e6abe, type: 3}
   hiddenClearImage: {fileID: 21300000, guid: d181be085043cb24f97ee18dab2e6abe, type: 3}
   hiddenPerfectClearImage: {fileID: 21300000, guid: 682baca66e867554b9b7255254110f43,
     type: 3}
@@ -2540,7 +2550,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -60}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1812563789
@@ -2560,6 +2570,7 @@ MonoBehaviour:
   hiddenEffectPanel: {fileID: 267498944}
   noneClearImage: {fileID: 0}
   firstClearImage: {fileID: 21300000, guid: 248876fbc6fec5f4ca59e63b15721dc4, type: 3}
+  badClearImage: {fileID: 0}
   hiddenClearImage: {fileID: 0}
   hiddenPerfectClearImage: {fileID: 0}
   hiddenClearEffect: {fileID: 0}
@@ -2740,7 +2751,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2059413192
 GameObject:
@@ -2798,6 +2809,7 @@ MonoBehaviour:
   hiddenEffectPanel: {fileID: 267498944}
   noneClearImage: {fileID: 21300000, guid: cbca626feceb2fd439375fc5e8eface0, type: 3}
   firstClearImage: {fileID: 21300000, guid: e9536b2b7d9d1b6479736c84069d9c94, type: 3}
+  badClearImage: {fileID: 21300000, guid: 5300a8b3885a5e241adcce05f771f2a4, type: 3}
   hiddenClearImage: {fileID: 21300000, guid: 136fe3d5f887cc64993b064943e99857, type: 3}
   hiddenPerfectClearImage: {fileID: 21300000, guid: 136fe3d5f887cc64993b064943e99857,
     type: 3}

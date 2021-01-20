@@ -58,16 +58,34 @@ public class BeforeChangeScript : MonoBehaviour
 
     void SetEnemyScore()
     {
-        switch(GameManager.instance.GetStageLevel())
+        int rand = 0;
+        rand = Random.Range(0, 9);
+        switch (GameManager.instance.GetStageLevel())
         {
             case 1:
-                enemy1Score = Random.Range(45, 59);
-                enemy2Score = Random.Range(45, 59);
+                if (rand == 3)
+                {
+                    enemy1Score = Random.Range(45, 59);
+                    enemy2Score = Random.Range(10, 20);
+                }
+                else
+                {
+                    enemy1Score = Random.Range(45, 59);
+                    enemy2Score = Random.Range(45, 59);
+                }
                 playerScore = GameManager.instance.GetStage1Score();
                 break;
             case 2:
-                enemy1Score = Random.Range(70, 79);
-                enemy2Score = Random.Range(70, 79);
+                if(rand == 3)
+                {
+                    enemy1Score = Random.Range(70, 79);
+                    enemy2Score = Random.Range(10, 30);
+                }
+                else    
+                { 
+                    enemy1Score = Random.Range(70, 79);
+                    enemy2Score = Random.Range(70, 79); 
+                }
                 playerScore = GameManager.instance.GetStage2Score();
                 break;
             case 3:

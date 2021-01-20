@@ -20,17 +20,29 @@ public class GameManager : MonoBehaviour
     private bool stage2HiddenClear;
     private bool stage3Clear;
     private bool stage3HiddenClear;
+
+    private int stage1State; // 스테이지 클리어판별 저장변수
+    private int stage2State; // 0 none클리어 1 노말클리어 2 히든클리어 3 히든 퍼펙트클리어
+    private int stage3State;
     // 진행상황(스테이지)
     // ========================================================================
     private int ingameStage; //스테이지 입장 시 어떤 스테이지인지 판별하게해주는 변수
     private int stage1Score; //스테이지1 최종 점수
     private int stage2Score; //스테이지2 최종 점수
     private int stage3Score; //스테이지3 최종 점수
+    // =======================================================================
+    private int stage1HighScore; //최고점
+    private int stage2HighScore;
+    private int stage3HighScore;
+
     // ========================================================================
-    private bool stage1Try;
+    private bool stage1Try;  // 시도했는가 판별하는 변수
     private bool stage2Try;
     private bool stage3Try;
 
+    // ========================================================================
+    private int stageProgress;
+    
 
     public static GameManager instance
     {
@@ -67,6 +79,9 @@ public class GameManager : MonoBehaviour
         }
         userName = "";
 
+        stage1State = 0;
+        stage2State = 0;
+        stage3State = 0;
         stage1Clear = false;
         stage2Clear = false;
         stage3Clear = false;
@@ -76,6 +91,13 @@ public class GameManager : MonoBehaviour
         stage1Try = false;
         stage2Try = false;
         stage3Try = false;
+        stage1Score = 0;
+        stage2Score = 0;
+        stage3Score = 0;
+        stage1HighScore = 0;
+        stage2HighScore = 0;
+        stage3HighScore = 0;
+        stageProgress = 0;
         DontDestroyOnLoad(gameObject);
     }
     void Start()
@@ -87,65 +109,39 @@ public class GameManager : MonoBehaviour
 
         if(PlayerPrefs.HasKey("Stage1"))
         {
-            switch(PlayerPrefs.GetInt("Stage1"))
-            {
-                case 0:
-                    break;
-                case 1:
-                    stage1Clear = true;
-                    break;
-                case 2:
-                    stage1HiddenClear = true;
-                    break;
-            }
+            stage1State = PlayerPrefs.GetInt("Stage1");
         }
 
         if (PlayerPrefs.HasKey("Stage2"))
         {
-            switch (PlayerPrefs.GetInt("Stage2"))
-            {
-                case 0:
-                    break;
-                case 1:
-                    stage2Clear = true;
-                    break;
-                case 2:
-                    stage2HiddenClear = true;
-                    break;
-            }
+            stage2State = PlayerPrefs.GetInt("Stage2");
         }
 
-        if (PlayerPrefs.HasKey("Stage3"))
+        if(PlayerPrefs.HasKey("Stage3"))
         {
-            switch (PlayerPrefs.GetInt("Stage3"))
-            {
-                case 0:
-                    break;
-                case 1:
-                    stage3Clear = true;
-                    break;
-                case 2:
-                    stage3HiddenClear = true;
-                    break;
-            }
+            stage3State = PlayerPrefs.GetInt("Stage3");
         }
 
-        if(PlayerPrefs.HasKey("Stage1Score"))
+        if(PlayerPrefs.HasKey("Stage1HighScore"))
         {
-            stage1Score = PlayerPrefs.GetInt("Stage1Score");
+            stage1HighScore = PlayerPrefs.GetInt("Stage1HighScore");
             stage1Try = true;
         }
-        if (PlayerPrefs.HasKey("Stage2Score"))
+        if (PlayerPrefs.HasKey("Stage2HighScore"))
         {
-            stage2Score = PlayerPrefs.GetInt("Stage2Score");
+            stage2HighScore = PlayerPrefs.GetInt("Stage2HighScore");
             stage2Try = true;
         }
-        if (PlayerPrefs.HasKey("Stage3Score"))
+        if (PlayerPrefs.HasKey("Stage3HighScore"))
         {
-            stage3Score = PlayerPrefs.GetInt("Stage3Score");
+            stage3HighScore = PlayerPrefs.GetInt("Stage3HighScore");
             stage3Try = true;
         }
 
+        if(PlayerPrefs.HasKey("StageProgress"))
+        {
+            stageProgress = PlayerPrefs.GetInt("StageProgress");
+        }
 
 
     }
@@ -234,6 +230,7 @@ public class GameManager : MonoBehaviour
 
     public void SetStage1Score(int Score)
     {
+        
         stage1Score = Score;
     }
 
@@ -291,16 +288,105 @@ public class GameManager : MonoBehaviour
         stage3Try = isTry;
     }
 
+    public int GetStage1HighScore()
+    {
+        return stage1HighScore;
+    }
+
+    public int GetStage2HighScore()
+    {
+        return stage2HighScore;
+    }
+
+    public int GetStage3HighScore()
+    {
+        return stage3HighScore;
+    }
+
+    public void SetStage1HighScore(int highScore)
+    {
+        stage1HighScore = highScore;
+    }
+
+    public void SetStage2HighScore(int highScore)
+    {
+        stage2HighScore = highScore;
+    }
+
+    public void SetStage3HighScore(int highScore)
+    {
+        stage3HighScore = highScore;
+    }
+
+    public int GetStageProgress()
+    {
+        return stageProgress;
+    }
+
+    public void SetStageProgress(int progress)
+    {
+        stageProgress = progress;
+    }
+
+    public int GetStage1State()
+    {
+        return stage1State;
+    }
+
+    public int GetStage2State()
+    {
+        return stage2State;
+    }
+
+    public int GetStage3State()
+    {
+        return stage3State;
+    }
+
+    public void SetStage1State(int state)
+    {
+        if (stage1State > state)
+            return;
+        stage1State = state;
+    }
+
+    public void SetStage2State(int state)
+    {
+        if (stage2State > state)
+            return;
+        stage2State = state;
+    }
+
+    public void SetStage3State(int state)
+    {
+        if (stage3State > state)
+            return;
+        stage3State = state;
+    }
+
 
     public void ResetGameManager()
     {
         userName = "";
 
+        stage1State = 0;
+        stage2State = 0;
+        stage3State = 0;
         stage1Clear = false;
         stage2Clear = false;
         stage3Clear = false;
         stage1HiddenClear = false;
         stage2HiddenClear = false;
         stage3HiddenClear = false;
+        stage1Try = false;
+        stage2Try = false;
+        stage3Try = false;
+        stage1Score = 0;
+        stage2Score = 0;
+        stage3Score = 0;
+        stage1HighScore = 0;
+        stage2HighScore = 0;
+        stage3HighScore = 0;
+
     }
 }
