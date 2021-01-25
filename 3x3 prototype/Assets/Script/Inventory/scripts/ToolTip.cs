@@ -10,10 +10,26 @@ public class ToolTip : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        
-        if(other.tag== "Database")
+
+        if (other.tag == "Database")
         {
             text.text = other.GetComponent<DataSpace>().item_List.Explanation;
+        }
+
+        if(other.tag =="Slot")
+        {
+            if(other.transform.childCount ==0)
+            {
+                text.text = null;
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if( other.tag == "Database")
+        {
+            text.text = null;
         }
     }
 }

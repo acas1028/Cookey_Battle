@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class MoveCursor : MonoBehaviour
 {
-
+    
     float time;
-    float scroll_line_size;
+    public float scroll_line_size;
     public float blockLine;
     public float bottom_count = 0;
     public int isThisFirst = 0;
@@ -32,13 +32,23 @@ public class MoveCursor : MonoBehaviour
 
     public GameObject[] inventorySlots;
 
+    public WareHouseInventoryScript inventoryScript;
+
+    public GameObject inventory;
+
+    public GameObject Main_Keyboard_Input;
+
+    public GameObject inventory_Cursor;
+
+    public bool isinventoryCursor;
+
     void Start()
     {
 
         X_blockSize = 180f;
         Y_blockSize = 150f;
         blockLine = 0;
-        scroll_line_size = 155f;
+        scroll_line_size = 150f;
         time = 0f;
         blockX = 0;
         blockY = 0;
@@ -57,12 +67,12 @@ public class MoveCursor : MonoBehaviour
         {
             move();
 
-            if (blockLine >= 0 && blockLine <= 2)
+            if (blockLine >= 0 && blockLine <= 3)
             {
                 moveScrollbar();
                 slotmoveScrollbar();
             }
-            if (blockLine < 0 || blockLine > 2)
+            if (blockLine < 0 || blockLine > 3)
             {
                 TeleportScrollbar();
             }
@@ -81,8 +91,15 @@ public class MoveCursor : MonoBehaviour
             bottom_count = 0;
         }
 
-
-
+        
+        if(inventoryScript.WareHouseDestroy==1)
+        {
+            if(Input.GetKeyDown(KeyCode.E))
+            {
+                inventory.SetActive(false);
+                Main_Keyboard_Input.SetActive(true);
+            }
+        }
 
 
     }
@@ -149,44 +166,49 @@ public class MoveCursor : MonoBehaviour
 
     void slotmoveScrollbar()
     {
-        for (int i = 0; i < 2; i++)
+        if (isinventoryCursor == false)
         {
 
-            if (inventorySlots[16 + 8 * i].transform.childCount != 0 && itemnotEmpty == true && firstitemnotEmpty == true)
+            for (int i = 0; i < 2; i++)
             {
-                inventoryScrollbar.transform.Translate(0, scroll_line_size, 0);
-                blockLine++;
-                itemnotEmpty = false;
-                firstitemnotEmpty = false;
-                if (isThisFirst < 1)// 최대 blockline-1로 설정되어있다.
+
+                if (inventorySlots[16 + 8 * i].transform.childCount != 0 && itemnotEmpty == true && firstitemnotEmpty == true && inventory_Cursor.GetComponent<MoveCursor>().blockLine != 3)
                 {
-                    isThisFirst++;
+                    inventoryScrollbar.transform.Translate(0, scroll_line_size, 0);
+                    inventory_Cursor.GetComponent<MoveCursor>().blockLine++;
+                    itemnotEmpty = false;
+                    firstitemnotEmpty = false;
+                    if (isThisFirst < 2)// 최대 blockline-1로 설정되어있다.
+                    {
+                        isThisFirst++;
+                    }
                 }
-            }
-            if (inventorySlots[(16 + 8 * i) - 1].transform.childCount != 0)
-            {
-                firstitemnotEmpty = true;
-            }
+                if (inventorySlots[(16 + 8 * i) - 1].transform.childCount != 0)
+                {
+                    firstitemnotEmpty = true;
+                }
 
-            if (inventorySlots[16 + 8 * isThisFirst].transform.childCount != 0)
-            {
-                itemnotEmpty = true;
-            }
+                if (inventorySlots[16 + 8 * isThisFirst].transform.childCount != 0)
+                {
+                    itemnotEmpty = true;
+                }
 
+            }
         }
-
-
-
-
-
-
     }
+
+        
+
+        
+
+        
+    
 
     void TeleportScrollbar()
     {
         if (Input.GetAxisRaw("Vertical") < 0 && bottom_count == 1)
         {
-            scrollbar.transform.Translate(0, -3f * scroll_line_size, 0);
+            scrollbar.transform.Translate(0, -4f * scroll_line_size, 0);
             cursor.transform.Translate(0, 1f * Y_blockSize, 0);
             blockY = 0;
             blockLine = 0;
@@ -194,11 +216,15 @@ public class MoveCursor : MonoBehaviour
 
         if (Input.GetAxisRaw("Vertical") > 0 && bottom_count == 0)
         {
-            scrollbar.transform.Translate(0, 3f * scroll_line_size, 0);
+            scrollbar.transform.Translate(0, 4f * scroll_line_size, 0);
             cursor.transform.Translate(0, -1f * Y_blockSize, 0);
             blockY = 1;
-            blockLine = 2;
+            blockLine = 3;
         }
 
     }
+
+   
+
+
 }

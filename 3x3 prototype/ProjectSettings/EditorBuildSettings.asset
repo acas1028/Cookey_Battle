@@ -22,10 +22,10 @@ EditorBuildSettings:
     guid: e2acb3811d257de4ebb8b79b112342d6
   - enabled: 1
     path: Assets/Scenes/MainGame2.unity
-    guid: ecaaf5df452e42e40b2d159e3f0c4488
+    guid: c46495bc0f014e04883c6711bf7bdfab
   - enabled: 1
     path: Assets/Scenes/MainGame3.unity
-    guid: 085cd8f1bf792904aa397ee96426c4d0
+    guid: fcbc5f7d54ca38e40aa86830de57e165
   - enabled: 1
     path: Assets/Scenes/LoadingScene.unity
     guid: 1ae2bdc7e17c081419b1a2b855719d46

@@ -14,10 +14,9 @@ public class DataSpace : MonoBehaviour
 
     public bool dataMovingCount = false;
 
-    private void Start()
-    {
-       
-    }
+    public WareHouseInventoryScript wareHouseInventoryScript;
+
+    
 
     private void Update()
     {
@@ -28,7 +27,6 @@ public class DataSpace : MonoBehaviour
                 item_List = data_GameManager.warehouseItemList[i];
             }
         }
-
         
 
         if(dataMovingCount==true)
@@ -43,7 +41,7 @@ public class DataSpace : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Cursor")
+        if (other.tag == "Cursor" )
         {
             dataMovingCount = true;
         }
@@ -52,7 +50,7 @@ public class DataSpace : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Cursor")
+        if (other.tag == "Cursor" )
         {
             dataMovingCount = false;
         }   

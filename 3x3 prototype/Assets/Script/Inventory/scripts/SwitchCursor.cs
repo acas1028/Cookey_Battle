@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class SwitchCursor : MonoBehaviour
 {
-    public MoveMouseCursor MoveMouseCursor;
-
     public GameObject wareHouseCursor;
 
     public GameObject inventoryCursor;

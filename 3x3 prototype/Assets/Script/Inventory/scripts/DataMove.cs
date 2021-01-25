@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DataMove : MonoBehaviour
 {
-    public GameObject[] InventorySlot;
+    public GameObject parents;
 
     public Data_GameManager data_GameManager;
 
@@ -20,7 +20,7 @@ public class DataMove : MonoBehaviour
     void Start()
     {
         
-        InventorySlot = GameObject.FindGameObjectsWithTag("Slot");
+        
         
     }
 
@@ -39,11 +39,11 @@ public class DataMove : MonoBehaviour
     void DataMoving()
     {
         
-            myObject.transform.SetParent(InventorySlot[data_GameManager.moveCount].transform);
-            myObject.transform.position = InventorySlot[data_GameManager.moveCount].transform.position;
-        movingObject.transform.SetParent(InventorySlot[data_GameManager.moveCount].transform);
-        movingObject.transform.position = InventorySlot[data_GameManager.moveCount].transform.position;
-        data_GameManager.moveCount++;
+            myObject.transform.SetParent(parents.transform);
+            myObject.transform.position = parents.transform.position;
+        movingObject.transform.SetParent(parents.transform);
+        movingObject.transform.position = parents.transform.position;
+        
 
         
         
