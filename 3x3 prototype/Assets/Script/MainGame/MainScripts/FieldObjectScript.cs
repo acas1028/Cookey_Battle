@@ -10,7 +10,7 @@ public class FieldObjectScript : MonoBehaviour
     void Start()
     {
         itemNumber = 0;
-        fieldScore = 90;
+        fieldScore = 76;
     }
 
     // Update is called once per frame

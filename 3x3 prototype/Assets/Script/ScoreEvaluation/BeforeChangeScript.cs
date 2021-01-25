@@ -22,16 +22,23 @@ public class BeforeChangeScript : MonoBehaviour
     int enemy1Score;
     int enemy2Score;
     int playerScore;
+
+    bool isClear;
     // Start is called before the first frame update
-    void Start()
+
+    private void Awake()
     {
         SetEnemyScore();
-        SetEffect();
+        Check_StageClear();
 
         Debug.Log("player" + playerScore);
         Debug.Log("enemy1" + enemy1Score);
         Debug.Log("enemy2" + enemy2Score);
 
+    }
+    void Start()
+    {
+        SetEffect();
     }
 
     // Update is called once per frame
@@ -40,7 +47,9 @@ public class BeforeChangeScript : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             if (playerScore >= enemy1Score && playerScore >= enemy2Score)
+            {
                 afterSpaceObject_1st.SetActive(true);
+            }
             else if (playerScore >= enemy1Score && playerScore < enemy2Score)
                 afterSpaceObject_2nd.SetActive(true);
             else if (playerScore >= enemy2Score && playerScore < enemy1Score)
@@ -50,9 +59,9 @@ public class BeforeChangeScript : MonoBehaviour
 
             foodCover.SetActive(false);
             backGroundEffect.SetActive(true);
-            this.gameObject.SetActive(false);
             goMainMenuButton.SetActive(true);
             goStageSelectButton.SetActive(true);
+            this.gameObject.SetActive(false);
         }
     }
 
@@ -94,7 +103,12 @@ public class BeforeChangeScript : MonoBehaviour
                 playerScore = GameManager.instance.GetStage3Score();
                 break;
         }
-       
+
+        if (playerScore >= enemy1Score && playerScore >= enemy2Score)
+        {
+            isClear = true;
+        }
+
     }
 
     void SetEffect()
@@ -136,6 +150,101 @@ public class BeforeChangeScript : MonoBehaviour
     public int GetPlayerScore()
     {
         return playerScore;
+    }
+
+    void Stage1_ClearCheck()
+    {
+        GameManager.instance.SetStage1State(0);
+        if (isClear)
+        {
+            GameManager.instance.SetStage1Clear(true);
+            GameManager.instance.SetStage1HiddenClear(false);
+            GameManager.instance.SetStage1State(1);
+            if (GameManager.instance.GetStageHiddenCondition())
+            {
+                GameManager.instance.SetStage1HiddenClear(true);
+                GameManager.instance.SetStage1State(2);
+            }
+
+            GameManager.instance.SetStageProgress(1);
+        }
+        else
+            GameManager.instance.SetStageProgress(0);
+
+
+
+        GameManager.instance.SetStage1Score(playerScore);
+
+        if (playerScore > GameManager.instance.GetStage1HighScore())
+        {
+            GameManager.instance.SetStage1HighScore(playerScore);
+        }
+    }
+
+    void Stage2_ClearCheck()
+    {
+        GameManager.instance.SetStage2State(0);
+        if (isClear)
+        {
+            GameManager.instance.SetStage2Clear(true);
+            GameManager.instance.SetStage2HiddenClear(false);
+            GameManager.instance.SetStage2State(1);
+            if (GameManager.instance.GetStageHiddenCondition())
+            {
+                GameManager.instance.SetStage2HiddenClear(true);
+                GameManager.instance.SetStage2State(2);
+            }
+            GameManager.instance.SetStageProgress(2);
+        }
+        else
+            GameManager.instance.SetStageProgress(0);
+        GameManager.instance.SetStage2Score(playerScore);
+
+        if (playerScore > GameManager.instance.GetStage2HighScore())
+        {
+            GameManager.instance.SetStage2HighScore(playerScore);
+        }
+    }
+
+    void Stage3_ClearCheck()
+    {
+        GameManager.instance.SetStage3State(0);
+        if (isClear)
+        {
+            GameManager.instance.SetStage3Clear(true);
+            GameManager.instance.SetStage3State(1);
+            if (GameManager.instance.GetStageHiddenCondition())
+            {
+                GameManager.instance.SetStage1HiddenClear(true);
+                GameManager.instance.SetStage3State(2);
+            }
+            GameManager.instance.SetStageProgress(3);
+        }
+        else
+            GameManager.instance.SetStageProgress(0);
+        GameManager.instance.SetStage3Score(playerScore);
+
+        if (playerScore > GameManager.instance.GetStage3HighScore())
+        {
+            GameManager.instance.SetStage3HighScore(playerScore);
+        }
+    }
+
+
+    void Check_StageClear()
+    {
+        switch(GameManager.instance.GetStageLevel())
+        {
+            case 1:
+                Stage1_ClearCheck();
+                break;
+            case 2:
+                Stage2_ClearCheck();
+                break;
+            case 3:
+                Stage3_ClearCheck();
+                break;
+        }
     }
 
 }

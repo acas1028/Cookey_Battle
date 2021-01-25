@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
 
     // ========================================================================
     private int stageProgress;
+    private bool stageHiddenCondition; // 그 스테이지의 히든 조건을 만족하였는가? (모든 스테이지에서 공통으로 사용하는 변수임)
     
 
     public static GameManager instance
@@ -98,6 +99,7 @@ public class GameManager : MonoBehaviour
         stage2HighScore = 0;
         stage3HighScore = 0;
         stageProgress = 0;
+        stageHiddenCondition = false;
         DontDestroyOnLoad(gameObject);
     }
     void Start()
@@ -306,16 +308,19 @@ public class GameManager : MonoBehaviour
     public void SetStage1HighScore(int highScore)
     {
         stage1HighScore = highScore;
+        PlayerPrefs.SetInt("Stage1HighScore", highScore);
     }
 
     public void SetStage2HighScore(int highScore)
     {
         stage2HighScore = highScore;
+        PlayerPrefs.SetInt("Stage2HighScore", highScore);
     }
 
     public void SetStage3HighScore(int highScore)
     {
         stage3HighScore = highScore;
+        PlayerPrefs.SetInt("Stage3HighScore", highScore);
     }
 
     public int GetStageProgress()
@@ -326,6 +331,7 @@ public class GameManager : MonoBehaviour
     public void SetStageProgress(int progress)
     {
         stageProgress = progress;
+        PlayerPrefs.SetInt("StageProgress", stageProgress);
     }
 
     public int GetStage1State()
@@ -348,6 +354,8 @@ public class GameManager : MonoBehaviour
         if (stage1State > state)
             return;
         stage1State = state;
+
+        PlayerPrefs.SetInt("Stage1", state);
     }
 
     public void SetStage2State(int state)
@@ -355,6 +363,8 @@ public class GameManager : MonoBehaviour
         if (stage2State > state)
             return;
         stage2State = state;
+
+        PlayerPrefs.SetInt("Stage2", state);
     }
 
     public void SetStage3State(int state)
@@ -362,6 +372,19 @@ public class GameManager : MonoBehaviour
         if (stage3State > state)
             return;
         stage3State = state;
+
+        PlayerPrefs.SetInt("Stage3", state);
+
+    }
+
+    public bool GetStageHiddenCondition()
+    {
+        return stageHiddenCondition;
+    }
+
+    public void SetStageHiddenCondition(bool istrue)
+    {
+        stageHiddenCondition = istrue;
     }
 
 
