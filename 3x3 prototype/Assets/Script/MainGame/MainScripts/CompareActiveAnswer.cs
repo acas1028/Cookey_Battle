@@ -7,16 +7,42 @@ public class CompareActiveAnswer : MonoBehaviour
     public GameObject fieldObject;
     public GameObject gameFinishObject;
 
+    public GameObject compare_score;
+
+    public GameObject movetag;
+
+    public GameObject[] score_compare_basic_instance;
+
+    public GameObject[] score_compare_instance;
+
+    public GameObject maingame_inventory;
+
+    public int score_compare_cal = 0;
+
+    public Item_list item_List;
+
+    public List<GameObject> basic_instance;
+
+    public bool inventoryonoff = false;
+
     int ingameStage;
     int ingameStep;
     int hiddenConditionNumber;
     int hiddenCount;
-    // Start is called before the first frame update
+
+
     void Start()
     {
         ingameStage = GameManager.instance.GetStageLevel();
         ingameStep = 0;
         hiddenCount = 0;
+        movetag.GetComponent<Find_tag>();
+
+        //for(int i=0;i< score_compare_basic_instance.Length; i++)
+        //{
+        //    basic_instance.Add(score_compare_basic_instance[i]);
+        //}
+
 
         switch (ingameStage)
         {
@@ -30,12 +56,23 @@ public class CompareActiveAnswer : MonoBehaviour
                 hiddenConditionNumber = 5;
                 break;
         }
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        switch(ingameStage)
+        if(movetag.GetComponent<WareHouseInventoryScript>().WareHouseDestroy == 1 && inventoryonoff==false)
+        {
+            score_compare_basic_instance = maingame_inventory.GetComponent<Inventory_clone_on>().inventory_clone;
+
+            for (int i = 0; i < score_compare_basic_instance.Length; i++)
+            {
+                basic_instance.Add(score_compare_basic_instance[i]);
+            }
+            inventoryonoff = true;
+        }
+        switch (ingameStage)
         {
             case 1:
                 CompareAnswer_Stage1(ingameStep);
@@ -55,17 +92,50 @@ public class CompareActiveAnswer : MonoBehaviour
         {
             case 1:
                 {
-                    if (Input.GetKeyDown(KeyCode.Alpha1))
-                        ingameStep++;
-                    else if(Input.GetKeyDown(KeyCode.F1))
+                    for (int j = 0; j < score_compare_basic_instance.Length; j++)
+                    {
+                        
+                        if (score_compare_basic_instance[j].GetComponent<DataMove>().space_onoff == true)
+                        {
+                            //Debug.Log("wwww");
+                            for (int i = 0; i < score_compare_basic_instance.Length; i++)
+                            {
+                                if (score_compare_basic_instance[i].activeSelf == true)
+                                {
+                                    compare_score = score_compare_basic_instance[i];
+                                    compare_score.GetComponent<DataMove>().Name_Compare();
+                                    ingameStep++;
+                                }
+                            }
+                        }
+                    }
+
+                    if (Input.GetKeyDown(KeyCode.F1))
                     {
                         ingameStep++;
                         hiddenCount++;
                     }
                 }
                 break;
+            
+            
             case 2:
                 {
+                    for (int j = 0; j < score_compare_basic_instance.Length; j++)
+                    {
+                        if (score_compare_basic_instance[j].GetComponent<DataMove>().space_onoff == true)
+                        {
+                            for (int i = 0; i < score_compare_basic_instance.Length; i++)
+                            {
+                                if (score_compare_basic_instance[i].activeSelf == true)
+                                {
+                                    compare_score = score_compare_basic_instance[i];
+                                    compare_score.GetComponent<DataMove>().Name_Compare();
+                                    ingameStep++;
+                                }
+                            }
+                        }
+                    }
                     if (Input.GetKeyDown(KeyCode.Alpha2))
                         ingameStep++;
                     else if (Input.GetKeyDown(KeyCode.F1))

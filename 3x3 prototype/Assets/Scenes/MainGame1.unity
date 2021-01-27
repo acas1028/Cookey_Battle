@@ -572,6 +572,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fieldObject: {fileID: 476160129}
   gameFinishObject: {fileID: 2130261730}
+  compare_score: {fileID: 0}
+  movetag: {fileID: 1715488435}
+  score_compare_basic_instance: []
+  score_compare_instance: []
+  maingame_inventory: {fileID: 1057413623}
+  score_compare_cal: 0
+  item_List:
+    Type: 
+    Name: 
+    Explanation: 
+    score: 0
 --- !u!4 &346193895
 Transform:
   m_ObjectHideFlags: 0
@@ -960,6 +971,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 744501976}
   m_CullTransparentMesh: 0
+--- !u!1 &831160389
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 831160391}
+  - component: {fileID: 831160390}
+  m_Layer: 0
+  m_Name: Soup_Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &831160390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831160389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c2450bcc646bd54c8eefb8bf44f5e1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemDatabase: {fileID: 4900000, guid: 1744d20af6132dd42a41125ba5eb27db, type: 3}
+  aiItemList: []
+  SoupAnswer_ItemList: []
+  moveCount: 0
+  score: 0
+--- !u!4 &831160391
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831160389}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1162.164, y: 637.2036, z: -264.57935}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &837493299
 GameObject:
   m_ObjectHideFlags: 0
@@ -1060,6 +1119,50 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1057413623
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1057413625}
+  - component: {fileID: 1057413624}
+  m_Layer: 0
+  m_Name: Inventory_clone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1057413624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057413623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e96543d498cfc4489e7113433bca24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory_clone: []
+--- !u!4 &1057413625
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057413623}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 202.16394, y: 97.20361, z: -264.57935}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1715488436}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1156223210
 GameObject:
   m_ObjectHideFlags: 0
@@ -1253,6 +1356,26 @@ PrefabInstance:
       propertyPath: data_GameManager
       value: 
       objectReference: {fileID: 1973789027}
+    - target: {fileID: 18944863, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: Field
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 18944863, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: objectScript
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 18944863, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: soup
+      value: 
+      objectReference: {fileID: 831160389}
+    - target: {fileID: 18944863, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: ingame_step_object
+      value: 
+      objectReference: {fileID: 346193893}
+    - target: {fileID: 18944863, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: fieldobject
+      value: 
+      objectReference: {fileID: 476160129}
     - target: {fileID: 23853670, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
       propertyPath: m_Name
       value: Honey
@@ -1273,6 +1396,26 @@ PrefabInstance:
       propertyPath: data_GameManager
       value: 
       objectReference: {fileID: 1973789027}
+    - target: {fileID: 109784566, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: Field
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 109784566, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: objectScript
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 109784566, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: soup
+      value: 
+      objectReference: {fileID: 831160389}
+    - target: {fileID: 109784566, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: ingame_step_object
+      value: 
+      objectReference: {fileID: 346193893}
+    - target: {fileID: 109784566, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: fieldobject
+      value: 
+      objectReference: {fileID: 476160129}
     - target: {fileID: 111181788, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
       propertyPath: m_Name
       value: Mushroom
@@ -1353,6 +1496,26 @@ PrefabInstance:
       propertyPath: data_GameManager
       value: 
       objectReference: {fileID: 1973789027}
+    - target: {fileID: 327404171, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: Field
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 327404171, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: objectScript
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 327404171, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: soup
+      value: 
+      objectReference: {fileID: 831160389}
+    - target: {fileID: 327404171, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: ingame_step_object
+      value: 
+      objectReference: {fileID: 346193893}
+    - target: {fileID: 327404171, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: fieldobject
+      value: 
+      objectReference: {fileID: 476160129}
     - target: {fileID: 336688421, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
       propertyPath: m_TagString
       value: MovingDatabase
@@ -1397,6 +1560,26 @@ PrefabInstance:
       propertyPath: data_GameManager
       value: 
       objectReference: {fileID: 1973789027}
+    - target: {fileID: 358747089, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: Field
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 358747089, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: objectScript
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 358747089, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: soup
+      value: 
+      objectReference: {fileID: 831160389}
+    - target: {fileID: 358747089, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: ingame_step_object
+      value: 
+      objectReference: {fileID: 346193893}
+    - target: {fileID: 358747089, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: fieldobject
+      value: 
+      objectReference: {fileID: 476160129}
     - target: {fileID: 360076575, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
       propertyPath: parents
       value: 
@@ -1405,6 +1588,26 @@ PrefabInstance:
       propertyPath: data_GameManager
       value: 
       objectReference: {fileID: 1973789027}
+    - target: {fileID: 360076575, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: Field
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 360076575, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: objectScript
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 360076575, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: soup
+      value: 
+      objectReference: {fileID: 831160389}
+    - target: {fileID: 360076575, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: ingame_step_object
+      value: 
+      objectReference: {fileID: 346193893}
+    - target: {fileID: 360076575, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: fieldobject
+      value: 
+      objectReference: {fileID: 476160129}
     - target: {fileID: 361037511, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
       propertyPath: parents
       value: 
@@ -1413,6 +1616,26 @@ PrefabInstance:
       propertyPath: data_GameManager
       value: 
       objectReference: {fileID: 1973789027}
+    - target: {fileID: 361037511, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: Field
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 361037511, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: objectScript
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 361037511, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: soup
+      value: 
+      objectReference: {fileID: 831160389}
+    - target: {fileID: 361037511, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: ingame_step_object
+      value: 
+      objectReference: {fileID: 346193893}
+    - target: {fileID: 361037511, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: fieldobject
+      value: 
+      objectReference: {fileID: 476160129}
     - target: {fileID: 363083114, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
       propertyPath: parents
       value: 
@@ -1421,6 +1644,26 @@ PrefabInstance:
       propertyPath: data_GameManager
       value: 
       objectReference: {fileID: 1973789027}
+    - target: {fileID: 363083114, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: Field
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 363083114, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: objectScript
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 363083114, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: soup
+      value: 
+      objectReference: {fileID: 831160389}
+    - target: {fileID: 363083114, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: ingame_step_object
+      value: 
+      objectReference: {fileID: 346193893}
+    - target: {fileID: 363083114, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: fieldobject
+      value: 
+      objectReference: {fileID: 476160129}
     - target: {fileID: 436543901, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
       propertyPath: m_Name
       value: Ruby
@@ -1525,6 +1768,26 @@ PrefabInstance:
       propertyPath: data_GameManager
       value: 
       objectReference: {fileID: 1973789027}
+    - target: {fileID: 588907381, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: Field
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 588907381, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: objectScript
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 588907381, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: soup
+      value: 
+      objectReference: {fileID: 831160389}
+    - target: {fileID: 588907381, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: ingame_step_object
+      value: 
+      objectReference: {fileID: 346193893}
+    - target: {fileID: 588907381, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: fieldobject
+      value: 
+      objectReference: {fileID: 476160129}
     - target: {fileID: 590821704, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
       propertyPath: m_Name
       value: Syrup
@@ -1637,6 +1900,26 @@ PrefabInstance:
       propertyPath: data_GameManager
       value: 
       objectReference: {fileID: 1973789027}
+    - target: {fileID: 910785478, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: Field
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 910785478, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: objectScript
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 910785478, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: soup
+      value: 
+      objectReference: {fileID: 831160389}
+    - target: {fileID: 910785478, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: ingame_step_object
+      value: 
+      objectReference: {fileID: 346193893}
+    - target: {fileID: 910785478, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: fieldobject
+      value: 
+      objectReference: {fileID: 476160129}
     - target: {fileID: 936567585, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
       propertyPath: m_TagString
       value: MovingDatabase
@@ -1681,6 +1964,26 @@ PrefabInstance:
       propertyPath: data_GameManager
       value: 
       objectReference: {fileID: 1973789027}
+    - target: {fileID: 983610656, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: Field
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 983610656, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: objectScript
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 983610656, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: soup
+      value: 
+      objectReference: {fileID: 831160389}
+    - target: {fileID: 983610656, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: ingame_step_object
+      value: 
+      objectReference: {fileID: 346193893}
+    - target: {fileID: 983610656, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: fieldobject
+      value: 
+      objectReference: {fileID: 476160129}
     - target: {fileID: 1027114385, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
       propertyPath: m_Name
       value: Fresh Cream
@@ -1701,6 +2004,26 @@ PrefabInstance:
       propertyPath: data_GameManager
       value: 
       objectReference: {fileID: 1973789027}
+    - target: {fileID: 1035531066, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: Field
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1035531066, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: objectScript
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1035531066, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: soup
+      value: 
+      objectReference: {fileID: 831160389}
+    - target: {fileID: 1035531066, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: ingame_step_object
+      value: 
+      objectReference: {fileID: 346193893}
+    - target: {fileID: 1035531066, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: fieldobject
+      value: 
+      objectReference: {fileID: 476160129}
     - target: {fileID: 1088718072, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
       propertyPath: m_Name
       value: Tomato
@@ -1721,6 +2044,26 @@ PrefabInstance:
       propertyPath: data_GameManager
       value: 
       objectReference: {fileID: 1973789027}
+    - target: {fileID: 1089680147, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: Field
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1089680147, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: objectScript
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1089680147, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: soup
+      value: 
+      objectReference: {fileID: 831160389}
+    - target: {fileID: 1089680147, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: ingame_step_object
+      value: 
+      objectReference: {fileID: 346193893}
+    - target: {fileID: 1089680147, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: fieldobject
+      value: 
+      objectReference: {fileID: 476160129}
     - target: {fileID: 1132927607, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
       propertyPath: m_TagString
       value: MovingDatabase
@@ -1785,6 +2128,26 @@ PrefabInstance:
       propertyPath: data_GameManager
       value: 
       objectReference: {fileID: 1973789027}
+    - target: {fileID: 1279943448, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: Field
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1279943448, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: objectScript
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1279943448, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: soup
+      value: 
+      objectReference: {fileID: 831160389}
+    - target: {fileID: 1279943448, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: ingame_step_object
+      value: 
+      objectReference: {fileID: 346193893}
+    - target: {fileID: 1279943448, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: fieldobject
+      value: 
+      objectReference: {fileID: 476160129}
     - target: {fileID: 1283964343, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
       propertyPath: parents
       value: 
@@ -1793,6 +2156,26 @@ PrefabInstance:
       propertyPath: data_GameManager
       value: 
       objectReference: {fileID: 1973789027}
+    - target: {fileID: 1283964343, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: Field
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1283964343, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: objectScript
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1283964343, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: soup
+      value: 
+      objectReference: {fileID: 831160389}
+    - target: {fileID: 1283964343, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: ingame_step_object
+      value: 
+      objectReference: {fileID: 346193893}
+    - target: {fileID: 1283964343, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: fieldobject
+      value: 
+      objectReference: {fileID: 476160129}
     - target: {fileID: 1283964344, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
       propertyPath: parents
       value: 
@@ -1801,6 +2184,26 @@ PrefabInstance:
       propertyPath: data_GameManager
       value: 
       objectReference: {fileID: 1973789027}
+    - target: {fileID: 1283964344, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: Field
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1283964344, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: objectScript
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1283964344, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: soup
+      value: 
+      objectReference: {fileID: 831160389}
+    - target: {fileID: 1283964344, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: ingame_step_object
+      value: 
+      objectReference: {fileID: 346193893}
+    - target: {fileID: 1283964344, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: fieldobject
+      value: 
+      objectReference: {fileID: 476160129}
     - target: {fileID: 1283964345, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
       propertyPath: parents
       value: 
@@ -1809,6 +2212,26 @@ PrefabInstance:
       propertyPath: data_GameManager
       value: 
       objectReference: {fileID: 1973789027}
+    - target: {fileID: 1283964345, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: Field
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1283964345, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: objectScript
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1283964345, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: soup
+      value: 
+      objectReference: {fileID: 831160389}
+    - target: {fileID: 1283964345, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: ingame_step_object
+      value: 
+      objectReference: {fileID: 346193893}
+    - target: {fileID: 1283964345, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: fieldobject
+      value: 
+      objectReference: {fileID: 476160129}
     - target: {fileID: 1283964346, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
       propertyPath: parents
       value: 
@@ -1817,6 +2240,26 @@ PrefabInstance:
       propertyPath: data_GameManager
       value: 
       objectReference: {fileID: 1973789027}
+    - target: {fileID: 1283964346, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: Field
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1283964346, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: objectScript
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1283964346, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: soup
+      value: 
+      objectReference: {fileID: 831160389}
+    - target: {fileID: 1283964346, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: ingame_step_object
+      value: 
+      objectReference: {fileID: 346193893}
+    - target: {fileID: 1283964346, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: fieldobject
+      value: 
+      objectReference: {fileID: 476160129}
     - target: {fileID: 1283964347, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
       propertyPath: parents
       value: 
@@ -1825,6 +2268,26 @@ PrefabInstance:
       propertyPath: data_GameManager
       value: 
       objectReference: {fileID: 1973789027}
+    - target: {fileID: 1283964347, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: Field
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1283964347, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: objectScript
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1283964347, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: soup
+      value: 
+      objectReference: {fileID: 831160389}
+    - target: {fileID: 1283964347, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: ingame_step_object
+      value: 
+      objectReference: {fileID: 346193893}
+    - target: {fileID: 1283964347, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: fieldobject
+      value: 
+      objectReference: {fileID: 476160129}
     - target: {fileID: 1283964348, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
       propertyPath: parents
       value: 
@@ -1833,6 +2296,26 @@ PrefabInstance:
       propertyPath: data_GameManager
       value: 
       objectReference: {fileID: 1973789027}
+    - target: {fileID: 1283964348, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: Field
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1283964348, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: objectScript
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1283964348, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: soup
+      value: 
+      objectReference: {fileID: 831160389}
+    - target: {fileID: 1283964348, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: ingame_step_object
+      value: 
+      objectReference: {fileID: 346193893}
+    - target: {fileID: 1283964348, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: fieldobject
+      value: 
+      objectReference: {fileID: 476160129}
     - target: {fileID: 1283964349, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
       propertyPath: parents
       value: 
@@ -1841,6 +2324,26 @@ PrefabInstance:
       propertyPath: data_GameManager
       value: 
       objectReference: {fileID: 1973789027}
+    - target: {fileID: 1283964349, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: Field
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1283964349, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: objectScript
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1283964349, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: soup
+      value: 
+      objectReference: {fileID: 831160389}
+    - target: {fileID: 1283964349, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: ingame_step_object
+      value: 
+      objectReference: {fileID: 346193893}
+    - target: {fileID: 1283964349, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: fieldobject
+      value: 
+      objectReference: {fileID: 476160129}
     - target: {fileID: 1283964350, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
       propertyPath: parents
       value: 
@@ -1849,6 +2352,26 @@ PrefabInstance:
       propertyPath: data_GameManager
       value: 
       objectReference: {fileID: 1973789027}
+    - target: {fileID: 1283964350, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: Field
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1283964350, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: objectScript
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1283964350, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: soup
+      value: 
+      objectReference: {fileID: 831160389}
+    - target: {fileID: 1283964350, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: ingame_step_object
+      value: 
+      objectReference: {fileID: 346193893}
+    - target: {fileID: 1283964350, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: fieldobject
+      value: 
+      objectReference: {fileID: 476160129}
     - target: {fileID: 1283964351, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
       propertyPath: parents
       value: 
@@ -1857,6 +2380,26 @@ PrefabInstance:
       propertyPath: data_GameManager
       value: 
       objectReference: {fileID: 1973789027}
+    - target: {fileID: 1283964351, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: Field
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1283964351, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: objectScript
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1283964351, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: soup
+      value: 
+      objectReference: {fileID: 831160389}
+    - target: {fileID: 1283964351, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: ingame_step_object
+      value: 
+      objectReference: {fileID: 346193893}
+    - target: {fileID: 1283964351, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: fieldobject
+      value: 
+      objectReference: {fileID: 476160129}
     - target: {fileID: 1283964352, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
       propertyPath: parents
       value: 
@@ -1865,6 +2408,26 @@ PrefabInstance:
       propertyPath: data_GameManager
       value: 
       objectReference: {fileID: 1973789027}
+    - target: {fileID: 1283964352, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: Field
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1283964352, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: objectScript
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1283964352, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: soup
+      value: 
+      objectReference: {fileID: 831160389}
+    - target: {fileID: 1283964352, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: ingame_step_object
+      value: 
+      objectReference: {fileID: 346193893}
+    - target: {fileID: 1283964352, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: fieldobject
+      value: 
+      objectReference: {fileID: 476160129}
     - target: {fileID: 1283964353, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
       propertyPath: parents
       value: 
@@ -1873,6 +2436,26 @@ PrefabInstance:
       propertyPath: data_GameManager
       value: 
       objectReference: {fileID: 1973789027}
+    - target: {fileID: 1283964353, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: Field
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1283964353, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: objectScript
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1283964353, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: soup
+      value: 
+      objectReference: {fileID: 831160389}
+    - target: {fileID: 1283964353, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: ingame_step_object
+      value: 
+      objectReference: {fileID: 346193893}
+    - target: {fileID: 1283964353, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: fieldobject
+      value: 
+      objectReference: {fileID: 476160129}
     - target: {fileID: 1283964354, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
       propertyPath: parents
       value: 
@@ -1881,6 +2464,26 @@ PrefabInstance:
       propertyPath: data_GameManager
       value: 
       objectReference: {fileID: 1973789027}
+    - target: {fileID: 1283964354, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: Field
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1283964354, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: objectScript
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1283964354, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: soup
+      value: 
+      objectReference: {fileID: 831160389}
+    - target: {fileID: 1283964354, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: ingame_step_object
+      value: 
+      objectReference: {fileID: 346193893}
+    - target: {fileID: 1283964354, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: fieldobject
+      value: 
+      objectReference: {fileID: 476160129}
     - target: {fileID: 1283964355, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
       propertyPath: parents
       value: 
@@ -1889,6 +2492,26 @@ PrefabInstance:
       propertyPath: data_GameManager
       value: 
       objectReference: {fileID: 1973789027}
+    - target: {fileID: 1283964355, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: Field
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1283964355, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: objectScript
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1283964355, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: soup
+      value: 
+      objectReference: {fileID: 831160389}
+    - target: {fileID: 1283964355, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: ingame_step_object
+      value: 
+      objectReference: {fileID: 346193893}
+    - target: {fileID: 1283964355, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: fieldobject
+      value: 
+      objectReference: {fileID: 476160129}
     - target: {fileID: 1283964356, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
       propertyPath: parents
       value: 
@@ -1897,6 +2520,26 @@ PrefabInstance:
       propertyPath: data_GameManager
       value: 
       objectReference: {fileID: 1973789027}
+    - target: {fileID: 1283964356, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: Field
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1283964356, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: objectScript
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1283964356, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: soup
+      value: 
+      objectReference: {fileID: 831160389}
+    - target: {fileID: 1283964356, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: ingame_step_object
+      value: 
+      objectReference: {fileID: 346193893}
+    - target: {fileID: 1283964356, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: fieldobject
+      value: 
+      objectReference: {fileID: 476160129}
     - target: {fileID: 1303772259, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
       propertyPath: m_Name
       value: Soy Sauce
@@ -2037,6 +2680,26 @@ PrefabInstance:
       propertyPath: data_GameManager
       value: 
       objectReference: {fileID: 1973789027}
+    - target: {fileID: 1721996171, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: Field
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1721996171, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: objectScript
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1721996171, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: soup
+      value: 
+      objectReference: {fileID: 831160389}
+    - target: {fileID: 1721996171, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: ingame_step_object
+      value: 
+      objectReference: {fileID: 346193893}
+    - target: {fileID: 1721996171, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: fieldobject
+      value: 
+      objectReference: {fileID: 476160129}
     - target: {fileID: 1732409832, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
       propertyPath: m_Name
       value: Milk
@@ -2057,6 +2720,26 @@ PrefabInstance:
       propertyPath: data_GameManager
       value: 
       objectReference: {fileID: 1973789027}
+    - target: {fileID: 1734606454, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: Field
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1734606454, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: objectScript
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1734606454, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: soup
+      value: 
+      objectReference: {fileID: 831160389}
+    - target: {fileID: 1734606454, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: ingame_step_object
+      value: 
+      objectReference: {fileID: 346193893}
+    - target: {fileID: 1734606454, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: fieldobject
+      value: 
+      objectReference: {fileID: 476160129}
     - target: {fileID: 1742083756, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
       propertyPath: m_Name
       value: Soya Milk
@@ -2125,6 +2808,26 @@ PrefabInstance:
       propertyPath: data_GameManager
       value: 
       objectReference: {fileID: 1973789027}
+    - target: {fileID: 1870386380, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: Field
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1870386380, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: objectScript
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1870386380, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: soup
+      value: 
+      objectReference: {fileID: 831160389}
+    - target: {fileID: 1870386380, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: ingame_step_object
+      value: 
+      objectReference: {fileID: 346193893}
+    - target: {fileID: 1870386380, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: fieldobject
+      value: 
+      objectReference: {fileID: 476160129}
     - target: {fileID: 1904402529, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
       propertyPath: parents
       value: 
@@ -2133,6 +2836,26 @@ PrefabInstance:
       propertyPath: data_GameManager
       value: 
       objectReference: {fileID: 1973789027}
+    - target: {fileID: 1904402529, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: Field
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1904402529, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: objectScript
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1904402529, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: soup
+      value: 
+      objectReference: {fileID: 831160389}
+    - target: {fileID: 1904402529, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: ingame_step_object
+      value: 
+      objectReference: {fileID: 346193893}
+    - target: {fileID: 1904402529, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: fieldobject
+      value: 
+      objectReference: {fileID: 476160129}
     - target: {fileID: 1913060685, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
       propertyPath: m_Name
       value: Apple
@@ -2153,6 +2876,26 @@ PrefabInstance:
       propertyPath: data_GameManager
       value: 
       objectReference: {fileID: 1973789027}
+    - target: {fileID: 1934701919, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: Field
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1934701919, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: objectScript
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 1934701919, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: soup
+      value: 
+      objectReference: {fileID: 831160389}
+    - target: {fileID: 1934701919, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: ingame_step_object
+      value: 
+      objectReference: {fileID: 346193893}
+    - target: {fileID: 1934701919, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+      propertyPath: fieldobject
+      value: 
+      objectReference: {fileID: 476160129}
     - target: {fileID: 1975776058, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
       propertyPath: m_TagString
       value: MovingDatabase
@@ -2416,6 +3159,31 @@ PrefabInstance:
       propertyPath: data_GameManager
       value: 
       objectReference: {fileID: 1973789027}
+    - target: {fileID: 2969398422412959234, guid: 2e2425b6c1fe0a746be3cda88d175a27,
+        type: 3}
+      propertyPath: Field
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 2969398422412959234, guid: 2e2425b6c1fe0a746be3cda88d175a27,
+        type: 3}
+      propertyPath: objectScript
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 2969398422412959234, guid: 2e2425b6c1fe0a746be3cda88d175a27,
+        type: 3}
+      propertyPath: soup
+      value: 
+      objectReference: {fileID: 831160389}
+    - target: {fileID: 2969398422412959234, guid: 2e2425b6c1fe0a746be3cda88d175a27,
+        type: 3}
+      propertyPath: ingame_step_object
+      value: 
+      objectReference: {fileID: 346193893}
+    - target: {fileID: 2969398422412959234, guid: 2e2425b6c1fe0a746be3cda88d175a27,
+        type: 3}
+      propertyPath: fieldobject
+      value: 
+      objectReference: {fileID: 476160129}
     - target: {fileID: 4462092633553878628, guid: 2e2425b6c1fe0a746be3cda88d175a27,
         type: 3}
       propertyPath: m_Name
@@ -2426,6 +3194,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dwarf Tree Leaf
       objectReference: {fileID: 0}
+    - target: {fileID: 4779924319466439376, guid: 2e2425b6c1fe0a746be3cda88d175a27,
+        type: 3}
+      propertyPath: Field
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 4779924319466439376, guid: 2e2425b6c1fe0a746be3cda88d175a27,
+        type: 3}
+      propertyPath: objectScript
+      value: 
+      objectReference: {fileID: 476160129}
+    - target: {fileID: 4779924319466439376, guid: 2e2425b6c1fe0a746be3cda88d175a27,
+        type: 3}
+      propertyPath: soup
+      value: 
+      objectReference: {fileID: 831160389}
+    - target: {fileID: 4779924319466439376, guid: 2e2425b6c1fe0a746be3cda88d175a27,
+        type: 3}
+      propertyPath: ingame_step_object
+      value: 
+      objectReference: {fileID: 346193893}
+    - target: {fileID: 4779924319466439376, guid: 2e2425b6c1fe0a746be3cda88d175a27,
+        type: 3}
+      propertyPath: fieldobject
+      value: 
+      objectReference: {fileID: 476160129}
     - target: {fileID: 5045480915875884966, guid: 2e2425b6c1fe0a746be3cda88d175a27,
         type: 3}
       propertyPath: data_GameManager
@@ -2466,6 +3259,53 @@ PrefabInstance:
     - {fileID: 1327878701, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
     - {fileID: 4823033001912661270, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2e2425b6c1fe0a746be3cda88d175a27, type: 3}
+--- !u!1 &1370329120
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1370329122}
+  - component: {fileID: 1370329121}
+  m_Layer: 0
+  m_Name: Tag_inventory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1370329121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370329120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f02608526ec4e84588ad92adcd90496, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  compare_score_basic: []
+  compare_score: {fileID: 0}
+  score_space: []
+  find_tag_compare: 0
+--- !u!4 &1370329122
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370329120}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1162.164, y: 637.2036, z: -264.57935}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1380256412 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6540525104677030674, guid: 4318a4fafe08f5c4890ecece4bcc52be,
@@ -2575,6 +3415,7 @@ RectTransform:
   - {fileID: 1549339511}
   - {fileID: 350075926}
   - {fileID: 1801735963}
+  - {fileID: 1057413625}
   m_Father: {fileID: 1808019418}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2604,7 +3445,10 @@ MonoBehaviour:
   canvas: {fileID: 1808019414}
   scrollbar: {fileID: 1380256412}
   moveCursor: {fileID: 2022638066}
+  active: {fileID: 1057413623}
+  inventory_move: {fileID: 0}
   WareHouseDestroy: 0
+  isscript: 0
 --- !u!1 &1717779951
 GameObject:
   m_ObjectHideFlags: 0
@@ -2929,6 +3773,54 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1928236986
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1928236987}
+  - component: {fileID: 1928236988}
+  m_Layer: 0
+  m_Name: Soup_Command_Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1928236987
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928236986}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1162.164, y: 637.2036, z: -264.57935}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1928236988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928236986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95594af08c4b5f1418c24c353ada54fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemDatabase: {fileID: 4900000, guid: 79ad41a8d8767db4696cd0dfa41b69b6, type: 3}
+  aiItemList: []
+  SoupAnswer_Command_ItemList: []
+  moveCount: 0
+  score: 0
 --- !u!1 &1943028004
 GameObject:
   m_ObjectHideFlags: 0
@@ -3062,10 +3954,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4aaafb5cfb0b8045abbe9da3a8b74a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemDatabase: {fileID: 4900000, guid: 106296b9da23d3c43946ddebf92d3fec, type: 3}
+  ItemDatabase: {fileID: 4900000, guid: fbfef223588fc5448b0d6acb8ec12eab, type: 3}
   aiItemList: []
   warehouseItemList: []
   moveCount: 0
+  score: 0
 --- !u!4 &1973789028
 Transform:
   m_ObjectHideFlags: 0

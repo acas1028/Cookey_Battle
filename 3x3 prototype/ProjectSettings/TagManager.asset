@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - UI
+  - Cursor
+  - Slot
+  - WareHouseSlot
+  - Database
+  - MovingDatabase
+  - hello
   layers:
   - Default
   - TransparentFX

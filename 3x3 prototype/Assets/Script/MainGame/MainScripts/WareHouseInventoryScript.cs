@@ -21,7 +21,13 @@ public class WareHouseInventoryScript : MonoBehaviour
 
     public MoveCursor moveCursor;
 
+    public GameObject active;
+
+    public GameObject inventory_move;
+
     public int WareHouseDestroy = 0;
+
+    public bool isscript = false;
     
     // Start is called before the first frame update
     void Start()
@@ -42,6 +48,7 @@ public class WareHouseInventoryScript : MonoBehaviour
             MainKeyBoardInput.SetActive(true);
             this.gameObject.SetActive(false);
             inventory.transform.SetParent(canvas.transform);//임시
+            active.transform.SetParent(canvas.transform);
             inventory.transform.Translate(0, 450, 0);
             WareHouseDestroy = 1;
 
@@ -57,6 +64,8 @@ public class WareHouseInventoryScript : MonoBehaviour
             }
 
             dataMove = GameObject.FindGameObjectsWithTag("MovingDatabase");
+            active.GetComponent<Inventory_clone_on>().inventory_clone = dataMove;
+            
 
             for (int i=0; i<dataMove.Length;i++)
             {
@@ -91,4 +100,6 @@ public class WareHouseInventoryScript : MonoBehaviour
         }
        
     }
+
+
 }
