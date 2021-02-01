@@ -1709,9 +1709,9 @@ MonoBehaviour:
   space8: {x: 1160, y: 90, z: 0}
   space9: {x: 1260, y: 90, z: 0}
   space10: {x: 1360, y: 90, z: 0}
-  Right: {fileID: 3528923449069979394, guid: 5fc1d26721d14244488fa9e99d4d68b0, type: 3}
-  Left: {fileID: 1363741406117444598, guid: 117961fa5381ee4489c1e651ece566be, type: 3}
-  Up: {fileID: 6867524259883166373, guid: 4ccd28d922132f54285116106bd08371, type: 3}
+  Right: {fileID: 1363741406117444598, guid: 117961fa5381ee4489c1e651ece566be, type: 3}
+  Left: {fileID: 6867524259883166373, guid: 4ccd28d922132f54285116106bd08371, type: 3}
+  Up: {fileID: 3528923449069979394, guid: 5fc1d26721d14244488fa9e99d4d68b0, type: 3}
   Down: {fileID: 3506238104755836916, guid: 174bfcf1e3f6c3c49b33211e1a7d4293, type: 3}
   commandCollection: {fileID: 1156062559}
   commandList: []
@@ -5188,6 +5188,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soupCommandDatabase: {fileID: 1928236986}
+  commandComparison: {fileID: 1667713502}
+  count: 0
   text: {fileID: 2125476978}
 --- !u!114 &2125476978
 MonoBehaviour:

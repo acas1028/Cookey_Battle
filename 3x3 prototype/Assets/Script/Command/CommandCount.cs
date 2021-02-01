@@ -7,10 +7,17 @@ public class CommandCount : MonoBehaviour
 {
     public GameObject soupCommandDatabase;
 
+    public GameObject commandComparison;
+
+    public int count;
+
     public Text text;
 
     private void Update()
     {
-        text.text = soupCommandDatabase.GetComponent<Soup_Command_DataBase>().HisCount.ToString();
+        count = soupCommandDatabase.GetComponent<Soup_Command_DataBase>().HisCount -commandComparison.GetComponent<ComandComparison>().CommandComparisonCount;
+
+
+        text.text = count.ToString();
     }
 }
