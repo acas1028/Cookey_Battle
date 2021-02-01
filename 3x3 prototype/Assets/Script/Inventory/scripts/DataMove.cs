@@ -16,15 +16,17 @@ public class DataMove : MonoBehaviour
 
     public GameObject soup;
 
-    public int ingame_step;
-
     public GameObject ingame_step_object;
 
     public GameObject fieldobject;
 
+    public int ingame_step;
+
     public int field_score;
 
     public bool space_onoff = false;
+
+    public bool isinventorystart = false;
 
 
     
@@ -38,19 +40,29 @@ public class DataMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                space_onoff = true;
-                DataMoving();
-            }
-        
-        
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            space_onoff = true;
+            
+        }
+
+        /*if (ingame_step_object.GetComponent<CompareActiveAnswer>().isPossibleDestroy == true)
+        {
+            DataMoving();
+            ingame_step_object.GetComponent<CompareActiveAnswer>().isPossibleDestroy = false;
+            
+
+        }*/
+
+
+
     }
 
-    void DataMoving()
+    public void DataMoving()
     {
         fieldobject.GetComponent<FieldObjectScript>().SetitemList(myObject.GetComponent<DataSpace>().item_List);
+        data_GameManager.moveCount--;
         Destroy(myObject);
         Destroy(movingObject);
         //    myObject.transform.SetParent(Field.transform);
@@ -67,13 +79,18 @@ public class DataMove : MonoBehaviour
 
     public void Name_Compare()
     {
-        if ( soup.GetComponent<Soup_DataBase>().GetItemName(ingame_step - 1) == myObject.GetComponent<DataSpace>().item_List.Name)
+        Debug.Log(soup.GetComponent<Soup_DataBase>().GetItemName(ingame_step_object.GetComponent<CompareActiveAnswer>().Ingredient_Count));
+        Debug.Log(myObject.GetComponent<DataSpace>().item_List.Name);
+        
+        if ( soup.GetComponent<Soup_DataBase>().GetItemName(ingame_step_object.GetComponent<CompareActiveAnswer>().Ingredient_Count) == myObject.GetComponent<DataSpace>().item_List.Name)
         {
-            fieldobject.GetComponent<FieldObjectScript>().SetFieldScore((field_score + myObject.GetComponent<DataSpace>().item_List.score) / 2);
+            Debug.Log("정답");
+            fieldobject.GetComponent<FieldObjectScript>().SetFieldScore((fieldobject.GetComponent<FieldObjectScript>().fieldScore + myObject.GetComponent<DataSpace>().item_List.score) );
         }
         else 
         {
-            fieldobject.GetComponent<FieldObjectScript>().SetFieldScore((field_score + 0) / 2);
+            fieldobject.GetComponent<FieldObjectScript>().SetFieldScore((fieldobject.GetComponent<FieldObjectScript>().fieldScore + 0) );
         }
+
     }
 }

@@ -1,1 +1,1 @@
-[{"Type":"command","Name":"Cutting Command\r"},{"Type":"command","Name":"Boiling Command\r"},{"Type":"command","Name":"Boiling Command\r"},{"Type":"command","Name":"Mash Command\r"},{"Type":"command","Name":"Spray Command\r"}]
+[{"Type":"command","Name":"Boiling_Command","Count":4},{"Type":"command","Name":"Boiling_Down_Command","Count":2},{"Type":"command","Name":"Boiling_Down_Command","Count":2},{"Type":"command","Name":"Mash_Command","Count":5},{"Type":"command","Name":"Spray_Command","Count":5}]

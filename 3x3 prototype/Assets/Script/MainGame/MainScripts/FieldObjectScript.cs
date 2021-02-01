@@ -5,7 +5,7 @@ using UnityEngine;
 public class FieldObjectScript : MonoBehaviour
 {
     int     itemNumber;
-    int     fieldScore;
+    public int     fieldScore;
 
     public Item_list field_item_list;
 

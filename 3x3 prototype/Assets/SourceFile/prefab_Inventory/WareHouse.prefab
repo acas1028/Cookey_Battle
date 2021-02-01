@@ -59,7 +59,7 @@ MonoBehaviour:
     Type: 
     Name: 
     Explanation: 
-    isUsing: 0
+    score: 0
   dataMovingCount: 0
   wareHouseInventoryScript: {fileID: 0}
 --- !u!65 &23853674
@@ -187,7 +187,7 @@ MonoBehaviour:
     Type: 
     Name: 
     Explanation: 
-    isUsing: 0
+    score: 0
   dataMovingCount: 0
   wareHouseInventoryScript: {fileID: 0}
 --- !u!65 &111181792
@@ -325,10 +325,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7836f0239c562458c26d20c6ef0f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parents: {fileID: 0}
+  Field: {fileID: 0}
   data_GameManager: {fileID: 0}
   myObject: {fileID: 692854299}
   movingObject: {fileID: 144133971}
+  objectScript: {fileID: 0}
+  soup: {fileID: 0}
+  ingame_step_object: {fileID: 0}
+  fieldobject: {fileID: 0}
+  ingame_step: 0
+  field_score: 0
+  space_onoff: 0
+  isinventorystart: 0
 --- !u!1 &148011405
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,7 +396,7 @@ MonoBehaviour:
     Type: 
     Name: 
     Explanation: 
-    isUsing: 0
+    score: 0
   dataMovingCount: 0
   wareHouseInventoryScript: {fileID: 0}
 --- !u!54 &148011409
@@ -516,7 +524,7 @@ MonoBehaviour:
     Type: 
     Name: 
     Explanation: 
-    isUsing: 0
+    score: 0
   dataMovingCount: 0
   wareHouseInventoryScript: {fileID: 0}
 --- !u!65 &200748498
@@ -654,10 +662,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7836f0239c562458c26d20c6ef0f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parents: {fileID: 0}
+  Field: {fileID: 0}
   data_GameManager: {fileID: 0}
   myObject: {fileID: 111181788}
   movingObject: {fileID: 205101079}
+  objectScript: {fileID: 0}
+  soup: {fileID: 0}
+  ingame_step_object: {fileID: 0}
+  fieldobject: {fileID: 0}
+  ingame_step: 0
+  field_score: 0
+  space_onoff: 0
+  isinventorystart: 0
 --- !u!1 &310176805
 GameObject:
   m_ObjectHideFlags: 0
@@ -727,10 +743,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7836f0239c562458c26d20c6ef0f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parents: {fileID: 0}
+  Field: {fileID: 0}
   data_GameManager: {fileID: 0}
   myObject: {fileID: 1584040433}
   movingObject: {fileID: 310176805}
+  objectScript: {fileID: 0}
+  soup: {fileID: 0}
+  ingame_step_object: {fileID: 0}
+  fieldobject: {fileID: 0}
+  ingame_step: 0
+  field_score: 0
+  space_onoff: 0
+  isinventorystart: 0
 --- !u!1 &336688421
 GameObject:
   m_ObjectHideFlags: 0
@@ -800,10 +824,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7836f0239c562458c26d20c6ef0f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parents: {fileID: 0}
+  Field: {fileID: 0}
   data_GameManager: {fileID: 0}
   myObject: {fileID: 1660490253}
   movingObject: {fileID: 336688421}
+  objectScript: {fileID: 0}
+  soup: {fileID: 0}
+  ingame_step_object: {fileID: 0}
+  fieldobject: {fileID: 0}
+  ingame_step: 0
+  field_score: 0
+  space_onoff: 0
+  isinventorystart: 0
 --- !u!1 &347036992
 GameObject:
   m_ObjectHideFlags: 0
@@ -863,7 +895,7 @@ MonoBehaviour:
     Type: 
     Name: 
     Explanation: 
-    isUsing: 0
+    score: 0
   dataMovingCount: 0
   wareHouseInventoryScript: {fileID: 0}
 --- !u!54 &347036996
@@ -1001,10 +1033,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7836f0239c562458c26d20c6ef0f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parents: {fileID: 0}
+  Field: {fileID: 0}
   data_GameManager: {fileID: 0}
   myObject: {fileID: 347036992}
   movingObject: {fileID: 353503463}
+  objectScript: {fileID: 0}
+  soup: {fileID: 0}
+  ingame_step_object: {fileID: 0}
+  fieldobject: {fileID: 0}
+  ingame_step: 0
+  field_score: 0
+  space_onoff: 0
+  isinventorystart: 0
 --- !u!1 &436543901
 GameObject:
   m_ObjectHideFlags: 0
@@ -1064,7 +1104,7 @@ MonoBehaviour:
     Type: 
     Name: 
     Explanation: 
-    isUsing: 0
+    score: 0
   dataMovingCount: 0
   wareHouseInventoryScript: {fileID: 0}
 --- !u!54 &436543905
@@ -1202,10 +1242,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7836f0239c562458c26d20c6ef0f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parents: {fileID: 0}
+  Field: {fileID: 0}
   data_GameManager: {fileID: 0}
   myObject: {fileID: 1338487444}
   movingObject: {fileID: 462069411}
+  objectScript: {fileID: 0}
+  soup: {fileID: 0}
+  ingame_step_object: {fileID: 0}
+  fieldobject: {fileID: 0}
+  ingame_step: 0
+  field_score: 0
+  space_onoff: 0
+  isinventorystart: 0
 --- !u!1 &502200349
 GameObject:
   m_ObjectHideFlags: 0
@@ -1265,7 +1313,7 @@ MonoBehaviour:
     Type: 
     Name: 
     Explanation: 
-    isUsing: 0
+    score: 0
   dataMovingCount: 0
   wareHouseInventoryScript: {fileID: 0}
 --- !u!54 &502200353
@@ -1393,7 +1441,7 @@ MonoBehaviour:
     Type: 
     Name: 
     Explanation: 
-    isUsing: 0
+    score: 0
   dataMovingCount: 0
   wareHouseInventoryScript: {fileID: 0}
 --- !u!54 &552132195
@@ -1521,7 +1569,7 @@ MonoBehaviour:
     Type: 
     Name: 
     Explanation: 
-    isUsing: 0
+    score: 0
   dataMovingCount: 0
   wareHouseInventoryScript: {fileID: 0}
 --- !u!54 &567810390
@@ -1649,7 +1697,7 @@ MonoBehaviour:
     Type: 
     Name: 
     Explanation: 
-    isUsing: 0
+    score: 0
   dataMovingCount: 0
   wareHouseInventoryScript: {fileID: 0}
 --- !u!65 &575240567
@@ -1787,10 +1835,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7836f0239c562458c26d20c6ef0f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parents: {fileID: 0}
+  Field: {fileID: 0}
   data_GameManager: {fileID: 0}
   myObject: {fileID: 1823765480}
   movingObject: {fileID: 579556792}
+  objectScript: {fileID: 0}
+  soup: {fileID: 0}
+  ingame_step_object: {fileID: 0}
+  fieldobject: {fileID: 0}
+  ingame_step: 0
+  field_score: 0
+  space_onoff: 0
+  isinventorystart: 0
 --- !u!1 &580014691
 GameObject:
   m_ObjectHideFlags: 0
@@ -1860,138 +1916,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7836f0239c562458c26d20c6ef0f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parents: {fileID: 0}
+  Field: {fileID: 0}
   data_GameManager: {fileID: 0}
   myObject: {fileID: 2088929686}
   movingObject: {fileID: 580014691}
---- !u!1 &590821704
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 590821705}
-  - component: {fileID: 590821706}
-  - component: {fileID: 590821708}
-  - component: {fileID: 590821707}
-  - component: {fileID: 523980935}
-  - component: {fileID: 523980934}
-  m_Layer: 5
-  m_Name: Syrup
-  m_TagString: Database
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &590821705
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 590821704}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1791489246999998572}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &590821706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 590821704}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e531c6d90c20bf743884a5c0a45bb6f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data_GameManager: {fileID: 0}
-  dataMoving: {fileID: 1975776058}
-  count: 2
-  item_List:
-    Type: 
-    Name: 
-    Explanation: 
-    isUsing: 0
-  dataMovingCount: 0
-  wareHouseInventoryScript: {fileID: 0}
---- !u!65 &590821708
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 590821704}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &590821707
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 590821704}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
---- !u!222 &523980935
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 590821704}
-  m_CullTransparentMesh: 0
---- !u!114 &523980934
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 590821704}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b9e62934b9b37f54b8a90b54a78d4823, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  objectScript: {fileID: 0}
+  soup: {fileID: 0}
+  ingame_step_object: {fileID: 0}
+  fieldobject: {fileID: 0}
+  ingame_step: 0
+  field_score: 0
+  space_onoff: 0
+  isinventorystart: 0
 --- !u!1 &629200956
 GameObject:
   m_ObjectHideFlags: 0
@@ -2061,10 +1997,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7836f0239c562458c26d20c6ef0f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parents: {fileID: 0}
+  Field: {fileID: 0}
   data_GameManager: {fileID: 0}
   myObject: {fileID: 575240563}
   movingObject: {fileID: 629200956}
+  objectScript: {fileID: 0}
+  soup: {fileID: 0}
+  ingame_step_object: {fileID: 0}
+  fieldobject: {fileID: 0}
+  ingame_step: 0
+  field_score: 0
+  space_onoff: 0
+  isinventorystart: 0
 --- !u!1 &634721093
 GameObject:
   m_ObjectHideFlags: 0
@@ -2124,7 +2068,7 @@ MonoBehaviour:
     Type: 
     Name: 
     Explanation: 
-    isUsing: 0
+    score: 0
   dataMovingCount: 0
   wareHouseInventoryScript: {fileID: 0}
 --- !u!54 &634721097
@@ -2262,10 +2206,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7836f0239c562458c26d20c6ef0f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parents: {fileID: 0}
+  Field: {fileID: 0}
   data_GameManager: {fileID: 0}
   myObject: {fileID: 1742083756}
   movingObject: {fileID: 643311162}
+  objectScript: {fileID: 0}
+  soup: {fileID: 0}
+  ingame_step_object: {fileID: 0}
+  fieldobject: {fileID: 0}
+  ingame_step: 0
+  field_score: 0
+  space_onoff: 0
+  isinventorystart: 0
 --- !u!1 &692854299
 GameObject:
   m_ObjectHideFlags: 0
@@ -2325,7 +2277,7 @@ MonoBehaviour:
     Type: 
     Name: 
     Explanation: 
-    isUsing: 0
+    score: 0
   dataMovingCount: 0
   wareHouseInventoryScript: {fileID: 0}
 --- !u!65 &692854303
@@ -2463,10 +2415,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7836f0239c562458c26d20c6ef0f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parents: {fileID: 0}
+  Field: {fileID: 0}
   data_GameManager: {fileID: 0}
   myObject: {fileID: 148011405}
   movingObject: {fileID: 736536990}
+  objectScript: {fileID: 0}
+  soup: {fileID: 0}
+  ingame_step_object: {fileID: 0}
+  fieldobject: {fileID: 0}
+  ingame_step: 0
+  field_score: 0
+  space_onoff: 0
+  isinventorystart: 0
 --- !u!1 &822977882
 GameObject:
   m_ObjectHideFlags: 0
@@ -2536,10 +2496,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7836f0239c562458c26d20c6ef0f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parents: {fileID: 0}
+  Field: {fileID: 0}
   data_GameManager: {fileID: 0}
   myObject: {fileID: 200748494}
   movingObject: {fileID: 822977882}
+  objectScript: {fileID: 0}
+  soup: {fileID: 0}
+  ingame_step_object: {fileID: 0}
+  fieldobject: {fileID: 0}
+  ingame_step: 0
+  field_score: 0
+  space_onoff: 0
+  isinventorystart: 0
 --- !u!1 &835309820
 GameObject:
   m_ObjectHideFlags: 0
@@ -2609,10 +2577,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7836f0239c562458c26d20c6ef0f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parents: {fileID: 0}
+  Field: {fileID: 0}
   data_GameManager: {fileID: 0}
   myObject: {fileID: 2060430065}
   movingObject: {fileID: 835309820}
+  objectScript: {fileID: 0}
+  soup: {fileID: 0}
+  ingame_step_object: {fileID: 0}
+  fieldobject: {fileID: 0}
+  ingame_step: 0
+  field_score: 0
+  space_onoff: 0
+  isinventorystart: 0
 --- !u!1 &868162233
 GameObject:
   m_ObjectHideFlags: 0
@@ -2682,10 +2658,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7836f0239c562458c26d20c6ef0f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parents: {fileID: 0}
+  Field: {fileID: 0}
   data_GameManager: {fileID: 0}
   myObject: {fileID: 2080730938}
   movingObject: {fileID: 868162233}
+  objectScript: {fileID: 0}
+  soup: {fileID: 0}
+  ingame_step_object: {fileID: 0}
+  fieldobject: {fileID: 0}
+  ingame_step: 0
+  field_score: 0
+  space_onoff: 0
+  isinventorystart: 0
 --- !u!1 &936567585
 GameObject:
   m_ObjectHideFlags: 0
@@ -2755,10 +2739,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7836f0239c562458c26d20c6ef0f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parents: {fileID: 0}
+  Field: {fileID: 0}
   data_GameManager: {fileID: 0}
   myObject: {fileID: 1027114385}
   movingObject: {fileID: 936567585}
+  objectScript: {fileID: 0}
+  soup: {fileID: 0}
+  ingame_step_object: {fileID: 0}
+  fieldobject: {fileID: 0}
+  ingame_step: 0
+  field_score: 0
+  space_onoff: 0
+  isinventorystart: 0
 --- !u!1 &959107232
 GameObject:
   m_ObjectHideFlags: 0
@@ -2828,10 +2820,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7836f0239c562458c26d20c6ef0f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parents: {fileID: 0}
+  Field: {fileID: 0}
   data_GameManager: {fileID: 0}
   myObject: {fileID: 634721093}
   movingObject: {fileID: 959107232}
+  objectScript: {fileID: 0}
+  soup: {fileID: 0}
+  ingame_step_object: {fileID: 0}
+  fieldobject: {fileID: 0}
+  ingame_step: 0
+  field_score: 0
+  space_onoff: 0
+  isinventorystart: 0
 --- !u!1 &980861405
 GameObject:
   m_ObjectHideFlags: 0
@@ -2901,10 +2901,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7836f0239c562458c26d20c6ef0f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parents: {fileID: 0}
+  Field: {fileID: 0}
   data_GameManager: {fileID: 0}
   myObject: {fileID: 1732409832}
   movingObject: {fileID: 980861405}
+  objectScript: {fileID: 0}
+  soup: {fileID: 0}
+  ingame_step_object: {fileID: 0}
+  fieldobject: {fileID: 0}
+  ingame_step: 0
+  field_score: 0
+  space_onoff: 0
+  isinventorystart: 0
 --- !u!1 &1027114385
 GameObject:
   m_ObjectHideFlags: 0
@@ -2964,7 +2972,7 @@ MonoBehaviour:
     Type: 
     Name: 
     Explanation: 
-    isUsing: 0
+    score: 0
   dataMovingCount: 0
   wareHouseInventoryScript: {fileID: 0}
 --- !u!54 &1027114389
@@ -3092,7 +3100,7 @@ MonoBehaviour:
     Type: 
     Name: 
     Explanation: 
-    isUsing: 0
+    score: 0
   dataMovingCount: 0
   wareHouseInventoryScript: {fileID: 0}
 --- !u!65 &1088718076
@@ -3230,10 +3238,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7836f0239c562458c26d20c6ef0f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parents: {fileID: 0}
+  Field: {fileID: 0}
   data_GameManager: {fileID: 0}
   myObject: {fileID: 1989223129}
   movingObject: {fileID: 1132927607}
+  objectScript: {fileID: 0}
+  soup: {fileID: 0}
+  ingame_step_object: {fileID: 0}
+  fieldobject: {fileID: 0}
+  ingame_step: 0
+  field_score: 0
+  space_onoff: 0
+  isinventorystart: 0
 --- !u!1 &1158964931
 GameObject:
   m_ObjectHideFlags: 0
@@ -3293,7 +3309,7 @@ MonoBehaviour:
     Type: 
     Name: 
     Explanation: 
-    isUsing: 0
+    score: 0
   dataMovingCount: 0
   wareHouseInventoryScript: {fileID: 0}
 --- !u!65 &1158964935
@@ -3431,10 +3447,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7836f0239c562458c26d20c6ef0f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parents: {fileID: 0}
+  Field: {fileID: 0}
   data_GameManager: {fileID: 0}
   myObject: {fileID: 436543901}
   movingObject: {fileID: 1170775890}
+  objectScript: {fileID: 0}
+  soup: {fileID: 0}
+  ingame_step_object: {fileID: 0}
+  fieldobject: {fileID: 0}
+  ingame_step: 0
+  field_score: 0
+  space_onoff: 0
+  isinventorystart: 0
 --- !u!1 &1178523071
 GameObject:
   m_ObjectHideFlags: 0
@@ -3494,7 +3518,7 @@ MonoBehaviour:
     Type: 
     Name: 
     Explanation: 
-    isUsing: 0
+    score: 0
   dataMovingCount: 0
   wareHouseInventoryScript: {fileID: 0}
 --- !u!222 &1178523076
@@ -3632,10 +3656,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7836f0239c562458c26d20c6ef0f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parents: {fileID: 0}
+  Field: {fileID: 0}
   data_GameManager: {fileID: 0}
   myObject: {fileID: 1178523071}
   movingObject: {fileID: 1247419810}
+  objectScript: {fileID: 0}
+  soup: {fileID: 0}
+  ingame_step_object: {fileID: 0}
+  fieldobject: {fileID: 0}
+  ingame_step: 0
+  field_score: 0
+  space_onoff: 0
+  isinventorystart: 0
 --- !u!1 &1303772259
 GameObject:
   m_ObjectHideFlags: 0
@@ -3695,7 +3727,7 @@ MonoBehaviour:
     Type: 
     Name: 
     Explanation: 
-    isUsing: 0
+    score: 0
   dataMovingCount: 0
   wareHouseInventoryScript: {fileID: 0}
 --- !u!65 &1303772263
@@ -3833,10 +3865,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7836f0239c562458c26d20c6ef0f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parents: {fileID: 0}
+  Field: {fileID: 0}
   data_GameManager: {fileID: 0}
   myObject: {fileID: 1913060685}
   movingObject: {fileID: 1314722684}
+  objectScript: {fileID: 0}
+  soup: {fileID: 0}
+  ingame_step_object: {fileID: 0}
+  fieldobject: {fileID: 0}
+  ingame_step: 0
+  field_score: 0
+  space_onoff: 0
+  isinventorystart: 0
 --- !u!1 &1317992047
 GameObject:
   m_ObjectHideFlags: 0
@@ -3906,10 +3946,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7836f0239c562458c26d20c6ef0f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parents: {fileID: 0}
+  Field: {fileID: 0}
   data_GameManager: {fileID: 0}
   myObject: {fileID: 552132191}
   movingObject: {fileID: 1317992047}
+  objectScript: {fileID: 0}
+  soup: {fileID: 0}
+  ingame_step_object: {fileID: 0}
+  fieldobject: {fileID: 0}
+  ingame_step: 0
+  field_score: 0
+  space_onoff: 0
+  isinventorystart: 0
 --- !u!1 &1338487444
 GameObject:
   m_ObjectHideFlags: 0
@@ -3969,7 +4017,7 @@ MonoBehaviour:
     Type: 
     Name: 
     Explanation: 
-    isUsing: 0
+    score: 0
   dataMovingCount: 0
   wareHouseInventoryScript: {fileID: 0}
 --- !u!65 &1338487448
@@ -4107,10 +4155,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7836f0239c562458c26d20c6ef0f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parents: {fileID: 0}
+  Field: {fileID: 0}
   data_GameManager: {fileID: 0}
   myObject: {fileID: 567810386}
   movingObject: {fileID: 1377018298}
+  objectScript: {fileID: 0}
+  soup: {fileID: 0}
+  ingame_step_object: {fileID: 0}
+  fieldobject: {fileID: 0}
+  ingame_step: 0
+  field_score: 0
+  space_onoff: 0
+  isinventorystart: 0
 --- !u!1 &1551843386
 GameObject:
   m_ObjectHideFlags: 0
@@ -4170,7 +4226,7 @@ MonoBehaviour:
     Type: 
     Name: 
     Explanation: 
-    isUsing: 0
+    score: 0
   dataMovingCount: 0
   wareHouseInventoryScript: {fileID: 0}
 --- !u!65 &1551843390
@@ -4298,7 +4354,7 @@ MonoBehaviour:
     Type: 
     Name: 
     Explanation: 
-    isUsing: 0
+    score: 0
   dataMovingCount: 0
   wareHouseInventoryScript: {fileID: 0}
 --- !u!54 &1584040437
@@ -4426,7 +4482,7 @@ MonoBehaviour:
     Type: 
     Name: 
     Explanation: 
-    isUsing: 0
+    score: 0
   dataMovingCount: 0
   wareHouseInventoryScript: {fileID: 0}
 --- !u!54 &1597382088
@@ -4564,10 +4620,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7836f0239c562458c26d20c6ef0f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parents: {fileID: 0}
+  Field: {fileID: 0}
   data_GameManager: {fileID: 0}
   myObject: {fileID: 1597382084}
   movingObject: {fileID: 1598188688}
+  objectScript: {fileID: 0}
+  soup: {fileID: 0}
+  ingame_step_object: {fileID: 0}
+  fieldobject: {fileID: 0}
+  ingame_step: 0
+  field_score: 0
+  space_onoff: 0
+  isinventorystart: 0
 --- !u!1 &1660490253
 GameObject:
   m_ObjectHideFlags: 0
@@ -4627,7 +4691,7 @@ MonoBehaviour:
     Type: 
     Name: 
     Explanation: 
-    isUsing: 0
+    score: 0
   dataMovingCount: 0
   wareHouseInventoryScript: {fileID: 0}
 --- !u!65 &1660490257
@@ -4755,7 +4819,7 @@ MonoBehaviour:
     Type: 
     Name: 
     Explanation: 
-    isUsing: 0
+    score: 0
   dataMovingCount: 0
   wareHouseInventoryScript: {fileID: 0}
 --- !u!54 &1674446985
@@ -4883,7 +4947,7 @@ MonoBehaviour:
     Type: 
     Name: 
     Explanation: 
-    isUsing: 0
+    score: 0
   dataMovingCount: 0
   wareHouseInventoryScript: {fileID: 0}
 --- !u!54 &1732409836
@@ -5011,7 +5075,7 @@ MonoBehaviour:
     Type: 
     Name: 
     Explanation: 
-    isUsing: 0
+    score: 0
   dataMovingCount: 0
   wareHouseInventoryScript: {fileID: 0}
 --- !u!65 &1742083760
@@ -5139,7 +5203,7 @@ MonoBehaviour:
     Type: 
     Name: 
     Explanation: 
-    isUsing: 0
+    score: 0
   dataMovingCount: 0
   wareHouseInventoryScript: {fileID: 0}
 --- !u!65 &1823765484
@@ -5277,10 +5341,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7836f0239c562458c26d20c6ef0f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parents: {fileID: 0}
+  Field: {fileID: 0}
   data_GameManager: {fileID: 0}
   myObject: {fileID: 502200349}
   movingObject: {fileID: 1827911659}
+  objectScript: {fileID: 0}
+  soup: {fileID: 0}
+  ingame_step_object: {fileID: 0}
+  fieldobject: {fileID: 0}
+  ingame_step: 0
+  field_score: 0
+  space_onoff: 0
+  isinventorystart: 0
 --- !u!1 &1837758813
 GameObject:
   m_ObjectHideFlags: 0
@@ -5350,10 +5422,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7836f0239c562458c26d20c6ef0f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parents: {fileID: 0}
+  Field: {fileID: 0}
   data_GameManager: {fileID: 0}
   myObject: {fileID: 1674446981}
   movingObject: {fileID: 1837758813}
+  objectScript: {fileID: 0}
+  soup: {fileID: 0}
+  ingame_step_object: {fileID: 0}
+  fieldobject: {fileID: 0}
+  ingame_step: 0
+  field_score: 0
+  space_onoff: 0
+  isinventorystart: 0
 --- !u!1 &1858840508
 GameObject:
   m_ObjectHideFlags: 0
@@ -5423,10 +5503,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7836f0239c562458c26d20c6ef0f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parents: {fileID: 0}
+  Field: {fileID: 0}
   data_GameManager: {fileID: 0}
   myObject: {fileID: 1088718072}
   movingObject: {fileID: 1858840508}
+  objectScript: {fileID: 0}
+  soup: {fileID: 0}
+  ingame_step_object: {fileID: 0}
+  fieldobject: {fileID: 0}
+  ingame_step: 0
+  field_score: 0
+  space_onoff: 0
+  isinventorystart: 0
 --- !u!1 &1913060685
 GameObject:
   m_ObjectHideFlags: 0
@@ -5486,7 +5574,7 @@ MonoBehaviour:
     Type: 
     Name: 
     Explanation: 
-    isUsing: 0
+    score: 0
   dataMovingCount: 0
   wareHouseInventoryScript: {fileID: 0}
 --- !u!54 &1913060689
@@ -5555,79 +5643,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &1975776058
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1975776059}
-  - component: {fileID: 1975776060}
-  - component: {fileID: 109784566}
-  m_Layer: 5
-  m_Name: DatabaseMoving_Syrup
-  m_TagString: MovingDatabase
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &1975776059
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1975776058}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1791489246999998572}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1975776060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1975776058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1c79dc44e4b45a46b3f588904cee3f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InventorySlot: []
-  data_GameManager: {fileID: 0}
-  myObject: {fileID: 590821704}
-  movingObject: {fileID: 1975776058}
-  dataSpace: {fileID: 590821706}
-  isemptySlots: 0
-  emptyslotCount: 0
-  isInventoryMove: 0
---- !u!114 &109784566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1975776058}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f7836f0239c562458c26d20c6ef0f0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parents: {fileID: 0}
-  data_GameManager: {fileID: 0}
-  myObject: {fileID: 590821704}
-  movingObject: {fileID: 1975776058}
 --- !u!1 &1982832183
 GameObject:
   m_ObjectHideFlags: 0
@@ -5697,10 +5712,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7836f0239c562458c26d20c6ef0f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parents: {fileID: 0}
+  Field: {fileID: 0}
   data_GameManager: {fileID: 0}
   myObject: {fileID: 1303772259}
   movingObject: {fileID: 1982832183}
+  objectScript: {fileID: 0}
+  soup: {fileID: 0}
+  ingame_step_object: {fileID: 0}
+  fieldobject: {fileID: 0}
+  ingame_step: 0
+  field_score: 0
+  space_onoff: 0
+  isinventorystart: 0
 --- !u!1 &1989223129
 GameObject:
   m_ObjectHideFlags: 0
@@ -5760,7 +5783,7 @@ MonoBehaviour:
     Type: 
     Name: 
     Explanation: 
-    isUsing: 0
+    score: 0
   dataMovingCount: 0
   wareHouseInventoryScript: {fileID: 0}
 --- !u!65 &1989223133
@@ -5898,10 +5921,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7836f0239c562458c26d20c6ef0f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parents: {fileID: 0}
+  Field: {fileID: 0}
   data_GameManager: {fileID: 0}
   myObject: {fileID: 23853670}
   movingObject: {fileID: 2009370967}
+  objectScript: {fileID: 0}
+  soup: {fileID: 0}
+  ingame_step_object: {fileID: 0}
+  fieldobject: {fileID: 0}
+  ingame_step: 0
+  field_score: 0
+  space_onoff: 0
+  isinventorystart: 0
 --- !u!1 &2060430065
 GameObject:
   m_ObjectHideFlags: 0
@@ -5961,7 +5992,7 @@ MonoBehaviour:
     Type: 
     Name: 
     Explanation: 
-    isUsing: 0
+    score: 0
   dataMovingCount: 0
   wareHouseInventoryScript: {fileID: 0}
 --- !u!222 &2060430070
@@ -6089,7 +6120,7 @@ MonoBehaviour:
     Type: 
     Name: 
     Explanation: 
-    isUsing: 0
+    score: 0
   dataMovingCount: 0
   wareHouseInventoryScript: {fileID: 0}
 --- !u!65 &2080730942
@@ -6217,7 +6248,7 @@ MonoBehaviour:
     Type: 
     Name: 
     Explanation: 
-    isUsing: 0
+    score: 0
   dataMovingCount: 0
   wareHouseInventoryScript: {fileID: 0}
 --- !u!54 &2088929690
@@ -6355,10 +6386,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7836f0239c562458c26d20c6ef0f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parents: {fileID: 0}
+  Field: {fileID: 0}
   data_GameManager: {fileID: 0}
   myObject: {fileID: 1551843386}
   movingObject: {fileID: 2132312547}
+  objectScript: {fileID: 0}
+  soup: {fileID: 0}
+  ingame_step_object: {fileID: 0}
+  fieldobject: {fileID: 0}
+  ingame_step: 0
+  field_score: 0
+  space_onoff: 0
+  isinventorystart: 0
 --- !u!1 &2132611123
 GameObject:
   m_ObjectHideFlags: 0
@@ -6428,10 +6467,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7836f0239c562458c26d20c6ef0f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parents: {fileID: 0}
+  Field: {fileID: 0}
   data_GameManager: {fileID: 0}
   myObject: {fileID: 1158964931}
   movingObject: {fileID: 2132611123}
+  objectScript: {fileID: 0}
+  soup: {fileID: 0}
+  ingame_step_object: {fileID: 0}
+  fieldobject: {fileID: 0}
+  ingame_step: 0
+  field_score: 0
+  space_onoff: 0
+  isinventorystart: 0
 --- !u!1 &540368444381759
 GameObject:
   m_ObjectHideFlags: 0
@@ -6608,10 +6655,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7836f0239c562458c26d20c6ef0f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parents: {fileID: 0}
+  Field: {fileID: 0}
   data_GameManager: {fileID: 0}
   myObject: {fileID: 4462092633553878628}
   movingObject: {fileID: 852421058523685661}
+  objectScript: {fileID: 0}
+  soup: {fileID: 0}
+  ingame_step_object: {fileID: 0}
+  fieldobject: {fileID: 0}
+  ingame_step: 0
+  field_score: 0
+  space_onoff: 0
+  isinventorystart: 0
 --- !u!1 &978870213670754742
 GameObject:
   m_ObjectHideFlags: 0
@@ -8202,10 +8257,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7836f0239c562458c26d20c6ef0f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parents: {fileID: 0}
+  Field: {fileID: 0}
   data_GameManager: {fileID: 0}
   myObject: {fileID: 4496796639638498985}
   movingObject: {fileID: 1824801849449350506}
+  objectScript: {fileID: 0}
+  soup: {fileID: 0}
+  ingame_step_object: {fileID: 0}
+  fieldobject: {fileID: 0}
+  ingame_step: 0
+  field_score: 0
+  space_onoff: 0
+  isinventorystart: 0
 --- !u!1 &1873689852659374743
 GameObject:
   m_ObjectHideFlags: 0
@@ -9866,7 +9929,7 @@ MonoBehaviour:
     Type: 
     Name: 
     Explanation: 
-    isUsing: 0
+    score: 0
   dataMovingCount: 0
   wareHouseInventoryScript: {fileID: 0}
 --- !u!222 &6816643556395019837
@@ -9994,7 +10057,7 @@ MonoBehaviour:
     Type: 
     Name: 
     Explanation: 
-    isUsing: 0
+    score: 0
   dataMovingCount: 0
   wareHouseInventoryScript: {fileID: 0}
 --- !u!222 &251930824289750826
@@ -11983,3 +12046,297 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &3316029335375369765
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1791489246999998572}
+    m_Modifications:
+    - target: {fileID: 3316029335863160684, guid: a4071b28855bfcc428a83489956ba78f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316029335863160684, guid: a4071b28855bfcc428a83489956ba78f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316029335863160684, guid: a4071b28855bfcc428a83489956ba78f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316029335863160684, guid: a4071b28855bfcc428a83489956ba78f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316029335863160684, guid: a4071b28855bfcc428a83489956ba78f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316029335863160684, guid: a4071b28855bfcc428a83489956ba78f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316029335863160684, guid: a4071b28855bfcc428a83489956ba78f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316029335863160684, guid: a4071b28855bfcc428a83489956ba78f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316029335863160684, guid: a4071b28855bfcc428a83489956ba78f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316029335863160684, guid: a4071b28855bfcc428a83489956ba78f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316029335863160684, guid: a4071b28855bfcc428a83489956ba78f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316029335863160684, guid: a4071b28855bfcc428a83489956ba78f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316029335863160684, guid: a4071b28855bfcc428a83489956ba78f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316029335863160684, guid: a4071b28855bfcc428a83489956ba78f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316029335863160684, guid: a4071b28855bfcc428a83489956ba78f,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316029335863160684, guid: a4071b28855bfcc428a83489956ba78f,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316029335863160684, guid: a4071b28855bfcc428a83489956ba78f,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316029335863160684, guid: a4071b28855bfcc428a83489956ba78f,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316029335863160684, guid: a4071b28855bfcc428a83489956ba78f,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316029335863160684, guid: a4071b28855bfcc428a83489956ba78f,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316029335863160684, guid: a4071b28855bfcc428a83489956ba78f,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316029335863160685, guid: a4071b28855bfcc428a83489956ba78f,
+        type: 3}
+      propertyPath: m_Name
+      value: Syrup
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316029335863160687, guid: a4071b28855bfcc428a83489956ba78f,
+        type: 3}
+      propertyPath: dataMoving
+      value: 
+      objectReference: {fileID: 1975776058}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a4071b28855bfcc428a83489956ba78f, type: 3}
+--- !u!224 &590821705 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3316029335863160684, guid: a4071b28855bfcc428a83489956ba78f,
+    type: 3}
+  m_PrefabInstance: {fileID: 3316029335375369765}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &590821706 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3316029335863160687, guid: a4071b28855bfcc428a83489956ba78f,
+    type: 3}
+  m_PrefabInstance: {fileID: 3316029335375369765}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590821704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e531c6d90c20bf743884a5c0a45bb6f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &590821704 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3316029335863160685, guid: a4071b28855bfcc428a83489956ba78f,
+    type: 3}
+  m_PrefabInstance: {fileID: 3316029335375369765}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6084898083214149993
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1791489246999998572}
+    m_Modifications:
+    - target: {fileID: 6084898083033627218, guid: 913d745bc1e9f2143a9bcbfcb2473bc2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084898083033627218, guid: 913d745bc1e9f2143a9bcbfcb2473bc2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084898083033627218, guid: 913d745bc1e9f2143a9bcbfcb2473bc2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084898083033627218, guid: 913d745bc1e9f2143a9bcbfcb2473bc2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084898083033627218, guid: 913d745bc1e9f2143a9bcbfcb2473bc2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084898083033627218, guid: 913d745bc1e9f2143a9bcbfcb2473bc2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084898083033627218, guid: 913d745bc1e9f2143a9bcbfcb2473bc2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084898083033627218, guid: 913d745bc1e9f2143a9bcbfcb2473bc2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084898083033627218, guid: 913d745bc1e9f2143a9bcbfcb2473bc2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084898083033627218, guid: 913d745bc1e9f2143a9bcbfcb2473bc2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084898083033627218, guid: 913d745bc1e9f2143a9bcbfcb2473bc2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084898083033627218, guid: 913d745bc1e9f2143a9bcbfcb2473bc2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084898083033627218, guid: 913d745bc1e9f2143a9bcbfcb2473bc2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084898083033627218, guid: 913d745bc1e9f2143a9bcbfcb2473bc2,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084898083033627218, guid: 913d745bc1e9f2143a9bcbfcb2473bc2,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084898083033627218, guid: 913d745bc1e9f2143a9bcbfcb2473bc2,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084898083033627218, guid: 913d745bc1e9f2143a9bcbfcb2473bc2,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084898083033627218, guid: 913d745bc1e9f2143a9bcbfcb2473bc2,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084898083033627218, guid: 913d745bc1e9f2143a9bcbfcb2473bc2,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084898083033627218, guid: 913d745bc1e9f2143a9bcbfcb2473bc2,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084898083033627218, guid: 913d745bc1e9f2143a9bcbfcb2473bc2,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084898083033627219, guid: 913d745bc1e9f2143a9bcbfcb2473bc2,
+        type: 3}
+      propertyPath: m_Name
+      value: DatabaseMoving_Syrup
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084898083033627221, guid: 913d745bc1e9f2143a9bcbfcb2473bc2,
+        type: 3}
+      propertyPath: myObject
+      value: 
+      objectReference: {fileID: 590821704}
+    - target: {fileID: 6084898083033627221, guid: 913d745bc1e9f2143a9bcbfcb2473bc2,
+        type: 3}
+      propertyPath: dataSpace
+      value: 
+      objectReference: {fileID: 590821706}
+    - target: {fileID: 6084898083322487967, guid: 913d745bc1e9f2143a9bcbfcb2473bc2,
+        type: 3}
+      propertyPath: myObject
+      value: 
+      objectReference: {fileID: 590821704}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 913d745bc1e9f2143a9bcbfcb2473bc2, type: 3}
+--- !u!224 &1975776059 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6084898083033627218, guid: 913d745bc1e9f2143a9bcbfcb2473bc2,
+    type: 3}
+  m_PrefabInstance: {fileID: 6084898083214149993}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1975776058 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6084898083033627219, guid: 913d745bc1e9f2143a9bcbfcb2473bc2,
+    type: 3}
+  m_PrefabInstance: {fileID: 6084898083214149993}
+  m_PrefabAsset: {fileID: 0}

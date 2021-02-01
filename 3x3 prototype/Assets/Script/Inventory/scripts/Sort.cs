@@ -12,12 +12,17 @@ public class Sort : MonoBehaviour
 
     private void Start()
     {
-        InventorySlot = GameObject.FindGameObjectsWithTag("Slot");
+        
     }
 
 
     private void Update()
     {
+        if (InventorySlot.Length == 0)
+        {
+            InventorySlot = GameObject.FindGameObjectsWithTag("Slot");
+        }
+
         for (int i = 0; i < data_GameManager.moveCount; i++)
         {
             if (InventorySlot[i].transform.childCount == 0)

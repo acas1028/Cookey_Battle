@@ -8,11 +8,17 @@ public class DataSpace : MonoBehaviour
 
     public GameObject dataMoving;
 
+    public GameObject soup_MakingIngredients;
+
     public int count;
 
     public Item_list item_List;
 
+    public Item_list_SoupMakingIngredient SoupMakingIngredient;
+
     public bool dataMovingCount = false;
+
+    public bool isMakingIngredinet;
 
     public WareHouseInventoryScript wareHouseInventoryScript;
 
@@ -25,6 +31,21 @@ public class DataSpace : MonoBehaviour
             if (count == i)
             {
                 item_List = data_GameManager.warehouseItemList[i];
+            }
+        }
+
+        if(isMakingIngredinet==true)
+        {
+            for(int i=0; i< soup_MakingIngredients.GetComponent<MakingDatabaseManager>().SoupAnswer_Making_ItemList.Count;i++)
+            {
+                if(count == i)
+                {
+                    SoupMakingIngredient = soup_MakingIngredients.GetComponent<MakingDatabaseManager>().SoupAnswer_Making_ItemList[i];
+                    item_List.Type = SoupMakingIngredient.Type;
+                    item_List.Name = SoupMakingIngredient.Name;
+                    item_List.Explanation = SoupMakingIngredient.Explanation;
+                    item_List.score = SoupMakingIngredient.score;
+                }
             }
         }
         
