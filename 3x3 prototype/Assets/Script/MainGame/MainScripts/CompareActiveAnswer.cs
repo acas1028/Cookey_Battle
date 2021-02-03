@@ -623,6 +623,8 @@ public class CompareActiveAnswer : MonoBehaviour
                 {
                     ingameStep++;
 
+                    fieldObject.GetComponent<FieldObjectScript>().SetFieldScore(fieldObject.GetComponent<FieldObjectScript>().GetFieldScore() / 16);
+
                     gameFinishObject.SetActive(true);
                 }
                 break;

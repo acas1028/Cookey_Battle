@@ -273,7 +273,6 @@ public class ComandComparison : MonoBehaviour
         {
             if (calculationCommand.Commands.Count > CommandsAnswer.Count)
             {
-                CommandComparisonCount++;
                 break;
             }
 
