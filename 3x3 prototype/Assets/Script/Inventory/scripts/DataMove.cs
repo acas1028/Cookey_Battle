@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DataMove : MonoBehaviour
 {
@@ -74,6 +75,7 @@ public class DataMove : MonoBehaviour
     public void DataMoving()
     {
         fieldobject.GetComponent<FieldObjectScript>().SetitemList(myObject.GetComponent<DataSpace>().item_List);
+        fieldobject.GetComponent<SpriteRenderer>().sprite = movingObject.GetComponent<SpriteRenderer>().sprite;
         data_GameManager.moveCount--;
         Destroy(myObject);
         Destroy(movingObject);
@@ -119,17 +121,19 @@ public class DataMove : MonoBehaviour
             }
         }
 
-        if(isDragon)
+        if(isDragon==true)
         {
             if (Dragon.GetComponent<Dragon_Database>().GetItemName(ingame_step_object.GetComponent<CompareActiveAnswer>().Ingredient_Count) == myObject.GetComponent<DataSpace>().item_List.Name)
             {
-                
+               
                 fieldobject.GetComponent<FieldObjectScript>().SetFieldScore((fieldobject.GetComponent<FieldObjectScript>().fieldScore + myObject.GetComponent<DataSpace>().item_List.score));
             }
             else
             {
+                
                 fieldobject.GetComponent<FieldObjectScript>().SetFieldScore((fieldobject.GetComponent<FieldObjectScript>().fieldScore + 0));
             }
+            
         }
 
     }

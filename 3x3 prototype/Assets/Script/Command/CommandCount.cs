@@ -31,6 +31,11 @@ public class CommandCount : MonoBehaviour
             count = soupCommandDatabase.GetComponent<SlimeCommandDatabase>().HisCount - commandComparison.GetComponent<ComandComparison>().CommandComparisonCount;
         }
 
+        if(isDragon==true)
+        {
+            count = soupCommandDatabase.GetComponent<Dragon_Command_Database>().HisCount - commandComparison.GetComponent<ComandComparison>().CommandComparisonCount;
+        }
+
 
         text.text = count.ToString();
     }

@@ -75,6 +75,11 @@ public class InputCommand : MonoBehaviour
                 CommandCompare.GetComponent<CommandCompare>().CommandCompare_Slime();
             }
 
+            if(commandCount.GetComponent<CommandCount>().isDragon == true)
+            {
+                CommandCompare.GetComponent<CommandCompare>().CommandCompare_Dragon();
+            }
+
 
 
 

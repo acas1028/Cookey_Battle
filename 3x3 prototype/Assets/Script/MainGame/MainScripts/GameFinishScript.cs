@@ -37,14 +37,14 @@ public class GameFinishScript : MonoBehaviour
                     LoadingSceneManager.LoadScene(8);
                     break;
                 case 2:
-                    fieldObject.GetComponent<FieldObjectScript>().SetFieldScore(fieldScore / 16);
+                    fieldObject.GetComponent<FieldObjectScript>().SetFieldScore(fieldScore / 28);
                     fieldScore = fieldObject.GetComponent<FieldObjectScript>().GetFieldScore();
                     GameManager.instance.SetStage2Try(true);
                     GameManager.instance.SetStage2Score(fieldScore);
                     LoadingSceneManager.LoadScene(9);
                     break;
                 case 3:
-                    fieldObject.GetComponent<FieldObjectScript>().SetFieldScore(fieldScore / 16);
+                    fieldObject.GetComponent<FieldObjectScript>().SetFieldScore(fieldScore / 38);
                     fieldScore = fieldObject.GetComponent<FieldObjectScript>().GetFieldScore();
                     GameManager.instance.SetStage3Try(true);
                     GameManager.instance.SetStage3Score(fieldScore);

@@ -55,12 +55,12 @@ public class Dragon_Command_Database : MonoBehaviour
         DragonAnswer_Command_ItemList = JsonConvert.DeserializeObject<List<Item_list_Dragon_Command>>(jdata);
     }
 
-    public string GetItemName_SoupCommand(int number)
+    public string GetItemName_DragonCommand(int number)
     {
         return DragonAnswer_Command_ItemList[number].Name;
     }
 
-    public void GetItemName_SoupCommand_Count(string Name)
+    public void GetItemName_DragonCommand_Count(string Name)
     {
         for (int I = 0; I < DragonAnswer_Command_ItemList.Count; I++)
         {
