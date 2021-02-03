@@ -16,6 +16,10 @@ public class DataMove : MonoBehaviour
 
     public GameObject soup;
 
+    public GameObject Slime;
+
+    public GameObject Dragon;
+
     public GameObject ingame_step_object;
 
     public GameObject fieldobject;
@@ -27,6 +31,14 @@ public class DataMove : MonoBehaviour
     public bool space_onoff = false;
 
     public bool isinventorystart = false;
+
+    public bool issoup;
+
+    public bool isslime;
+
+    public bool isDragon;
+
+   
 
 
     
@@ -79,17 +91,45 @@ public class DataMove : MonoBehaviour
 
     public void Name_Compare()
     {
-        Debug.Log(soup.GetComponent<Soup_DataBase>().GetItemName(ingame_step_object.GetComponent<CompareActiveAnswer>().Ingredient_Count));
-        Debug.Log(myObject.GetComponent<DataSpace>().item_List.Name);
-        
-        if ( soup.GetComponent<Soup_DataBase>().GetItemName(ingame_step_object.GetComponent<CompareActiveAnswer>().Ingredient_Count) == myObject.GetComponent<DataSpace>().item_List.Name)
+        if (issoup == true)
         {
-            Debug.Log("정답");
-            fieldobject.GetComponent<FieldObjectScript>().SetFieldScore((fieldobject.GetComponent<FieldObjectScript>().fieldScore + myObject.GetComponent<DataSpace>().item_List.score) );
+
+            if (soup.GetComponent<Soup_DataBase>().GetItemName(ingame_step_object.GetComponent<CompareActiveAnswer>().Ingredient_Count) == myObject.GetComponent<DataSpace>().item_List.Name)
+            {
+                
+                fieldobject.GetComponent<FieldObjectScript>().SetFieldScore((fieldobject.GetComponent<FieldObjectScript>().fieldScore + myObject.GetComponent<DataSpace>().item_List.score));
+            }
+            else
+            {
+                fieldobject.GetComponent<FieldObjectScript>().SetFieldScore((fieldobject.GetComponent<FieldObjectScript>().fieldScore + 0));
+            }
         }
-        else 
+
+        if (isslime == true)
         {
-            fieldobject.GetComponent<FieldObjectScript>().SetFieldScore((fieldobject.GetComponent<FieldObjectScript>().fieldScore + 0) );
+
+            if (Slime.GetComponent<SlimeDatabase>().GetItemName(ingame_step_object.GetComponent<CompareActiveAnswer>().Ingredient_Count) == myObject.GetComponent<DataSpace>().item_List.Name)
+            {
+                
+                fieldobject.GetComponent<FieldObjectScript>().SetFieldScore((fieldobject.GetComponent<FieldObjectScript>().fieldScore + myObject.GetComponent<DataSpace>().item_List.score));
+            }
+            else
+            {
+                fieldobject.GetComponent<FieldObjectScript>().SetFieldScore((fieldobject.GetComponent<FieldObjectScript>().fieldScore + 0));
+            }
+        }
+
+        if(isDragon)
+        {
+            if (Dragon.GetComponent<Dragon_Database>().GetItemName(ingame_step_object.GetComponent<CompareActiveAnswer>().Ingredient_Count) == myObject.GetComponent<DataSpace>().item_List.Name)
+            {
+                
+                fieldobject.GetComponent<FieldObjectScript>().SetFieldScore((fieldobject.GetComponent<FieldObjectScript>().fieldScore + myObject.GetComponent<DataSpace>().item_List.score));
+            }
+            else
+            {
+                fieldobject.GetComponent<FieldObjectScript>().SetFieldScore((fieldobject.GetComponent<FieldObjectScript>().fieldScore + 0));
+            }
         }
 
     }

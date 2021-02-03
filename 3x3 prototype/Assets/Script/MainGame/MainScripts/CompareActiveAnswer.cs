@@ -61,8 +61,8 @@ public class CompareActiveAnswer : MonoBehaviour
 
     int ingameStage;
     int ingameStep;
-    int hiddenConditionNumber;
-    int hiddenCount;
+    int hiddenConditionNumber; //히든 아이템 갯수
+    int hiddenCount; // 히든 아이템 사용 횟수
 
 
     void Start()
@@ -622,8 +622,9 @@ public class CompareActiveAnswer : MonoBehaviour
             case 16:
                 {
                     ingameStep++;
+                    command_All_Count = 0;
 
-                    fieldObject.GetComponent<FieldObjectScript>().SetFieldScore(fieldObject.GetComponent<FieldObjectScript>().GetFieldScore() / 16);
+                    
 
                     gameFinishObject.SetActive(true);
                 }
@@ -638,105 +639,651 @@ public class CompareActiveAnswer : MonoBehaviour
         {
             case 1:
                 {
-                    if (Input.GetKeyDown(KeyCode.Alpha1))
-                        ingameStep++;
-                    else if (Input.GetKeyDown(KeyCode.F1))
+                    for (int j = 0; j < basic_instance.Count; j++)
                     {
-                        ingameStep++;
-                        hiddenCount++;
+
+                        if (basic_instance[j].GetComponent<DataMove>().space_onoff == true && inventory.activeSelf == true)
+                        {
+
+                            for (int i = 0; i < basic_instance.Count; i++)
+                            {
+                                if (basic_instance[i].activeSelf == true)
+                                {
+
+                                    compare_score = basic_instance[i];
+                                    compare_score.GetComponent<DataMove>().Name_Compare();
+                                    ingameStep++;
+                                    Ingredient_Count++;
+                                    basic_instance[i].GetComponent<DataMove>().DataMoving();
+                                    keyboardinput.SetActive(true);
+                                    inventory.SetActive(false);
+                                    iscommandStart = true;
+
+
+
+                                }
+                            }
+                        }
                     }
                 }
                 break;
             case 2:
                 {
-                    if (Input.GetKeyDown(KeyCode.Alpha2))
-                        ingameStep++;
-                    else if (Input.GetKeyDown(KeyCode.F1))
+                    if (iscommandStart == true)
                     {
+                        keyboardinput.SetActive(false);
+                        commandbar.SetActive(true);
+                        Soup_Command_Database.GetComponent<SlimeCommandDatabase>().GetItemName_SlimeCommand_Count(Soup_Command_Database.GetComponent<SlimeCommandDatabase>().GetItemName_SoupCommand(command_All_Count));
+
+                    }
+
+
+
+                    if (CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount == Soup_Command_Database.GetComponent<SlimeCommandDatabase>().HisCount && Soup_Command_Database.GetComponent<SlimeCommandDatabase>().HisCount != 0)
+                    {
+
+                        commandbar.SetActive(false);
+                        keyboardinput.SetActive(true);
+                        commandCompare.GetComponent<CommandCompare>().CommandScore();
+                        CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount = 0;
+                        Making_ingredient();
+                        command_All_Count++;
                         ingameStep++;
-                        hiddenCount++;
+
                     }
                 }
                 break;
             case 3:
                 {
-                    if (Input.GetKeyDown(KeyCode.Alpha3))
-                        ingameStep++;
-                    else if (Input.GetKeyDown(KeyCode.F1))
+                    for (int j = 0; j < basic_instance.Count; j++)
                     {
-                        ingameStep++;
-                        hiddenCount++;
+
+                        if (basic_instance[j].GetComponent<DataMove>().space_onoff == true && inventory.activeSelf == true)
+                        {
+
+                            for (int i = 0; i < basic_instance.Count; i++)
+                            {
+                                if (basic_instance[i].activeSelf == true)
+                                {
+
+                                    compare_score = basic_instance[i];
+                                    compare_score.GetComponent<DataMove>().Name_Compare();
+                                    ingameStep++;
+                                    Ingredient_Count++;
+                                    basic_instance[i].GetComponent<DataMove>().DataMoving();
+                                    keyboardinput.SetActive(true);
+                                    inventory.SetActive(false);
+                                    iscommandStart = true;
+
+
+
+                                }
+                            }
+                        }
                     }
                 }
                 break;
             case 4:
                 {
-                    if (Input.GetKeyDown(KeyCode.Alpha4))
-                        ingameStep++;
-                    else if (Input.GetKeyDown(KeyCode.F1))
+                    if (iscommandStart == true)
                     {
+                        keyboardinput.SetActive(false);
+                        commandbar.SetActive(true);
+                        Soup_Command_Database.GetComponent<SlimeCommandDatabase>().GetItemName_SlimeCommand_Count(Soup_Command_Database.GetComponent<SlimeCommandDatabase>().GetItemName_SoupCommand(command_All_Count));
+
+                    }
+
+
+
+                    if (CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount == Soup_Command_Database.GetComponent<SlimeCommandDatabase>().HisCount && Soup_Command_Database.GetComponent<SlimeCommandDatabase>().HisCount != 0)
+                    {
+
+                        commandbar.SetActive(false);
+                        keyboardinput.SetActive(true);
+                        commandCompare.GetComponent<CommandCompare>().CommandScore();
+                        CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount = 0;
+                        Making_ingredient();
+                        command_All_Count++;
                         ingameStep++;
-                        hiddenCount++;
+
                     }
                 }
                 break;
             case 5:
                 {
-                    if (Input.GetKeyDown(KeyCode.Alpha5))
-                        ingameStep++;
+                    for (int j = 0; j < basic_instance.Count; j++)
+                    {
+
+                        if (basic_instance[j].GetComponent<DataMove>().space_onoff == true && inventory.activeSelf == true)
+                        {
+
+                            for (int i = 0; i < basic_instance.Count; i++)
+                            {
+                                if (basic_instance[i].activeSelf == true)
+                                {
+
+                                    compare_score = basic_instance[i];
+                                    compare_score.GetComponent<DataMove>().Name_Compare();
+                                    ingameStep++;
+                                    Ingredient_Count++;
+                                    basic_instance[i].GetComponent<DataMove>().DataMoving();
+                                    keyboardinput.SetActive(true);
+                                    inventory.SetActive(false);
+                                   
+
+
+
+                                }
+                            }
+                        }
+                    }
                 }
                 break;
             case 6:
                 {
-                    if (Input.GetKeyDown(KeyCode.Alpha6))
-                        ingameStep++;
+                    for (int j = 0; j < basic_instance.Count; j++)
+                    {
+
+                        if (basic_instance[j].GetComponent<DataMove>().space_onoff == true && inventory.activeSelf == true)
+                        {
+
+                            for (int i = 0; i < basic_instance.Count; i++)
+                            {
+                                if (basic_instance[i].activeSelf == true)
+                                {
+
+                                    compare_score = basic_instance[i];
+                                    compare_score.GetComponent<DataMove>().Name_Compare();
+                                    ingameStep++;
+                                    Ingredient_Count++;
+                                    basic_instance[i].GetComponent<DataMove>().DataMoving();
+                                    keyboardinput.SetActive(true);
+                                    inventory.SetActive(false);
+                                    iscommandStart = true;
+
+
+
+                                }
+                            }
+                        }
+                    }
                 }
                 break;
             case 7:
                 {
-                    if (Input.GetKeyDown(KeyCode.Alpha7))
-                        ingameStep++;  
+                    if (iscommandStart == true)
+                    {
+                        keyboardinput.SetActive(false);
+                        commandbar.SetActive(true);
+                        Soup_Command_Database.GetComponent<SlimeCommandDatabase>().GetItemName_SlimeCommand_Count(Soup_Command_Database.GetComponent<SlimeCommandDatabase>().GetItemName_SoupCommand(command_All_Count));
+
+                    }
+
+
+
+                    if (CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount == Soup_Command_Database.GetComponent<SlimeCommandDatabase>().HisCount && Soup_Command_Database.GetComponent<SlimeCommandDatabase>().HisCount != 0)
+                    {
+
+                        commandbar.SetActive(false);
+                        keyboardinput.SetActive(true);
+                        commandCompare.GetComponent<CommandCompare>().CommandScore();
+                        CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount = 0;
+                        Making_ingredient();
+                        command_All_Count++;
+                        ingameStep++;
+
+                    }
                 }
                 break;
             case 8:
                 {
-                    if (Input.GetKeyDown(KeyCode.Alpha8))
-                        ingameStep++;
+                    for (int j = 0; j < basic_instance.Count; j++)
+                    {
+
+                        if (basic_instance[j].GetComponent<DataMove>().space_onoff == true && inventory.activeSelf == true)
+                        {
+
+                            for (int i = 0; i < basic_instance.Count; i++)
+                            {
+                                if (basic_instance[i].activeSelf == true)
+                                {
+
+                                    compare_score = basic_instance[i];
+                                    compare_score.GetComponent<DataMove>().Name_Compare();
+                                    ingameStep++;
+                                    Ingredient_Count++;
+                                    basic_instance[i].GetComponent<DataMove>().DataMoving();
+                                    keyboardinput.SetActive(true);
+                                    inventory.SetActive(false);
+                                    iscommandStart = true;
+
+
+
+                                }
+                            }
+                        }
+                    }
                 }
                 break;
             case 9:
                 {
-                    if (Input.GetKeyDown(KeyCode.Alpha9))
+                    if (iscommandStart == true)
+                    {
+                        keyboardinput.SetActive(false);
+                        commandbar.SetActive(true);
+                        Soup_Command_Database.GetComponent<SlimeCommandDatabase>().GetItemName_SlimeCommand_Count(Soup_Command_Database.GetComponent<SlimeCommandDatabase>().GetItemName_SoupCommand(command_All_Count));
+
+                    }
+
+
+
+                    if (CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount == Soup_Command_Database.GetComponent<SlimeCommandDatabase>().HisCount && Soup_Command_Database.GetComponent<SlimeCommandDatabase>().HisCount != 0)
+                    {
+
+                        commandbar.SetActive(false);
+                        keyboardinput.SetActive(true);
+                        commandCompare.GetComponent<CommandCompare>().CommandScore();
+                        CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount = 0;
+                        Making_ingredient();
+                        command_All_Count++;
                         ingameStep++;
+
+                    }
                 }
                 break;
             case 10:
                 {
-                    if (Input.GetKeyDown(KeyCode.Alpha0))
-                        ingameStep++;
+                    for (int j = 0; j < basic_instance.Count; j++)
+                    {
+
+                        if (basic_instance[j].GetComponent<DataMove>().space_onoff == true && inventory.activeSelf == true)
+                        {
+
+                            for (int i = 0; i < basic_instance.Count; i++)
+                            {
+                                if (basic_instance[i].activeSelf == true)
+                                {
+
+                                    compare_score = basic_instance[i];
+                                    compare_score.GetComponent<DataMove>().Name_Compare();
+                                    ingameStep++;
+                                    Ingredient_Count++;
+                                    basic_instance[i].GetComponent<DataMove>().DataMoving();
+                                    keyboardinput.SetActive(true);
+                                    inventory.SetActive(false);
+                                    iscommandStart = true;
+
+
+
+                                }
+                            }
+                        }
+                    }
                 }
                 break;
             case 11:
                 {
-                    if (Input.GetKeyDown(KeyCode.Q))
+                    if (iscommandStart == true)
+                    {
+                        keyboardinput.SetActive(false);
+                        commandbar.SetActive(true);
+                        Soup_Command_Database.GetComponent<SlimeCommandDatabase>().GetItemName_SlimeCommand_Count(Soup_Command_Database.GetComponent<SlimeCommandDatabase>().GetItemName_SoupCommand(command_All_Count));
+
+                    }
+
+
+
+                    if (CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount == Soup_Command_Database.GetComponent<SlimeCommandDatabase>().HisCount && Soup_Command_Database.GetComponent<SlimeCommandDatabase>().HisCount != 0)
+                    {
+
+                        commandbar.SetActive(false);
+                        keyboardinput.SetActive(true);
+                        commandCompare.GetComponent<CommandCompare>().CommandScore();
+                        CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount = 0;
+                        Making_ingredient();
+                        command_All_Count++;
                         ingameStep++;
+
+                    }
                 }
                 break;
             case 12:
                 {
-                    if (Input.GetKeyDown(KeyCode.W))
-                        ingameStep++;
+                    for (int j = 0; j < basic_instance.Count; j++)
+                    {
+
+                        if (basic_instance[j].GetComponent<DataMove>().space_onoff == true && inventory.activeSelf == true)
+                        {
+
+                            for (int i = 0; i < basic_instance.Count; i++)
+                            {
+                                if (basic_instance[i].activeSelf == true)
+                                {
+
+                                    compare_score = basic_instance[i];
+                                    compare_score.GetComponent<DataMove>().Name_Compare();
+                                    ingameStep++;
+                                    Ingredient_Count++;
+                                    basic_instance[i].GetComponent<DataMove>().DataMoving();
+                                    keyboardinput.SetActive(true);
+                                    inventory.SetActive(false);
+
+
+
+
+                                }
+                            }
+                        }
+                    }
                 }
                 break;
             case 13:
-                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    for (int j = 0; j < basic_instance.Count; j++)
+                    {
+
+                        if (basic_instance[j].GetComponent<DataMove>().space_onoff == true && inventory.activeSelf == true)
+                        {
+
+                            for (int i = 0; i < basic_instance.Count; i++)
+                            {
+                                if (basic_instance[i].activeSelf == true)
+                                {
+
+                                    compare_score = basic_instance[i];
+                                    compare_score.GetComponent<DataMove>().Name_Compare();
+                                    ingameStep++;
+                                    Ingredient_Count++;
+                                    basic_instance[i].GetComponent<DataMove>().DataMoving();
+                                    keyboardinput.SetActive(true);
+                                    inventory.SetActive(false);
+
+
+
+
+                                }
+                            }
+                        }
+                    }
+                }
+                break;
+
+            case 14:
+                {
+                    for (int j = 0; j < basic_instance.Count; j++)
+                    {
+
+                        if (basic_instance[j].GetComponent<DataMove>().space_onoff == true && inventory.activeSelf == true)
+                        {
+
+                            for (int i = 0; i < basic_instance.Count; i++)
+                            {
+                                if (basic_instance[i].activeSelf == true)
+                                {
+
+                                    compare_score = basic_instance[i];
+                                    compare_score.GetComponent<DataMove>().Name_Compare();
+                                    ingameStep++;
+                                    Ingredient_Count++;
+                                    basic_instance[i].GetComponent<DataMove>().DataMoving();
+                                    keyboardinput.SetActive(true);
+                                    inventory.SetActive(false);
+                                    iscommandStart = true;
+
+
+
+
+                                }
+                            }
+                        }
+                    }
+                }
+                break;
+
+            case 15:
+                {
+                    if (iscommandStart == true)
+                    {
+                        keyboardinput.SetActive(false);
+                        commandbar.SetActive(true);
+                        Soup_Command_Database.GetComponent<SlimeCommandDatabase>().GetItemName_SlimeCommand_Count(Soup_Command_Database.GetComponent<SlimeCommandDatabase>().GetItemName_SoupCommand(command_All_Count));
+
+                    }
+
+
+
+                    if (CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount == Soup_Command_Database.GetComponent<SlimeCommandDatabase>().HisCount && Soup_Command_Database.GetComponent<SlimeCommandDatabase>().HisCount != 0)
+                    {
+
+                        commandbar.SetActive(false);
+                        keyboardinput.SetActive(true);
+                        commandCompare.GetComponent<CommandCompare>().CommandScore();
+                        CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount = 0;
+                        Making_ingredient();
+                        command_All_Count++;
+                        ingameStep++;
+
+                    }
+                }
+                break;
+            case 16:
+                {
+                    for (int j = 0; j < basic_instance.Count; j++)
+                    {
+
+                        if (basic_instance[j].GetComponent<DataMove>().space_onoff == true && inventory.activeSelf == true)
+                        {
+
+                            for (int i = 0; i < basic_instance.Count; i++)
+                            {
+                                if (basic_instance[i].activeSelf == true)
+                                {
+
+                                    compare_score = basic_instance[i];
+                                    compare_score.GetComponent<DataMove>().Name_Compare();
+                                    ingameStep++;
+                                    Ingredient_Count++;
+                                    basic_instance[i].GetComponent<DataMove>().DataMoving();
+                                    keyboardinput.SetActive(true);
+                                    inventory.SetActive(false);
+
+
+
+
+                                }
+                            }
+                        }
+                    }
+                }
+                break;
+            case 17:
+                {
+                    for (int j = 0; j < basic_instance.Count; j++)
+                    {
+
+                        if (basic_instance[j].GetComponent<DataMove>().space_onoff == true && inventory.activeSelf == true)
+                        {
+
+                            for (int i = 0; i < basic_instance.Count; i++)
+                            {
+                                if (basic_instance[i].activeSelf == true)
+                                {
+
+                                    compare_score = basic_instance[i];
+                                    compare_score.GetComponent<DataMove>().Name_Compare();
+                                    ingameStep++;
+                                    Ingredient_Count++;
+                                    basic_instance[i].GetComponent<DataMove>().DataMoving();
+                                    keyboardinput.SetActive(true);
+                                    inventory.SetActive(false);
+
+
+
+
+                                }
+                            }
+                        }
+                    }
+                }
+                break;
+            case 18:
+                {
+                    for (int j = 0; j < basic_instance.Count; j++)
+                    {
+
+                        if (basic_instance[j].GetComponent<DataMove>().space_onoff == true && inventory.activeSelf == true)
+                        {
+
+                            for (int i = 0; i < basic_instance.Count; i++)
+                            {
+                                if (basic_instance[i].activeSelf == true)
+                                {
+
+                                    compare_score = basic_instance[i];
+                                    compare_score.GetComponent<DataMove>().Name_Compare();
+                                    ingameStep++;
+                                    Ingredient_Count++;
+                                    basic_instance[i].GetComponent<DataMove>().DataMoving();
+                                    keyboardinput.SetActive(true);
+                                    inventory.SetActive(false);
+                                    iscommandStart = true;
+
+
+
+
+                                }
+                            }
+                        }
+                    }
+                }
+                break;
+            case 19:
+                {
+                    if (iscommandStart == true)
+                    {
+                        keyboardinput.SetActive(false);
+                        commandbar.SetActive(true);
+                        Soup_Command_Database.GetComponent<SlimeCommandDatabase>().GetItemName_SlimeCommand_Count(Soup_Command_Database.GetComponent<SlimeCommandDatabase>().GetItemName_SoupCommand(command_All_Count));
+
+                    }
+
+
+
+                    if (CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount == Soup_Command_Database.GetComponent<SlimeCommandDatabase>().HisCount && Soup_Command_Database.GetComponent<SlimeCommandDatabase>().HisCount != 0)
+                    {
+
+                        commandbar.SetActive(false);
+                        keyboardinput.SetActive(true);
+                        commandCompare.GetComponent<CommandCompare>().CommandScore();
+                        CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount = 0;
+                        Making_ingredient();
+                        command_All_Count++;
+                        ingameStep++;
+
+                    }
+                }
+                break;
+            case 20:
+                {
+                    for (int j = 0; j < basic_instance.Count; j++)
+                    {
+
+                        if (basic_instance[j].GetComponent<DataMove>().space_onoff == true && inventory.activeSelf == true)
+                        {
+
+                            for (int i = 0; i < basic_instance.Count; i++)
+                            {
+                                if (basic_instance[i].activeSelf == true)
+                                {
+
+                                    compare_score = basic_instance[i];
+                                    compare_score.GetComponent<DataMove>().Name_Compare();
+                                    ingameStep++;
+                                    Ingredient_Count++;
+                                    basic_instance[i].GetComponent<DataMove>().DataMoving();
+                                    keyboardinput.SetActive(true);
+                                    inventory.SetActive(false);
+
+
+
+
+                                }
+                            }
+                        }
+                    }
+                }
+                break;
+            case 21:
+                {
+                    for (int j = 0; j < basic_instance.Count; j++)
+                    {
+
+                        if (basic_instance[j].GetComponent<DataMove>().space_onoff == true && inventory.activeSelf == true)
+                        {
+
+                            for (int i = 0; i < basic_instance.Count; i++)
+                            {
+                                if (basic_instance[i].activeSelf == true)
+                                {
+
+                                    compare_score = basic_instance[i];
+                                    compare_score.GetComponent<DataMove>().Name_Compare();
+                                    ingameStep++;
+                                    Ingredient_Count++;
+                                    basic_instance[i].GetComponent<DataMove>().DataMoving();
+                                    keyboardinput.SetActive(true);
+                                    inventory.SetActive(false);
+
+
+
+
+                                }
+                            }
+                        }
+                    }
+
+                }
+                break;
+            case 22:
+                {
+                    for (int j = 0; j < basic_instance.Count; j++)
+                    {
+
+                        if (basic_instance[j].GetComponent<DataMove>().space_onoff == true && inventory.activeSelf == true)
+                        {
+
+                            for (int i = 0; i < basic_instance.Count; i++)
+                            {
+                                if (basic_instance[i].activeSelf == true)
+                                {
+
+                                    compare_score = basic_instance[i];
+                                    compare_score.GetComponent<DataMove>().Name_Compare();
+                                    ingameStep++;
+                                    Ingredient_Count++;
+                                    basic_instance[i].GetComponent<DataMove>().DataMoving();
+                                    keyboardinput.SetActive(true);
+                                    inventory.SetActive(false);
+
+
+
+
+                                }
+                            }
+                        }
+                    }
+                }
+                break;
+
+            case 23:
                 {
                     ingameStep++;
+
+
 
                     gameFinishObject.SetActive(true);
                 }
                 break;
-
 
 
         }

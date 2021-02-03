@@ -13,9 +13,23 @@ public class CommandCount : MonoBehaviour
 
     public Text text;
 
+    public bool isSoup;
+
+    public bool isSlime;
+
+    public bool isDragon;
+
     private void Update()
     {
-        count = soupCommandDatabase.GetComponent<Soup_Command_DataBase>().HisCount -commandComparison.GetComponent<ComandComparison>().CommandComparisonCount;
+        if (isSoup == true)
+        {
+            count = soupCommandDatabase.GetComponent<Soup_Command_DataBase>().HisCount - commandComparison.GetComponent<ComandComparison>().CommandComparisonCount;
+        }
+
+        if(isSlime==true)
+        {
+            count = soupCommandDatabase.GetComponent<SlimeCommandDatabase>().HisCount - commandComparison.GetComponent<ComandComparison>().CommandComparisonCount;
+        }
 
 
         text.text = count.ToString();

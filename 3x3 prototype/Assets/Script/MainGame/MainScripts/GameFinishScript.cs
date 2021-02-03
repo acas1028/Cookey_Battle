@@ -14,10 +14,12 @@ public class GameFinishScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         hiddenCondition = ingameStepObject.GetComponent<CompareActiveAnswer>().GetHiddenConditionNumber();
         hiddenCount = ingameStepObject.GetComponent<CompareActiveAnswer>().GetHiddenCount();
 
         fieldScore = fieldObject.GetComponent<FieldObjectScript>().GetFieldScore();
+       
     }
 
     // Update is called once per frame
@@ -28,16 +30,22 @@ public class GameFinishScript : MonoBehaviour
             switch(GameManager.instance.GetStageLevel())
             {
                 case 1:
+                    fieldObject.GetComponent<FieldObjectScript>().SetFieldScore(fieldScore / 16);
+                    fieldScore = fieldObject.GetComponent<FieldObjectScript>().GetFieldScore();
                     GameManager.instance.SetStage1Try(true);
                     GameManager.instance.SetStage1Score(fieldScore);
                     LoadingSceneManager.LoadScene(8);
                     break;
                 case 2:
+                    fieldObject.GetComponent<FieldObjectScript>().SetFieldScore(fieldScore / 16);
+                    fieldScore = fieldObject.GetComponent<FieldObjectScript>().GetFieldScore();
                     GameManager.instance.SetStage2Try(true);
                     GameManager.instance.SetStage2Score(fieldScore);
                     LoadingSceneManager.LoadScene(9);
                     break;
                 case 3:
+                    fieldObject.GetComponent<FieldObjectScript>().SetFieldScore(fieldScore / 16);
+                    fieldScore = fieldObject.GetComponent<FieldObjectScript>().GetFieldScore();
                     GameManager.instance.SetStage3Try(true);
                     GameManager.instance.SetStage3Score(fieldScore);
                     LoadingSceneManager.LoadScene(10);

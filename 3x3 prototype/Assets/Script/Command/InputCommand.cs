@@ -10,6 +10,8 @@ public class InputCommand : MonoBehaviour
 
     public GameObject CommandCompare;
 
+    public GameObject commandCount;
+
 
     int count = 1;
 
@@ -63,12 +65,21 @@ public class InputCommand : MonoBehaviour
            
             
             comandComparison.Comparison();
-            CommandCompare.GetComponent<CommandCompare>().CommandCompare_Soup();
+            if (commandCount.GetComponent<CommandCount>().isSoup == true)
+            {
+                CommandCompare.GetComponent<CommandCompare>().CommandCompare_Soup();
+            }
+
+            if( commandCount.GetComponent<CommandCount>().isSlime == true)
+            {
+                CommandCompare.GetComponent<CommandCompare>().CommandCompare_Slime();
+            }
 
 
-            
 
-            if(comandComparison.commandName!=null)
+
+
+            if (comandComparison.commandName!=null)
             {
                 Debug.Log(comandComparison.commandName);
                 comandComparison.commandName = null;

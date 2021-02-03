@@ -22,6 +22,12 @@ public class CommandCompare : MonoBehaviour
 
     public bool isSame;
 
+    public bool isSoup;
+
+    public bool isSlime;
+
+    public bool isDragon;
+
     
 
 
@@ -51,9 +57,37 @@ public class CommandCompare : MonoBehaviour
         
     }
 
+    public void CommandCompare_Slime()
+    {
+        if (soup_Command_Database.GetComponent<SlimeCommandDatabase>().GetItemName_SoupCommand(CompareActiveAnswer.GetComponent<CompareActiveAnswer>().command_All_Count) == commandComparison.GetComponent<ComandComparison>().commandName)
+        {
+
+            command_Score += 100;
+
+
+            //fieldobject.GetComponent<FieldObjectScript>().SetFieldScore((command_Score + 100)/2 );
+
+
+        }
+        else
+        {
+            command_Score += 0;
+            //fieldobject.GetComponent<FieldObjectScript>().SetFieldScore((command_Score + 0)/2 );
+
+        }
+    }
+
     public void CommandScore()
     {
-        final_Command_Score = command_Score / soup_Command_Database.GetComponent<Soup_Command_DataBase>().HisCount;
+        if (isSoup == true)
+        {
+            final_Command_Score = command_Score / soup_Command_Database.GetComponent<Soup_Command_DataBase>().HisCount;
+        }
+
+        if(isSlime==true)
+        {
+            final_Command_Score = command_Score / soup_Command_Database.GetComponent<SlimeCommandDatabase>().HisCount;
+        }
         fieldobject.GetComponent<FieldObjectScript>().SetFieldScore(fieldobject.GetComponent<FieldObjectScript>().GetFieldScore()+final_Command_Score);
         command_Score = 0;
 
@@ -63,59 +97,120 @@ public class CommandCompare : MonoBehaviour
 
     public void CommandAnswer_division()
     {
-        if(soup_Command_Database.GetComponent<Soup_Command_DataBase>().GetItemName_SoupCommand(CompareActiveAnswer.GetComponent<CompareActiveAnswer>().command_All_Count) == "Cutting_Command")
+        if (isSoup == true)
         {
-            commandComparison.GetComponent<ComandComparison>().CommandsAnswer = commandComparison.GetComponent<CommandCollection>().CuttingCommand;
+            if (soup_Command_Database.GetComponent<Soup_Command_DataBase>().GetItemName_SoupCommand(CompareActiveAnswer.GetComponent<CompareActiveAnswer>().command_All_Count) == "Cutting_Command")
+            {
+                commandComparison.GetComponent<ComandComparison>().CommandsAnswer = commandComparison.GetComponent<CommandCollection>().CuttingCommand;
+            }
+
+            if (soup_Command_Database.GetComponent<Soup_Command_DataBase>().GetItemName_SoupCommand(CompareActiveAnswer.GetComponent<CompareActiveAnswer>().command_All_Count) == "Boiling_Down_Command")
+            {
+                commandComparison.GetComponent<ComandComparison>().CommandsAnswer = commandComparison.GetComponent<CommandCollection>().Boiling_DownCommand;
+            }
+
+            if (soup_Command_Database.GetComponent<Soup_Command_DataBase>().GetItemName_SoupCommand(CompareActiveAnswer.GetComponent<CompareActiveAnswer>().command_All_Count) == "Boiling_Command")
+            {
+                commandComparison.GetComponent<ComandComparison>().CommandsAnswer = commandComparison.GetComponent<CommandCollection>().BoilingCommand;
+            }
+
+            if (soup_Command_Database.GetComponent<Soup_Command_DataBase>().GetItemName_SoupCommand(CompareActiveAnswer.GetComponent<CompareActiveAnswer>().command_All_Count) == "Chopping_Command")
+            {
+                commandComparison.GetComponent<ComandComparison>().CommandsAnswer = commandComparison.GetComponent<CommandCollection>().ChoppingCommand;
+            }
+
+            if (soup_Command_Database.GetComponent<Soup_Command_DataBase>().GetItemName_SoupCommand(CompareActiveAnswer.GetComponent<CompareActiveAnswer>().command_All_Count) == "Mash_Command")
+            {
+                commandComparison.GetComponent<ComandComparison>().CommandsAnswer = commandComparison.GetComponent<CommandCollection>().MashCommand;
+            }
+
+            if (soup_Command_Database.GetComponent<Soup_Command_DataBase>().GetItemName_SoupCommand(CompareActiveAnswer.GetComponent<CompareActiveAnswer>().command_All_Count) == "Spray_Command")
+            {
+                commandComparison.GetComponent<ComandComparison>().CommandsAnswer = commandComparison.GetComponent<CommandCollection>().SprayCommand;
+            }
+
+            if (soup_Command_Database.GetComponent<Soup_Command_DataBase>().GetItemName_SoupCommand(CompareActiveAnswer.GetComponent<CompareActiveAnswer>().command_All_Count) == "WrapUp_Command")
+            {
+                commandComparison.GetComponent<ComandComparison>().CommandsAnswer = commandComparison.GetComponent<CommandCollection>().WrapUpCommand;
+            }
+
+            if (soup_Command_Database.GetComponent<Soup_Command_DataBase>().GetItemName_SoupCommand(CompareActiveAnswer.GetComponent<CompareActiveAnswer>().command_All_Count) == "Cut_inInsert_Command")
+            {
+                commandComparison.GetComponent<ComandComparison>().CommandsAnswer = commandComparison.GetComponent<CommandCollection>().Cut_inInsertCommand;
+            }
+
+            if (soup_Command_Database.GetComponent<Soup_Command_DataBase>().GetItemName_SoupCommand(CompareActiveAnswer.GetComponent<CompareActiveAnswer>().command_All_Count) == "Stir_Fry_Command")
+            {
+                commandComparison.GetComponent<ComandComparison>().CommandsAnswer = commandComparison.GetComponent<CommandCollection>().Stir_fryCommand;
+            }
+
+            if (soup_Command_Database.GetComponent<Soup_Command_DataBase>().GetItemName_SoupCommand(CompareActiveAnswer.GetComponent<CompareActiveAnswer>().command_All_Count) == "Ironing_Command")
+            {
+                commandComparison.GetComponent<ComandComparison>().CommandsAnswer = commandComparison.GetComponent<CommandCollection>().IroningCommand;
+            }
+
+            if (soup_Command_Database.GetComponent<Soup_Command_DataBase>().GetItemName_SoupCommand(CompareActiveAnswer.GetComponent<CompareActiveAnswer>().command_All_Count) == "Push_Command")
+            {
+                commandComparison.GetComponent<ComandComparison>().CommandsAnswer = commandComparison.GetComponent<CommandCollection>().PushCommand;
+            }
         }
 
-        if (soup_Command_Database.GetComponent<Soup_Command_DataBase>().GetItemName_SoupCommand(CompareActiveAnswer.GetComponent<CompareActiveAnswer>().command_All_Count) == "Boiling_Down_Command")
+        if(isSlime==true)
         {
-            commandComparison.GetComponent<ComandComparison>().CommandsAnswer = commandComparison.GetComponent<CommandCollection>().Boiling_DownCommand;
-        }
+            if (soup_Command_Database.GetComponent<SlimeCommandDatabase>().GetItemName_SoupCommand(CompareActiveAnswer.GetComponent<CompareActiveAnswer>().command_All_Count) == "Cutting_Command")
+            {
+                commandComparison.GetComponent<ComandComparison>().CommandsAnswer = commandComparison.GetComponent<CommandCollection>().CuttingCommand;
+            }
 
-        if (soup_Command_Database.GetComponent<Soup_Command_DataBase>().GetItemName_SoupCommand(CompareActiveAnswer.GetComponent<CompareActiveAnswer>().command_All_Count) == "Boiling_Command")
-        {
-            commandComparison.GetComponent<ComandComparison>().CommandsAnswer = commandComparison.GetComponent<CommandCollection>().BoilingCommand;
-        }
+            if (soup_Command_Database.GetComponent<SlimeCommandDatabase>().GetItemName_SoupCommand(CompareActiveAnswer.GetComponent<CompareActiveAnswer>().command_All_Count) == "Boiling_Down_Command")
+            {
+                commandComparison.GetComponent<ComandComparison>().CommandsAnswer = commandComparison.GetComponent<CommandCollection>().Boiling_DownCommand;
+            }
 
-        if (soup_Command_Database.GetComponent<Soup_Command_DataBase>().GetItemName_SoupCommand(CompareActiveAnswer.GetComponent<CompareActiveAnswer>().command_All_Count) == "Chopping_Command")
-        {
-            commandComparison.GetComponent<ComandComparison>().CommandsAnswer = commandComparison.GetComponent<CommandCollection>().ChoppingCommand;
-        }
+            if (soup_Command_Database.GetComponent<SlimeCommandDatabase>().GetItemName_SoupCommand(CompareActiveAnswer.GetComponent<CompareActiveAnswer>().command_All_Count) == "Boiling_Command")
+            {
+                commandComparison.GetComponent<ComandComparison>().CommandsAnswer = commandComparison.GetComponent<CommandCollection>().BoilingCommand;
+            }
 
-        if (soup_Command_Database.GetComponent<Soup_Command_DataBase>().GetItemName_SoupCommand(CompareActiveAnswer.GetComponent<CompareActiveAnswer>().command_All_Count) == "Mash_Command")
-        {
-            commandComparison.GetComponent<ComandComparison>().CommandsAnswer = commandComparison.GetComponent<CommandCollection>().MashCommand;
-        }
+            if (soup_Command_Database.GetComponent<SlimeCommandDatabase>().GetItemName_SoupCommand(CompareActiveAnswer.GetComponent<CompareActiveAnswer>().command_All_Count) == "Chopping_Command")
+            {
+                commandComparison.GetComponent<ComandComparison>().CommandsAnswer = commandComparison.GetComponent<CommandCollection>().ChoppingCommand;
+            }
 
-        if (soup_Command_Database.GetComponent<Soup_Command_DataBase>().GetItemName_SoupCommand(CompareActiveAnswer.GetComponent<CompareActiveAnswer>().command_All_Count) == "Spray_Command")
-        {
-            commandComparison.GetComponent<ComandComparison>().CommandsAnswer = commandComparison.GetComponent<CommandCollection>().SprayCommand;
-        }
+            if (soup_Command_Database.GetComponent<SlimeCommandDatabase>().GetItemName_SoupCommand(CompareActiveAnswer.GetComponent<CompareActiveAnswer>().command_All_Count) == "Mash_Command")
+            {
+                commandComparison.GetComponent<ComandComparison>().CommandsAnswer = commandComparison.GetComponent<CommandCollection>().MashCommand;
+            }
 
-        if (soup_Command_Database.GetComponent<Soup_Command_DataBase>().GetItemName_SoupCommand(CompareActiveAnswer.GetComponent<CompareActiveAnswer>().command_All_Count) == "WrapUp_Command")
-        {
-            commandComparison.GetComponent<ComandComparison>().CommandsAnswer = commandComparison.GetComponent<CommandCollection>().WrapUpCommand;
-        }
+            if (soup_Command_Database.GetComponent<SlimeCommandDatabase>().GetItemName_SoupCommand(CompareActiveAnswer.GetComponent<CompareActiveAnswer>().command_All_Count) == "Spray_Command")
+            {
+                commandComparison.GetComponent<ComandComparison>().CommandsAnswer = commandComparison.GetComponent<CommandCollection>().SprayCommand;
+            }
 
-        if (soup_Command_Database.GetComponent<Soup_Command_DataBase>().GetItemName_SoupCommand(CompareActiveAnswer.GetComponent<CompareActiveAnswer>().command_All_Count) == "Cut_inInsert_Command")
-        {
-            commandComparison.GetComponent<ComandComparison>().CommandsAnswer = commandComparison.GetComponent<CommandCollection>().Cut_inInsertCommand;
-        }
+            if (soup_Command_Database.GetComponent<SlimeCommandDatabase>().GetItemName_SoupCommand(CompareActiveAnswer.GetComponent<CompareActiveAnswer>().command_All_Count) == "WrapUp_Command")
+            {
+                commandComparison.GetComponent<ComandComparison>().CommandsAnswer = commandComparison.GetComponent<CommandCollection>().WrapUpCommand;
+            }
 
-        if (soup_Command_Database.GetComponent<Soup_Command_DataBase>().GetItemName_SoupCommand(CompareActiveAnswer.GetComponent<CompareActiveAnswer>().command_All_Count) == "Stir_Fry_Command")
-        {
-            commandComparison.GetComponent<ComandComparison>().CommandsAnswer = commandComparison.GetComponent<CommandCollection>().Stir_fryCommand;
-        }
+            if (soup_Command_Database.GetComponent<SlimeCommandDatabase>().GetItemName_SoupCommand(CompareActiveAnswer.GetComponent<CompareActiveAnswer>().command_All_Count) == "Cut_inInsert_Command")
+            {
+                commandComparison.GetComponent<ComandComparison>().CommandsAnswer = commandComparison.GetComponent<CommandCollection>().Cut_inInsertCommand;
+            }
 
-        if (soup_Command_Database.GetComponent<Soup_Command_DataBase>().GetItemName_SoupCommand(CompareActiveAnswer.GetComponent<CompareActiveAnswer>().command_All_Count) == "Ironing_Command")
-        {
-            commandComparison.GetComponent<ComandComparison>().CommandsAnswer = commandComparison.GetComponent<CommandCollection>().IroningCommand;
-        }
+            if (soup_Command_Database.GetComponent<SlimeCommandDatabase>().GetItemName_SoupCommand(CompareActiveAnswer.GetComponent<CompareActiveAnswer>().command_All_Count) == "Stir_Fry_Command")
+            {
+                commandComparison.GetComponent<ComandComparison>().CommandsAnswer = commandComparison.GetComponent<CommandCollection>().Stir_fryCommand;
+            }
 
-        if (soup_Command_Database.GetComponent<Soup_Command_DataBase>().GetItemName_SoupCommand(CompareActiveAnswer.GetComponent<CompareActiveAnswer>().command_All_Count) == "Push_Command")
-        {
-            commandComparison.GetComponent<ComandComparison>().CommandsAnswer = commandComparison.GetComponent<CommandCollection>().PushCommand;
+            if (soup_Command_Database.GetComponent<SlimeCommandDatabase>().GetItemName_SoupCommand(CompareActiveAnswer.GetComponent<CompareActiveAnswer>().command_All_Count) == "Ironing_Command")
+            {
+                commandComparison.GetComponent<ComandComparison>().CommandsAnswer = commandComparison.GetComponent<CommandCollection>().IroningCommand;
+            }
+
+            if (soup_Command_Database.GetComponent<SlimeCommandDatabase>().GetItemName_SoupCommand(CompareActiveAnswer.GetComponent<CompareActiveAnswer>().command_All_Count) == "Push_Command")
+            {
+                commandComparison.GetComponent<ComandComparison>().CommandsAnswer = commandComparison.GetComponent<CommandCollection>().PushCommand;
+            }
         }
 
     }
