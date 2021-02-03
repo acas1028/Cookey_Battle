@@ -38,6 +38,7 @@ public class BeforeChangeScript : MonoBehaviour
     }
     void Start()
     {
+
         SetEffect();
     }
 
@@ -68,6 +69,7 @@ public class BeforeChangeScript : MonoBehaviour
     void SetEnemyScore()
     {
         int rand = 0;
+        isClear = false;
         rand = Random.Range(0, 9);
         switch (GameManager.instance.GetStageLevel())
         {
