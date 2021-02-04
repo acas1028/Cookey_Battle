@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CompareActiveAnswer : MonoBehaviour
 {
@@ -24,6 +25,12 @@ public class CompareActiveAnswer : MonoBehaviour
     public GameObject Soup_Command_Database;
 
     public GameObject commandCompare;
+
+    public GameObject ShowMakingIngredient;
+
+    public GameObject block;
+
+    public GameObject timer;
 
     public GameObject[] score_compare_basic_instance;
 
@@ -59,6 +66,11 @@ public class CompareActiveAnswer : MonoBehaviour
 
     public bool isinventoryStart = false;
 
+    public bool isInventoryOk = false;
+
+  
+
+   
     int ingameStage;
     int ingameStep;
     int hiddenConditionNumber; //히든 아이템 갯수
@@ -98,6 +110,8 @@ public class CompareActiveAnswer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        
         if (InventorySlot.Length == 0)
         {
             InventorySlot = GameObject.FindGameObjectsWithTag("Slot"); //문제가 생길시 고침
@@ -227,12 +241,14 @@ public class CompareActiveAnswer : MonoBehaviour
                     {
                         
                         commandbar.SetActive(false);
-                        keyboardinput.SetActive(true);
                         commandCompare.GetComponent<CommandCompare>().CommandScore();
                         CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount = 0;
                         Making_ingredient();
+                        isInventoryOk = true;
+                        timer.GetComponent<Timer>().timer = 0;
                         command_All_Count++;
                         ingameStep++;
+                        
 
                     }
 
@@ -269,6 +285,7 @@ public class CompareActiveAnswer : MonoBehaviour
                 break;
             case 4:
                 {
+                    
                     for (int j = 0; j < basic_instance.Count; j++)
                     {
 
@@ -374,10 +391,11 @@ public class CompareActiveAnswer : MonoBehaviour
                     if (CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount == Soup_Command_Database.GetComponent<Soup_Command_DataBase>().HisCount && Soup_Command_Database.GetComponent<Soup_Command_DataBase>().HisCount != 0)
                     {
 
-                        commandbar.SetActive(false);
-                        keyboardinput.SetActive(true);
+                        commandbar.SetActive(false);                       
                         commandCompare.GetComponent<CommandCompare>().CommandScore();
                         CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount = 0;
+                        isInventoryOk = true;
+                        timer.GetComponent<Timer>().timer = 0;
                         Making_ingredient();
                         command_All_Count++;
                         ingameStep++;
@@ -464,11 +482,12 @@ public class CompareActiveAnswer : MonoBehaviour
                     if (CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount == Soup_Command_Database.GetComponent<Soup_Command_DataBase>().HisCount && Soup_Command_Database.GetComponent<Soup_Command_DataBase>().HisCount != 0)
                     {
 
-                        commandbar.SetActive(false);
-                        keyboardinput.SetActive(true);
+                        commandbar.SetActive(false);                       
                         commandCompare.GetComponent<CommandCompare>().CommandScore();
                         CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount = 0;
                         Making_ingredient();
+                        isInventoryOk = true;
+                        timer.GetComponent<Timer>().timer = 0;
                         command_All_Count++;
                         ingameStep++;
 
@@ -520,11 +539,12 @@ public class CompareActiveAnswer : MonoBehaviour
                     if (CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount == Soup_Command_Database.GetComponent<Soup_Command_DataBase>().HisCount && Soup_Command_Database.GetComponent<Soup_Command_DataBase>().HisCount != 0)
                     {
 
-                        commandbar.SetActive(false);
-                        keyboardinput.SetActive(true);
+                        commandbar.SetActive(false);                       
                         commandCompare.GetComponent<CommandCompare>().CommandScore();
                         CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount = 0;
                         Making_ingredient();
+                        isInventoryOk = true;
+                        timer.GetComponent<Timer>().timer = 0;
                         command_All_Count++;
                         ingameStep++;
 
@@ -608,11 +628,12 @@ public class CompareActiveAnswer : MonoBehaviour
                     if (CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount == Soup_Command_Database.GetComponent<Soup_Command_DataBase>().HisCount && Soup_Command_Database.GetComponent<Soup_Command_DataBase>().HisCount != 0)
                     {
 
-                        commandbar.SetActive(false);
-                        keyboardinput.SetActive(true);
+                        commandbar.SetActive(false);                       
                         commandCompare.GetComponent<CommandCompare>().CommandScore();
                         CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount = 0;
                         Making_ingredient();
+                        isInventoryOk = true;
+                        timer.GetComponent<Timer>().timer = 0;
                         command_All_Count++;
                         ingameStep++;
 
@@ -683,11 +704,12 @@ public class CompareActiveAnswer : MonoBehaviour
                     if (CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount == Soup_Command_Database.GetComponent<SlimeCommandDatabase>().HisCount && Soup_Command_Database.GetComponent<SlimeCommandDatabase>().HisCount != 0)
                     {
 
-                        commandbar.SetActive(false);
-                        keyboardinput.SetActive(true);
+                        commandbar.SetActive(false);                        
                         commandCompare.GetComponent<CommandCompare>().CommandScore();
                         CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount = 0;
                         Making_ingredient();
+                        isInventoryOk = true;
+                        timer.GetComponent<Timer>().timer = 0;
                         command_All_Count++;
                         ingameStep++;
 
@@ -771,11 +793,12 @@ public class CompareActiveAnswer : MonoBehaviour
                     if (CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount == Soup_Command_Database.GetComponent<SlimeCommandDatabase>().HisCount && Soup_Command_Database.GetComponent<SlimeCommandDatabase>().HisCount != 0)
                     {
 
-                        commandbar.SetActive(false);
-                        keyboardinput.SetActive(true);
+                        commandbar.SetActive(false);                       
                         commandCompare.GetComponent<CommandCompare>().CommandScore();
                         CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount = 0;
                         Making_ingredient();
+                        isInventoryOk = true;
+                        timer.GetComponent<Timer>().timer = 0;
                         command_All_Count++;
                         ingameStep++;
 
@@ -857,11 +880,12 @@ public class CompareActiveAnswer : MonoBehaviour
                     if (CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount == Soup_Command_Database.GetComponent<SlimeCommandDatabase>().HisCount && Soup_Command_Database.GetComponent<SlimeCommandDatabase>().HisCount != 0)
                     {
 
-                        commandbar.SetActive(false);
-                        keyboardinput.SetActive(true);
+                        commandbar.SetActive(false);                      
                         commandCompare.GetComponent<CommandCompare>().CommandScore();
                         CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount = 0;
                         Making_ingredient();
+                        isInventoryOk = true;
+                        timer.GetComponent<Timer>().timer = 0;
                         command_All_Count++;
                         ingameStep++;
 
@@ -914,10 +938,11 @@ public class CompareActiveAnswer : MonoBehaviour
                     {
 
                         commandbar.SetActive(false);
-                        keyboardinput.SetActive(true);
                         commandCompare.GetComponent<CommandCompare>().CommandScore();
                         CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount = 0;
                         Making_ingredient();
+                        isInventoryOk = true;
+                        timer.GetComponent<Timer>().timer = 0;
                         command_All_Count++;
                         ingameStep++;
 
@@ -970,10 +995,11 @@ public class CompareActiveAnswer : MonoBehaviour
                     {
 
                         commandbar.SetActive(false);
-                        keyboardinput.SetActive(true);
                         commandCompare.GetComponent<CommandCompare>().CommandScore();
                         CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount = 0;
                         Making_ingredient();
+                        isInventoryOk = true;
+                        timer.GetComponent<Timer>().timer = 0;
                         command_All_Count++;
                         ingameStep++;
 
@@ -1088,11 +1114,12 @@ public class CompareActiveAnswer : MonoBehaviour
                     if (CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount == Soup_Command_Database.GetComponent<SlimeCommandDatabase>().HisCount && Soup_Command_Database.GetComponent<SlimeCommandDatabase>().HisCount != 0)
                     {
 
-                        commandbar.SetActive(false);
-                        keyboardinput.SetActive(true);
+                        commandbar.SetActive(false);                       
                         commandCompare.GetComponent<CommandCompare>().CommandScore();
                         CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount = 0;
                         Making_ingredient();
+                        isInventoryOk = true;
+                        timer.GetComponent<Timer>().timer = 0;
                         command_All_Count++;
                         ingameStep++;
 
@@ -1146,11 +1173,12 @@ public class CompareActiveAnswer : MonoBehaviour
                     if (CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount == Soup_Command_Database.GetComponent<SlimeCommandDatabase>().HisCount && Soup_Command_Database.GetComponent<SlimeCommandDatabase>().HisCount != 0)
                     {
 
-                        commandbar.SetActive(false);
-                        keyboardinput.SetActive(true);
+                        commandbar.SetActive(false);                       
                         commandCompare.GetComponent<CommandCompare>().CommandScore();
                         CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount = 0;
                         Making_ingredient();
+                        isInventoryOk = true;
+                        timer.GetComponent<Timer>().timer = 0;
                         command_All_Count++;
                         ingameStep++;
 
@@ -1203,11 +1231,12 @@ public class CompareActiveAnswer : MonoBehaviour
                     if (CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount == Soup_Command_Database.GetComponent<SlimeCommandDatabase>().HisCount && Soup_Command_Database.GetComponent<SlimeCommandDatabase>().HisCount != 0)
                     {
 
-                        commandbar.SetActive(false);
-                        keyboardinput.SetActive(true);
+                        commandbar.SetActive(false);                      
                         commandCompare.GetComponent<CommandCompare>().CommandScore();
                         CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount = 0;
                         Making_ingredient();
+                        isInventoryOk = true;
+                        timer.GetComponent<Timer>().timer = 0;
                         command_All_Count++;
                         ingameStep++;
 
@@ -1260,11 +1289,12 @@ public class CompareActiveAnswer : MonoBehaviour
                     if (CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount == Soup_Command_Database.GetComponent<SlimeCommandDatabase>().HisCount && Soup_Command_Database.GetComponent<SlimeCommandDatabase>().HisCount != 0)
                     {
 
-                        commandbar.SetActive(false);
-                        keyboardinput.SetActive(true);
+                        commandbar.SetActive(false);                        
                         commandCompare.GetComponent<CommandCompare>().CommandScore();
                         CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount = 0;
                         Making_ingredient();
+                        isInventoryOk = true;
+                        timer.GetComponent<Timer>().timer = 0;
                         command_All_Count++;
                         ingameStep++;
 
@@ -1494,11 +1524,12 @@ public class CompareActiveAnswer : MonoBehaviour
                     if (CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount == Soup_Command_Database.GetComponent<Dragon_Command_Database>().HisCount && Soup_Command_Database.GetComponent<Dragon_Command_Database>().HisCount != 0)
                     {
 
-                        commandbar.SetActive(false);
-                        keyboardinput.SetActive(true);
+                        commandbar.SetActive(false);                      
                         commandCompare.GetComponent<CommandCompare>().CommandScore();
                         CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount = 0;
                         Making_ingredient();
+                        isInventoryOk = true;
+                        timer.GetComponent<Timer>().timer = 0;
                         command_All_Count++;
                         ingameStep++;
 
@@ -1611,11 +1642,12 @@ public class CompareActiveAnswer : MonoBehaviour
                     if (CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount == Soup_Command_Database.GetComponent<Dragon_Command_Database>().HisCount && Soup_Command_Database.GetComponent<Dragon_Command_Database>().HisCount != 0)
                     {
 
-                        commandbar.SetActive(false);
-                        keyboardinput.SetActive(true);
+                        commandbar.SetActive(false);                       
                         commandCompare.GetComponent<CommandCompare>().CommandScore();
                         CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount = 0;
                         Making_ingredient();
+                        isInventoryOk = true;
+                        timer.GetComponent<Timer>().timer = 0;
                         command_All_Count++;
                         ingameStep++;
 
@@ -1668,11 +1700,12 @@ public class CompareActiveAnswer : MonoBehaviour
                     if (CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount == Soup_Command_Database.GetComponent<Dragon_Command_Database>().HisCount && Soup_Command_Database.GetComponent<Dragon_Command_Database>().HisCount != 0)
                     {
 
-                        commandbar.SetActive(false);
-                        keyboardinput.SetActive(true);
+                        commandbar.SetActive(false);                      
                         commandCompare.GetComponent<CommandCompare>().CommandScore();
                         CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount = 0;
                         Making_ingredient();
+                        isInventoryOk = true;
+                        timer.GetComponent<Timer>().timer = 0;
                         command_All_Count++;
                         ingameStep++;
 
@@ -1785,11 +1818,12 @@ public class CompareActiveAnswer : MonoBehaviour
                     if (CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount == Soup_Command_Database.GetComponent<Dragon_Command_Database>().HisCount && Soup_Command_Database.GetComponent<Dragon_Command_Database>().HisCount != 0)
                     {
 
-                        commandbar.SetActive(false);
-                        keyboardinput.SetActive(true);
+                        commandbar.SetActive(false);                      
                         commandCompare.GetComponent<CommandCompare>().CommandScore();
                         CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount = 0;
                         Making_ingredient();
+                        isInventoryOk = true;
+                        timer.GetComponent<Timer>().timer = 0;
                         command_All_Count++;
                         ingameStep++;
 
@@ -1843,11 +1877,12 @@ public class CompareActiveAnswer : MonoBehaviour
                     if (CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount == Soup_Command_Database.GetComponent<Dragon_Command_Database>().HisCount && Soup_Command_Database.GetComponent<Dragon_Command_Database>().HisCount != 0)
                     {
 
-                        commandbar.SetActive(false);
-                        keyboardinput.SetActive(true);
+                        commandbar.SetActive(false);                      
                         commandCompare.GetComponent<CommandCompare>().CommandScore();
                         CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount = 0;
                         Making_ingredient();
+                        isInventoryOk = true;
+                        timer.GetComponent<Timer>().timer = 0;
                         command_All_Count++;
                         ingameStep++;
 
@@ -1930,11 +1965,12 @@ public class CompareActiveAnswer : MonoBehaviour
                     if (CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount == Soup_Command_Database.GetComponent<Dragon_Command_Database>().HisCount && Soup_Command_Database.GetComponent<Dragon_Command_Database>().HisCount != 0)
                     {
 
-                        commandbar.SetActive(false);
-                        keyboardinput.SetActive(true);
+                        commandbar.SetActive(false);                    
                         commandCompare.GetComponent<CommandCompare>().CommandScore();
                         CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount = 0;
                         Making_ingredient();
+                        isInventoryOk = true;
+                        timer.GetComponent<Timer>().timer = 0;
                         command_All_Count++;
                         ingameStep++;
 
@@ -2080,11 +2116,12 @@ public class CompareActiveAnswer : MonoBehaviour
                     if (CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount == Soup_Command_Database.GetComponent<Dragon_Command_Database>().HisCount && Soup_Command_Database.GetComponent<Dragon_Command_Database>().HisCount != 0)
                     {
 
-                        commandbar.SetActive(false);
-                        keyboardinput.SetActive(true);
+                        commandbar.SetActive(false);                      
                         commandCompare.GetComponent<CommandCompare>().CommandScore();
                         CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount = 0;
                         Making_ingredient();
+                        isInventoryOk = true;
+                        timer.GetComponent<Timer>().timer = 0;
                         command_All_Count++;
                         ingameStep++;
 
@@ -2140,11 +2177,12 @@ public class CompareActiveAnswer : MonoBehaviour
                     if (CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount == Soup_Command_Database.GetComponent<Dragon_Command_Database>().HisCount && Soup_Command_Database.GetComponent<Dragon_Command_Database>().HisCount != 0)
                     {
 
-                        commandbar.SetActive(false);
-                        keyboardinput.SetActive(true);
+                        commandbar.SetActive(false);                        
                         commandCompare.GetComponent<CommandCompare>().CommandScore();
                         CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount = 0;
                         Making_ingredient();
+                        isInventoryOk = true;
+                        timer.GetComponent<Timer>().timer = 0;
                         command_All_Count++;
                         ingameStep++;
 
@@ -2198,11 +2236,12 @@ public class CompareActiveAnswer : MonoBehaviour
                     if (CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount == Soup_Command_Database.GetComponent<Dragon_Command_Database>().HisCount && Soup_Command_Database.GetComponent<Dragon_Command_Database>().HisCount != 0)
                     {
 
-                        commandbar.SetActive(false);
-                        keyboardinput.SetActive(true);
+                        commandbar.SetActive(false);                     
                         commandCompare.GetComponent<CommandCompare>().CommandScore();
                         CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount = 0;
                         Making_ingredient();
+                        isInventoryOk = true;
+                        timer.GetComponent<Timer>().timer = 0;
                         command_All_Count++;
                         ingameStep++;
 
@@ -2255,11 +2294,12 @@ public class CompareActiveAnswer : MonoBehaviour
                     if (CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount == Soup_Command_Database.GetComponent<Dragon_Command_Database>().HisCount && Soup_Command_Database.GetComponent<Dragon_Command_Database>().HisCount != 0)
                     {
 
-                        commandbar.SetActive(false);
-                        keyboardinput.SetActive(true);
+                        commandbar.SetActive(false);                     
                         commandCompare.GetComponent<CommandCompare>().CommandScore();
                         CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount = 0;
                         Making_ingredient();
+                        isInventoryOk = true;
+                        timer.GetComponent<Timer>().timer = 0;
                         command_All_Count++;
                         ingameStep++;
 
@@ -2376,11 +2416,12 @@ public class CompareActiveAnswer : MonoBehaviour
                     if (CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount == Soup_Command_Database.GetComponent<Dragon_Command_Database>().HisCount && Soup_Command_Database.GetComponent<Dragon_Command_Database>().HisCount != 0)
                     {
 
-                        commandbar.SetActive(false);
-                        keyboardinput.SetActive(true);
+                        commandbar.SetActive(false);                      
                         commandCompare.GetComponent<CommandCompare>().CommandScore();
                         CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount = 0;
                         Making_ingredient();
+                        isInventoryOk = true;
+                        timer.GetComponent<Timer>().timer = 0;
                         command_All_Count++;
                         ingameStep++;
 
@@ -2436,11 +2477,12 @@ public class CompareActiveAnswer : MonoBehaviour
                     if (CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount == Soup_Command_Database.GetComponent<Dragon_Command_Database>().HisCount && Soup_Command_Database.GetComponent<Dragon_Command_Database>().HisCount != 0)
                     {
 
-                        commandbar.SetActive(false);
-                        keyboardinput.SetActive(true);
+                        commandbar.SetActive(false);                      
                         commandCompare.GetComponent<CommandCompare>().CommandScore();
                         CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount = 0;
                         Making_ingredient();
+                        isInventoryOk = true;
+                        timer.GetComponent<Timer>().timer = 0;
                         command_All_Count++;
                         ingameStep++;
 
@@ -2527,11 +2569,12 @@ public class CompareActiveAnswer : MonoBehaviour
                     if (CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount == Soup_Command_Database.GetComponent<Dragon_Command_Database>().HisCount && Soup_Command_Database.GetComponent<Dragon_Command_Database>().HisCount != 0)
                     {
 
-                        commandbar.SetActive(false);
-                        keyboardinput.SetActive(true);
+                        commandbar.SetActive(false);                       
                         commandCompare.GetComponent<CommandCompare>().CommandScore();
                         CommandComparison.GetComponent<ComandComparison>().CommandComparisonCount = 0;
                         Making_ingredient();
+                        isInventoryOk = true;
+                        timer.GetComponent<Timer>().timer = 0;
                         command_All_Count++;
                         ingameStep++;
 
@@ -2588,6 +2631,10 @@ public class CompareActiveAnswer : MonoBehaviour
         Making_Ingredients_Moving[making_Count].transform.localScale = new Vector3(0.8f, 0.8f, 0);
         Making_Ingredients_Moving[making_Count].GetComponent<WareHouseDataMove>().enabled = false;
         Making_Ingredients_Moving[making_Count].GetComponent<DataMove>().enabled = true;
+        ShowMakingIngredient.GetComponent<Image>().sprite = Making_Ingredients[making_Count].GetComponent<Image>().sprite;
+        ShowMakingIngredient.SetActive(true);
+        block.SetActive(true);
+        
         basic_instance.Add(Making_Ingredients_Moving[making_Count]);
         dataGameManager.GetComponent<Data_GameManager>().moveCount++;
         making_Count++;
